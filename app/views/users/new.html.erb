@@ -1,0 +1,38 @@
+
+<p>WELCOME to Gymsavvy your gym buddy</p>
+<p>A great way to find a program that suits you NOT just another endless list of programs built purley for body builders.</p><br>
+
+<p><span class="siteponts">CREATE PROGRAM</span> - Although there are plenty of programs to chose from sometimes it's easier just to create exactly what you want from scratch. Use this feature by browing and selecting the exercises and adjusting the weights and distances to match you current fitness leve. As you progress alter the exercises/weights/distances until you reach you goal.</p><br> 
+
+<p><span class="siteponts">COPY PROGRAM</span> - Browse other peoples programs and see what there teckniques are for getting fit, you can then copy there program and rearange it if you like to suit you. Ajust weights and update it as you progress adding new exercises and emoving ones that have become too easy.</p><br>
+
+<p><span class="siteponts">CALORY COUNT</span> - Use the calory count feature to see how many calories your burning dependant on which program your chose, or recreate what ever program your currently</p><br>
+
+<p><span class="siteponts">IM INJURED</span> - Bad technique and advice can lead to injury. Although with and sports injury we would always advise seeing proper medical attention and guidence we have set up a few programs that are focused on some of the most common sports injuries designed to get you back on form! Click the I'm injured link to get more information.</p><br>
+
+<p><span class="siteponts">ENJOY!</span></p>
+
+
+
+<h1>Sign Up</h1>
+
+<%= form_for @user do |f| %>
+
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %>
+  </p>
+  <p class="Sign Up"><%= f.submit %></p>
+  
+<% end %>
+
+
+

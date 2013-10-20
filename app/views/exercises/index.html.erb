@@ -1,0 +1,24 @@
+<h1>Exercises</h1>
+
+<%= link_to "Add New Exercise", new_exercise_path %>
+
+<% @exercises.each do |type| %>
+	<% type.each do |exercise| %>
+	
+		<div class="exercisebox">
+			<div class="imagebox">
+			</div>
+			<div class="info blue">
+				<h2><%= exercise.name %></h2>
+				<p><%= exercise.description %></p>
+				<p>Option types:<%= exercise.option_types + " " + exercise.muscle_group %></p>
+				<ul class="actions">
+					<li><%= link_to "Edit", edit_exercise_path(exercise) %></li>
+					<li><%= link_to "Delete", exercise, method: :delete, data: { confirm: "are you sure you want to delete this exercise?" } %></li>
+				</ul>
+			</div>
+			
+		</div>
+	<% end %>
+
+<% end %>

@@ -1,0 +1,9 @@
+<h1>Create a new exercise</h1>
+
+<%= form_for @exercise do |f| %>
+	
+	<%= render(partial: 'form', locals: { f: f }) %>
+
+	<%= submit_tag("create") %>
+	
+<% end %>

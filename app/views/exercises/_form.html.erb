@@ -1,0 +1,21 @@
+<table>
+	<tr>
+		<td><%= f.label :name %>
+		<td><%= f.text_field :name %>
+	</tr>
+	<tr>
+		<td><%= f.label :muscle_group %>
+		<td><%= f.select :muscle_group, options_for_select([['Cardio'], ['Abs and Obliques'], ['Biceps and Triceps'], ['Shoulders'],['Legs'], ['Chest'], ['Back']]) %>
+	</tr>
+
+	<tr>
+		<td><%= f.label :description %>
+		<td><%= f.text_area :description %>
+	</tr>
+	<tr>
+		<!-- RS = REPS/SETS, WRS = WEIGHTS/REPS/SETS, DT = DISTANCE/TIME, 
+		SWIMDT = SWIM/DISTANCE/TIME, T = TIME -->
+		<td><%= f.label :option_types %>
+		<td><%= f.select :option_types, options_for_select([['RS'], ['WRS'], ['DT'], ['SWIMDT'], ['T']]) %>
+	</tr>
+</table>

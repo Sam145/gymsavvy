@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gymsavvy</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="wrap">
+
+<div class="maintopbar">
+	<div class="maintitlebar"><%= image_tag "title/maintitle.psd" %></div>
+	<div class="mainnavbar">
+		<ul>
+			<li>Sign up!</li>
+			<li>Log in</li>
+		</ul>
+	</div>
+</div>
+
+<div id="maincontainer">
+	<div class="leftside">
+		<div class="links">
+			<h2>Mens Programs</h2>
+			<ul>
+				<li>Fat Burn</li>
+				<li>Muscle Build</li>
+				<li>Where did i go wronge</li>
+			</ul>
+		</div>
+		<div class="links">
+			<h2>Womans Programs</h2>
+			<ul>
+				<li>Pear Shaped</li>
+				<li>Apple Shaped</li>
+				<li>Hour Glass</li>
+				<li>Tube</li>
+			</ul>
+		</div>
+		<div class="links">
+			<h2>Injuerd?</h2>
+			<ul>
+				<li>Common injurys</li>
+				<li>Ask the doc</li>
+				<li>Give advice</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="container">
+		<%= yield %>
+	</div>
+
+	<div class="rightside">
+		<div class="advertising">
+			<h1>Adverts</h1>
+			<div class="image">
+				<%= image_tag "protein_shake.gif", :alt => "protein shake" %>
+			</div>
+			<div class="image">
+				<%= image_tag "sand_bell.gif", :alt => "sand bell" %>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+</body>
+</html>

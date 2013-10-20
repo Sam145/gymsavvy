@@ -1,0 +1,192 @@
+<div class="iconoutercontainer">
+    <div class="icons">
+      <%= fields_for :add_exercise do |ae| %>
+      <div class="listedexercises">
+
+              <div class="buttons">
+                <div class="firstbtn" id="absbtn">
+                  <%= image_tag "buttons/abs.psd", class: "btnpos" %>
+                  <p id="absborder">Over 100 ABS exercises to chose from!!</p>
+                </div>
+                <div class="secondbtn" id="armsbtn">
+                  <%= image_tag "buttons/arms.psd", class: "btnpos" %>
+                  <p id="armsborder">Over 100 ARMS exercises to chose from!!</p>
+                </div>
+
+              </div>
+              <div class="buttons">
+                <div class="firstbtn" id="backbtn">
+                  <%= image_tag "buttons/back.psd", class: "btnpos" %>
+                  <p id="backborder">Over 100 BACK exercises to chose from!!</p>
+                </div>
+                <div class="secondbtn" id="cardiobtn">
+                  <%= image_tag "buttons/cardio.psd", class: "btnpos" %>
+                  <p id="cardioborder">Over 100 CARDIO exercises to chose from!!</p>
+                </div>
+              </div>
+
+              <div class="buttons">
+                <div class="firstbtn" id="chestbtn">
+                  <%= image_tag "buttons/chest.psd", class: "btnpos" %>
+                  <p id="chestborder">Over 100 CHEST exercises to chose from!!</p>
+                </div>
+                <div class="secondbtn" id="legsbtn">
+                  <%= image_tag "buttons/legs.psd", class: "btnpos" %>
+                  <p id="legsborder">Over 100 LEG exercises to chose from!!</p>
+                </div>
+              </div>
+
+              <div class="buttons">
+                <div class="firstbtn" id="shouldersbtn">
+                  <%= image_tag "buttons/shoulders.psd", class: "btnpos" %>
+                  <p id="shouldersborder">Over 100 SHOULDER exercises to chose from!!</p>
+                </div>
+              </div>
+          
+
+              <div class="abscol move" id="absmove" style="display: none;">
+                <div class="titlebar">
+                    <h2>Abs and Obliques</h2>
+                    <button type="button" class="buttonexerciseshide" >Close</button>
+                </div>
+                    <% @abs.each do |abs| %>
+                
+                      <div class="exercisebox">
+                        <div class="imagebox">
+                        </div>
+                          <div class="info brown">
+                            <h2><%= abs.name %></h2>
+                            <p><%= abs.description %></p>
+                            <p class="checktext">Add exercise<%= ae.check_box "exercise_id[#{abs.id}]", {:class => "checkbox"}, true, false %></p>                
+                          </div>   
+                      </div>
+                    <% end %>
+                    <p>If there is an exercise you would like added to the list please email us at <%= mail_to "spthomas145@gmail.com" %> and we will add it for you</p>
+              </div>
+
+              <div class="armscol move" id="armsmove" style="display: none;">
+                <div class="titlebar">
+                  <h2>Biceps and Triceps</h2>
+                  <button type="button" class="buttonexerciseshide" >Close</button>
+                </div>
+                      <% @arms.each do |arm| %>
+                  
+                        <div class="exercisebox">
+                          <div class="imagebox">
+                          </div>
+                            <div class="info blue">
+                              <h2><%= arm.name %></h2>
+                              <p><%= arm.description %></p>
+                              <p class="checktext">Add exercise<%= ae.check_box "exercise_id[#{arm.id}]", {:class => "checkbox"}, true, false %></p>       
+                            </div>   
+                        </div>
+                      <% end %>
+                      <p>If there is an exercise you would like added to the list please email us at <%= mail_to "spthomas145@gmail.com" %> and we will add it for you</p>
+              </div>
+
+              <div class="cardiocol move" id="cardiomove" style="display: none;">
+                <div class="titlebar">
+                  <h2>Cardio</h2>
+                  <button type="button" class="buttonexerciseshide" >Close</button>
+                </div>
+                    <% @cardio.each do |cardio| %>
+                
+                      <div class="exercisebox">
+                        <div class="imagebox">
+                        </div>
+                          <div class="info red">
+                            <h2><%= cardio.name %></h2>
+                            <p><%= cardio.description %></p>
+                            <p class="checktext">Add exercise<%= ae.check_box "exercise_id[#{cardio.id}]", {:class => "checkbox"}, true, false %></p>
+                          </div>   
+                      </div>
+                    <% end %>
+                    <p>If there is an exercise you would like added to the list please email us at <%= mail_to "spthomas145@gmail.com" %> and we will add it for you</p>
+              </div>
+
+              <div class="shoulderscol move" id="shouldersmove" style="display: none;">
+                <div class="titlebar">
+                  <h2>Shoulders</h2>
+                  <button type="button" class="buttonexerciseshide" >Close</button>
+                </div>
+                    <% @shoulders.each do |shoulder| %>
+                
+                      <div class="exercisebox">
+                        <div class="imagebox">
+                        </div>
+                          <div class="info green">
+                            <h2><%= shoulder.name %></h2>
+                            <p><%= shoulder.description %></p>
+                            <p class="checktext">Add exercise<%= ae.check_box "exercise_id[#{shoulder.id}]", {:class => "checkbox"}, true, false %></p>          
+                          </div>   
+                      </div>
+                    <% end %>
+                    <p>If there is an exercise you would like added to the list please email us at <%= mail_to "spthomas145@gmail.com" %> and we will add it for you</p>
+              </div>
+
+
+              <div class="legscol move" id="legsmove" style="display: none;">
+                <div class="titlebar">
+                  <h2>Legs</h2>
+                  <button type="button" class="buttonexerciseshide" >Close</button>
+                </div>
+                    <% @legs.each do |legs| %>
+                
+                      <div class="exercisebox">
+                        <div class="imagebox">
+                        </div>
+                          <div class="info purple">
+                            <h2><%= legs.name %></h2>
+                            <p><%= legs.description %></p>
+                            <p class="checktext">Add exercise<%= ae.check_box "exercise_id[#{legs.id}]", {:class => "checkbox"}, true, false %></p>              
+                          </div>   
+                      </div>
+                    <% end %>
+                    <p>If there is an exercise you would like added to the list please email us at <%= mail_to "spthomas145@gmail.com" %> and we will add it for you</p>
+              </div>
+
+              <div class="chestcol move" id="chestmove" style="display: none;">
+                <div class="titlebar">
+                  <h2>Chest</h2>
+                  <button type="button" class="buttonexerciseshide" >Close</button>
+                </div>
+                    <% @chest.each do |chest| %>
+                
+                      <div class="exercisebox">
+                        <div class="imagebox">
+                        </div>
+                          <div class="info yellow">
+                            <h2><%= chest.name %></h2>
+                            <p><%= chest.description %></p>
+                            <p class="checktext">Add exercise<%= ae.check_box "exercise_id[#{chest.id}]", {:class => "checkbox"}, true, false %></p>
+                          </div>   
+                      </div>
+                    <% end %>
+                    <p>If there is an exercise you would like added to the list please email us at <%= mail_to "spthomas145@gmail.com" %> and we will add it for you</p>
+              </div>
+
+              <div class="backcol move" id="backmove" style="display: none;">
+                <div class="titlebar">
+                  <h2>Back</h2>
+                  <button type="button" class="buttonexerciseshide" >Close</button>
+                </div>
+                    <% @back.each do |back| %>
+                
+                      <div class="exercisebox">
+                        <div class="imagebox">
+                        </div>
+                          <div class="info orange">
+                            <h2><%= back.name %></h2>
+                            <p><%= back.description %></p>
+                            <p class="checktext">Add exercise<%= ae.check_box "exercise_id[#{back.id}]", {:class => "checkbox"}, true, false %></p>                
+                          </div>   
+                      </div>
+                    <% end %>
+                    <p>If there is an exercise you would like added to the list please email us at <%= mail_to "spthomas145@gmail.com" %> and we will add it for you</p>
+              </div>
+
+        </div>
+        
+    <% end %>
+    </div>
+</div>
