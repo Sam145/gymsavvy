@@ -7,6 +7,15 @@
 	
 		<div class="exercisebox">
 			<div class="imagebox">
+				<% if exercise.assets.size >= 1 %>
+					<% exercise.assets.each do |asset| %>
+						<%= image_tag(asset.image.url(:thumb)) %>
+					<% end %>
+				<% else %>
+					<div class="missingimage">
+						<span>Image To<br /> Come</span>
+					</div>
+				<% end %>
 			</div>
 			<div class="info blue">
 				<h2><%= exercise.name %></h2>

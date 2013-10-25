@@ -13,8 +13,12 @@
 	<div class="maintitlebar"><%= image_tag "title/maintitle.psd" %></div>
 	<div class="mainnavbar">
 		<ul>
-			<li>Sign up!</li>
-			<li>Log in</li>
+			<% if current_user %>
+				<li><%= link_to "Log out", log_out_path , class: "bob" %></li>
+			<% else %>
+				<li><%= link_to "Sign up", sign_up_path, class: "bob" %></li>
+				<li><%= link_to "log in", log_in_path, class: "bob" %></li>
+			<% end %>
 		</ul>
 	</div>
 </div>
@@ -49,6 +53,9 @@
 	</div>
 
 	<div id="container">
+		<% flash.each do |name, msg| %>
+		  <%= content_tag :div, msg, :id => "flash_#{name}" %>
+		<% end %>
 		<%= yield %>
 	</div>
 

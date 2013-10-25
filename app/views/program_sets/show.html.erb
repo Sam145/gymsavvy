@@ -2,16 +2,22 @@
 
 <h1>Your Program</h1>
 
-<!--  <%= link_to "Edit program", edit_program_path(@programs.first.id) %>
-  <%= link_to "Print program", "#" %> -->
-
 <div class="showprogram">
 
-	<% @programs.each do |program| %>
+	<% @program_set.programs.each do |program| %>
 
 		 
             <div class="exercisebox showexercise">
               <div class="imagebox">
+                <% if program.exercise.assets.size >= 1 %>
+                  <% program.exercise.assets.each do |asset| %>
+                    <%= image_tag(asset.image.url(:thumb)) %>
+                  <% end %>
+                <% else %>
+                  <div class="missingimage">
+                    <span>Image To<br /> Come</span>
+                  </div>
+                <% end %>
               </div>
                 <div class="showinfo <%=  case program.exercise.muscle_group
                                           when 'Cardio' then "red"
@@ -25,33 +31,34 @@
                                       %>" >
 
                   <h2><%= program.exercise.name %></h2>
+                  <div class="containsdetails">
                     <% if program.sets %>
                       <div class="details">
-                        <h1>SETS</h1>
+                        <h1>Sets</h1>
                         <span><%= program.sets %></span>
                       </div>
                     <% end %>
                     <% if program.reps %>
                       <div class="details">
-                        <h1>REPS</h1>
+                        <h1>Reps</h1>
                         <span><%= program.reps %></span>
                       </div>
                     <% end %>
                     <% if program.weight %>
                       <div class="details">
-                        <h1>WEIGHT</h1>
+                        <h1>Weight</h1>
                         <span><%= "#{program.weight} #{program.weight_unit}" %></span>
                       </div>
                     <% end %>
-                    <% if program.distance %>
+                    <% if program.distance_unit %>
                       <div class="details">
-                        <h1>DISTANCE</h1>
+                        <h1>Distance</h1>
                         <span><%= "#{program.distance} #{program.distance_unit}" %></span>
                       </div>
                     <% end %>
                     <% if program.swim_distance_unit %>
                       <div class="details">
-                        <h1>DISTANCE</h1>
+                        <h1>Distance</h1>
                         <span><%= "#{program.distance} #{program.swim_distance_unit}" %></span>
                       </div>
                     <% end %>
@@ -67,8 +74,10 @@
                         <span><%= program.hours %></span>
                       </div>
                     <% end %>
+                  </div>
                     
-                  <p><%= program.exercise.description %><span class="more">more</span></p>
+                  <p><%= program.exercise.description %></p>
+                  <span class="more">more</span>
                 </div>   
             </div>
 		
@@ -76,3 +85,6 @@
 </div>
 
 <hr>
+
+<%= link_to 'Edit', edit_program_set_path(@program_set) %> |
+<%= link_to 'Back', program_sets_path %>

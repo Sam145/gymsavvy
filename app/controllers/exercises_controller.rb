@@ -15,6 +15,7 @@ class ExercisesController < ApplicationController
 
   def new
   	@exercise = Exercise.new
+    3.times { @exercise.assets.build }
   end
 
   def create
@@ -29,6 +30,7 @@ class ExercisesController < ApplicationController
 
   def edit
     @exercise = Exercise.find(params[:id])
+    3.times { @exercise.assets.build }
   end
 
   def update

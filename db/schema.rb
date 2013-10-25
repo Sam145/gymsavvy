@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131019165713) do
+ActiveRecord::Schema.define(:version => 20131025141151) do
+
+  create_table "assets", :force => true do |t|
+    t.integer  "exercise_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.string   "image_file_size"
+  end
 
   create_table "exercises", :force => true do |t|
     t.string   "muscle_group"
@@ -22,14 +31,20 @@ ActiveRecord::Schema.define(:version => 20131019165713) do
     t.datetime "updated_at",   :null => false
   end
 
-  create_table "programs", :force => true do |t|
+  create_table "program_sets", :force => true do |t|
     t.integer  "user_id"
-    t.integer  "exercise_id"
-    t.integer  "sequence"
-    t.integer  "program_number"
-    t.integer  "rating"
     t.string   "name"
     t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "program_sets", ["user_id"], :name => "index_program_sets_on_user_id"
+
+  create_table "programs", :force => true do |t|
+    t.integer  "exercise_id"
+    t.integer  "sequence"
+    t.integer  "rating"
     t.string   "type"
     t.integer  "reps"
     t.integer  "sets"
@@ -45,9 +60,10 @@ ActiveRecord::Schema.define(:version => 20131019165713) do
     t.integer  "hours"
     t.integer  "minutes"
     t.integer  "seconds"
+    t.integer  "program_set_id"
   end
 
-  add_index "programs", ["user_id", "exercise_id"], :name => "index_programs_on_user_id_and_exercise_id"
+  add_index "programs", ["exercise_id"], :name => "index_programs_on_user_id_and_exercise_id"
 
   create_table "sequences", :force => true do |t|
     t.integer "counter_field", :default => 0, :null => false
@@ -58,8 +74,9 @@ ActiveRecord::Schema.define(:version => 20131019165713) do
     t.integer  "weight"
     t.string   "password_hash"
     t.string   "password_salt"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
+    t.boolean  "admin",         :default => false
   end
 
 end

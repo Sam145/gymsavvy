@@ -19,3 +19,30 @@
 		<td><%= f.select :option_types, options_for_select([['RS'], ['WRS'], ['DT'], ['SWIMDT'], ['T']]) %>
 	</tr>
 </table>
+
+	<div class="choosefile">
+		<%= f.fields_for :assets do |asset| %>
+		<ul>
+			<% if asset.object.new_record? %>
+				<li><%= asset.file_field :image %></li>
+			<% end %>
+		</ul>
+		<% end %>
+	</div>
+
+	<div class="imagesrow">		
+		<%= f.fields_for :assets do |asset| %>
+				<% unless asset.object.new_record? %>
+					<div class="mediumimage">
+						<%= link_to(image_tag(asset.object.image(:medium)), (asset.object.image(:large))) %>
+					</div>
+					<%= asset.check_box :_destroy %>
+				<% end %>
+		<% end %>
+	</div>
+
+
+
+
+
+

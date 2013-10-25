@@ -1,6 +1,6 @@
 <h1>Edit your exercise</h1>
 
-<%= form_for @exercise do |f| %>
+<%= form_for @exercise, html: { multipart: true}  do |f| %>
 	
 	<%= render(partial: 'form', locals: { f: f }) %>
 

@@ -71,19 +71,9 @@ class ProgramsController < ApplicationController
       redirect_to new_program_path
     end
 
- #   respond_to do |format|
- #     if @program.save
- #       format.html { redirect_to @program, notice: 'Program was successfully created.' }
- #       format.json { render json: @program, status: :created, location: @program }
- #     else
- #       format.html { render action: "new" }
- #       format.json { render json: @program.errors, status: :unprocessable_entity }
- #     end
- #   end
   end
 
-  # PUT /programs/1
-  # PUT /programs/1.json
+
   def update
     @program = Program.find(params[:id])
     @programs = Program.find(:all, conditions: { program_number: @program.program_number })
@@ -103,7 +93,6 @@ class ProgramsController < ApplicationController
         end
           find_exercises
           redirect_to edit_program_path(@new_programs.first.id)
-   #    flash[:success] = "You have created a Program!!"
       else
         ####### ISSUE! if no info provided the new action errors out, needs to be fixed
   #      render action: "new" 
@@ -133,14 +122,6 @@ class ProgramsController < ApplicationController
             program.destroy
           else
             program.update_attributes(params[@param_keys[i]])
-              if i == 0
-                prog_name = program.name
-                prog_description = program.description
-              end
-              if i > 0
-                program.name = prog_name
-                program.description = prog_description
-              end
             program.save
           end       
         i+=1
@@ -167,16 +148,6 @@ class ProgramsController < ApplicationController
     def set_counter
       sql = "UPDATE sequences SET counter_field = LAST_INSERT_ID(counter_field + 1);"
       ActiveRecord::Base.connection.execute(sql)
-    end
-
-    def find_exercises
-      @cardio = Exercise.cardio
-      @abs = Exercise.abs
-      @arms = Exercise.arms
-      @shoulders = Exercise.shoulders
-      @legs = Exercise.legs
-      @chest = Exercise.chest
-      @back = Exercise.back
     end
 
 end

@@ -1,0 +1,64 @@
+.createlink {
+	padding: 10px;
+}
+
+a.fakediv:link, a.fakediv:hover, a.fakediv:active, a.fakediv:visited{
+       display: block;
+       text-decoration: none;
+       color: white;
+       cursor: pointer;
+       outline: none;
+    }
+
+.thumbnailcontainer {
+	width: 650px;
+}
+
+.thumbposition {
+	float: left;
+}
+
+.thumbnailcontainer ul {
+	list-style: none;
+	padding: 0px;
+}
+
+.setthumbnail {
+	border: 2px solid;
+	margin: 10px;
+	width: 190px;
+	height: 230px;
+}
+
+.setthumbnail h1 {
+	text-align: center;
+	margin: 0px 0px 5px 0px;
+	padding: 5px 0px 5px 0px;
+	font-size: 18px;
+	height: 20px;
+	background: black;
+	color: white;
+}
+
+.setthumbnail ol {
+	padding-left: 30px;
+	height: 160px;
+	overflow:scroll;
+}
+
+.bhhh {
+	height: 35px;
+	width: 190px;
+	background: #FFFFA7;
+	text-align: center;
+}
+
+ul .thumbactionsul {
+	padding-top: 5px;
+}
+
+.thumbactionsul li {
+	height: 40px;
+	display: inline;
+	margin-top: 10px;
+}
