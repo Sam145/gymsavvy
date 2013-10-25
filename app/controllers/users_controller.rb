@@ -5,9 +5,10 @@ class UsersController < ApplicationController
   end
 
   def create
-  	@user = User.new(params[:user])
+  	user = User.new(params[:user])
 
-  	if @user.save
+  	if user.save
+      sign_in user
   		redirect_to root_url, notice: "Signed up!"
   	else
   		render 'new'

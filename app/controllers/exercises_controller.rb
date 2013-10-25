@@ -1,5 +1,8 @@
 class ExercisesController < ApplicationController
 
+  before_filter :signed_in_user
+  before_filter :admin?
+
   def index
     @cardio = Exercise.cardio
     @abs = Exercise.abs
@@ -49,5 +52,14 @@ class ExercisesController < ApplicationController
 
   	redirect_to exercises_path
   end
+
+
+  private
+
+  def admin?
+    redirect_to(log_in_path) unless current_user.admin?
+  end
+
+  
   
 end

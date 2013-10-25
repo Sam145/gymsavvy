@@ -1,8 +1,10 @@
 class ProgramSetsController < ApplicationController
 
+  before_filter :signed_in_user, only: :index
+
 
   def index
-    @program_sets = ProgramSet.all
+    @program_sets = current_user.program_sets
 
   end
 
@@ -73,6 +75,7 @@ class ProgramSetsController < ApplicationController
       ##### THIS PART UPDATES THE PROGRAM RECORDS ######
     if @program_set.update_attributes(params[:program_set])
       flash[:success] = "You have created a Program!!"
+      current_user.program_sets << @program_set
       redirect_to program_set_path(@program_set.id)
     else
       render 'edit'
