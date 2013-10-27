@@ -2,12 +2,9 @@
 	padding: 10px;
 }
 
-a.fakediv:link, a.fakediv:hover, a.fakediv:active, a.fakediv:visited{
-       display: block;
-       text-decoration: none;
-       color: white;
-       cursor: pointer;
-       outline: none;
+fakediv:hover{
+	color: white;
+	background: black;
     }
 
 .thumbnailcontainer {

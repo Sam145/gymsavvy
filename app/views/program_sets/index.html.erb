@@ -5,29 +5,30 @@
     <ul>
       <% @program_sets.each do |program_set| %>
 
-        <a class="fakediv">
-          <div class="thumbposition">  
-            <li>
-              <div class="setthumbnail">
-                <h1><%= program_set.name %></h1>
-                <ol>
-                  <% program_set.programs.each do |program| %>
-                    <li><%= program.exercise.name %>
-                  <% end %>
-                </ol>
+        <%= link_to(program_set) do %>
+          <div class="fakediv">
+            <div class="thumbposition">  
+              <li>
+                <div class="setthumbnail">
+                  <h1><%= program_set.name %></h1>
+                  <ol>
+                    <% program_set.programs.each do |program| %>
+                      <li><%= program.exercise.name %>
+                    <% end %>
+                  </ol>
 
-                <div class="bhhh">
-                  <ul class="thumbactionsul">
-                    <li><%= link_to 'View', program_set %></li>
-                    <li><%= link_to 'Edit', edit_program_set_path(program_set) %></li>
-                    <li><%= link_to 'Delete', program_set, method: :delete, data: { confirm: 'Are you sure?' }%></li>
-                  </ul>
+                  <div class="bhhh">
+                    <ul class="thumbactionsul">
+                      <li><%= link_to 'Edit', edit_program_set_path(program_set) %></li>
+                      <li><%= link_to 'Delete', program_set, method: :delete, data: { confirm: 'Are you sure?' }%></li>
+                    </ul>
+                  </div>
+
                 </div>
-
-              </div>
-            </li>
+              </li>
+            </div>
           </div>
-        </a>
+        <% end %>
       <% end %>
     </ul>
 </div>

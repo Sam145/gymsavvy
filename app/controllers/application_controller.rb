@@ -1,6 +1,14 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
+  	def pluraling(count, name)
+  		if count == 1
+  			1.to_s + ' name'
+  		else
+  			count.to_s ' name\'s'
+  		end
+  	end
+
 	def find_exercises
 	  @cardio = Exercise.cardio
 	  @abs = Exercise.abs

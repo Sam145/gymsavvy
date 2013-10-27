@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Your Programme</h1>
+<h1><%= !@program_set.name.blank? ? @program_set.name : "Your programme" %></h1>
+
+<%= link_to 'Edit programme', edit_program_set_path(@program_set) %> |
+<%= link_to 'Your programme list', program_sets_path %>
+
+<hr>
 
 <div class="showprogram">
 
@@ -90,6 +95,3 @@
 </div>
 
 <hr>
-
-<%= link_to 'Edit', edit_program_set_path(@program_set) %> |
-<%= link_to 'Back', program_sets_path %>

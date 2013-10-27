@@ -17,7 +17,16 @@
 					</div>
 				<% end %>
 			</div>
-			<div class="info blue">
+			<div class="info <%=  case exercise.muscle_group
+                                          when 'Cardio' then "red"
+                                          when 'Abs and Obliques' then "brown"
+                                          when 'Biceps and Triceps' then "blue"
+                                          when 'Shoulders' then "green" 
+                                          when 'Legs' then "purple"
+                                          when 'Chest' then "yellow"
+                                          when 'Back' then "orange"
+                                          end
+                                      %>">
 				<h2><%= exercise.name %></h2>
 				<p><%= exercise.description %></p>
 				<p>Option types:<%= exercise.option_types + " " + exercise.muscle_group %></p>

@@ -42,7 +42,7 @@ class ProgramSetsController < ApplicationController
         program.exercise = exercise
         @program_set.save
       end
-     flash[:success] = "You have created a Program!!"
+     flash[:success] = "You have created a programme!!"
      redirect_to edit_program_set_path(@program_set.id)
     else
       redirect_to new_program_sets_path
@@ -54,34 +54,23 @@ class ProgramSetsController < ApplicationController
   def update
     @program_set = ProgramSet.find(params[:id])
 
+        ##### THIS ADDS PROGRAMS TO PROGRAMS SET AND UPDATES RECORDS THEN REDIRECTS BACK TO EDIT ######
+    if params[:add_exercise] && @program_set.update_attributes(params[:program_set])
+        current_user.program_sets << @program_set
+        add_exercise
 
-    if params[:add_exercise]
-      @add_exercises = Exercise.find(params[:add_exercise][:exercise_id].keys)
-
-      if @add_exercises
-        @add_exercises.each do |exercise|
-          program = @program_set.programs.build
-          program.exercise = exercise
-          @program_set.save
+          ##### THIS JUST ADDS PROGRAMS TO PROGRAMS SET AND REDIRECTS BACK TO EDIT ######
+    elsif params[:add_exercise]
+        add_exercise
+    else
+        ##### THIS JUST UPDATES RECORDS AND REDIRECTS TO SHOW PAGE ######
+        if @program_set.update_attributes(params[:program_set])
+          flash[:success] = "Your programme has updated!!"
+          current_user.program_sets << @program_set
+          redirect_to program_set_path(@program_set.id)
+        else
+          render 'edit'
         end
-          redirect_to edit_program_set_path(@program_set.id)
-   #    flash[:success] = "You have created a Program!!"
-      else
-        ####### ISSUE! if no info provided the new action errors out, needs to be fixed
-  #      render action: "new" 
-      end
-
-    else
-      ##### THIS PART UPDATES THE PROGRAM RECORDS ######
-    if @program_set.update_attributes(params[:program_set])
-      flash[:success] = "You have created a Program!!"
-      current_user.program_sets << @program_set
-      redirect_to program_set_path(@program_set.id)
-    else
-      render 'edit'
-    end
-
-
     end 
 
   end
@@ -91,8 +80,31 @@ class ProgramSetsController < ApplicationController
   def destroy
     @program_set = ProgramSet.find(params[:id])
     @program_set.destroy
+    flash[:success] = "You have deleted a programme!!"
     redirect_to program_sets_path
 
+  end
+
+
+
+  private
+
+  def add_exercise
+      @add_exercises = Exercise.find(params[:add_exercise][:exercise_id].keys)
+
+      if @add_exercises
+        @add_exercises.each do |exercise|
+          program = @program_set.programs.build
+          program.exercise = exercise
+          @program_set.save
+        end
+          redirect_to edit_program_set_path(@program_set.id)
+          flash[:success] = "You added 
+            #{@add_exercises.count == 1 ? '1 exercise' : @add_exercises.count.to_s + ' exercises' } to your programme!!"
+      else
+        ####### ISSUE! if no info provided the new action errors out, needs to be fixed
+  #      render action: "new" 
+      end
   end
 
 end
