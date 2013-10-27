@@ -14,10 +14,10 @@
 	<div class="mainnavbar">
 		<ul>
 			<% if current_user %>
-				<li><%= link_to "Log out", log_out_path , class: "bob" %></li>
+				<li class="navlink"><%= link_to "Log out", log_out_path %></li>
 			<% else %>
-				<li><%= link_to "Sign up", sign_up_path, class: "bob" %></li>
-				<li><%= link_to "log in", log_in_path, class: "bob" %></li>
+				<li class="navlink"><%= link_to "Sign up", sign_up_path %></li>
+				<li class="navlink"><%= link_to "log in", log_in_path %></li>
 			<% end %>
 		</ul>
 	</div>
@@ -43,9 +43,9 @@
 			</ul>
 		</div>
 		<div class="links">
-			<h2>Injuerd?</h2>
+			<h2>Injured?</h2>
 			<ul>
-				<li>Common injurys</li>
+				<li>Common injuries</li>
 				<li>Ask the doc</li>
 				<li>Give advice</li>
 			</ul>

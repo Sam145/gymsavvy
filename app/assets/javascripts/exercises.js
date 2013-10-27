@@ -33,4 +33,51 @@ $(document).ready(function(){
 		});
 
 
+
+
+	$(".showexercise").each(function(){
+
+		var theContainer = $(this).closest(".showexercise")
+
+		var contentHeight = $(this).find(".descriptionContent").height();
+		var more = $(this).find(".more").hide();
+
+		theContainer.css({ "height" : 125 });
+		theContainer.find(".imagespace").css({ "height" : 125 });
+		theContainer.find(".descriptionContent").css({ 	"height" : "75px",
+														"overflow" : "hidden" });
+		theContainer.find(".less").hide();
+
+
+		if(contentHeight > 75) {
+			more.show()
+			more.click(function(){ 
+
+				theContainer.css({ "height" : "100%" });
+				theContainer.find(".imagespace").css({ "height" : "100%",
+														"margin-bottom" : "20px;"
+														 });
+				theContainer.find(".descriptionContent").css({ 	"height" : "100%",
+																"overflow" : "visible",
+																 });
+				theContainer.find(".less").show();	
+				more.hide();
+
+				$(".less").click(function(){
+					theContainer.css({ "height" : 125 });
+					theContainer.find(".imagespace").css({ "height" : 125 });
+					theContainer.find(".descriptionContent").css({ 	"height" : "75px",
+																	"overflow" : "hidden" });
+					theContainer.find(".less").hide()
+					more.show()
+				});
+			});
+		};
+	});
+
+	
+
+
+
+
 });

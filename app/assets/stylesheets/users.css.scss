@@ -2,11 +2,40 @@
 
 /* Home page */
 
+.homecontainer {
+	margin: 10px;
+}
+
 .siteponts {
 	color: #FF0F0F;
 	font-weight: bold;
 	font-size: 15px;
 }
 
+.featuresoutercontainer {
+	background: #E89E5F;
+	border: 3px solid #E8500C;
+	margin: 10px 0px 10px 0px;
+	border-radius: 10px;
+}
+
+.featuresinnercontainer {
+	margin: 10px;
+}
+
+.features {
+	color: blue;
+}
+
+.signupformouter {
+	background: #E89E5F;
+	border: 3px solid #E8500C;
+	width: 300px;
+}
+
+
+.signupforminner {
+	margin: 10px 20px 10px 20px;
+}
 
 

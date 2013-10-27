@@ -168,17 +168,28 @@
 	padding-top: 2px;
 	padding-bottom: 2px;
 	margin: 10px;
+	z-index: 2;
 }
 
 .showexercise {
+	min-height: 125px;
+	position:relative;
 	margin: 2px;
-	margin-bottom: 5px;
+	margin: 5px;
 	border: 3px solid #0C6727;
 	background: #D2FFD3;
 }
 
+.showimagebox {
+	height: 110px;
+	width: 110px;
+	border: 1px solid;
+	overflow: hidden;
+}
+
 .showinfo {
 	margin: 5px;
+	min-height: 80px;
 }
 
 .showinfo h1 {
@@ -188,26 +199,44 @@
 .showinfo h2 {
 	font-size: 25px;
 	margin: 5px;
-
+	margin-left: 122px;
 }
 
-.showinfo {
-	height: 80px;
+.descriptionContent {
+	min-height: 75px;
+	margin-left: 122px;
+	overflow: visible;
 }
 
 .more {
+	display: none;
 	color: blue;
 	margin-top: 5px;
-}
-
-.more:hover {
+	margin-left: 122px;
 	cursor: pointer;
 }
+
+.less {
+	color: blue;
+	margin-bottom: 5px;
+	margin-right: 5px;
+	cursor: pointer;
+
+}
+
+
+.imagespace {
+	position: absolute;
+	width: 110px;
+	margin: 6px 10px 5px 5px;
+}
+
 
 .details {
 	border-left: 2px solid red;
 	padding: 6px 9px 6px 9px;
 	text-align: center;
+	z-index: 3;
 	float: right;
 }
 
@@ -218,11 +247,6 @@
 
 .details span {
 	font-size: 15px;
-}
-
-.details p {
-	height: 70px;
-	overflow: hidden;
 }
 
 .containsdetails {

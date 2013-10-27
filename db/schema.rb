@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131025141151) do
+ActiveRecord::Schema.define(:version => 20131026090030) do
 
   create_table "assets", :force => true do |t|
     t.integer  "exercise_id"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(:version => 20131025141151) do
   create_table "exercises", :force => true do |t|
     t.string   "muscle_group"
     t.string   "name"
-    t.string   "description"
+    t.text     "description"
     t.string   "option_types"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
