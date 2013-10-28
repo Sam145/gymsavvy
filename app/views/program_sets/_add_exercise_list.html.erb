@@ -2,6 +2,10 @@
     <div class="icons">
       <%= fields_for :add_exercise do |ae| %>
       <div class="listedexercises">
+        <div class="pageheading">
+          <h2>Add exercises</h2>
+        </div>
+        
 
               <div class="buttons">
                 <div class="firstbtn" id="absbtn">
@@ -54,7 +58,7 @@
                         <%= render(partial: "exercise_iteration", locals: { exercise: exercise, ae: ae }) %>
 
                     <% end %>
-                    <p>If there is an exercise you would like added to the list please email us at <%= mail_to "spthomas145@gmail.com" %> and we will add it for you</p>
+                    <p class="emailexercise">If there is an exercise you would like added to the list please email us at <%= mail_to "spthomas145@gmail.com" %> and we will add it for you</p>
               </div>
 
               <div class="armscol move" id="armsmove" style="display: none;">
@@ -67,7 +71,7 @@
                           <%= render(partial: "exercise_iteration", locals: { exercise: exercise, ae: ae }) %>
 
                       <% end %>
-                      <p>If there is an exercise you would like added to the list please email us at <%= mail_to "spthomas145@gmail.com" %> and we will add it for you</p>
+                      <p class="emailexercise">If there is an exercise you would like added to the list please email us at <%= mail_to "spthomas145@gmail.com" %> and we will add it for you</p>
               </div>
 
               <div class="cardiocol move" id="cardiomove" style="display: none;">
@@ -80,7 +84,7 @@
                        <%= render(partial: "exercise_iteration", locals: { exercise: exercise, ae: ae }) %>
 
                     <% end %>
-                    <p>If there is an exercise you would like added to the list please email us at <%= mail_to "spthomas145@gmail.com" %> and we will add it for you</p>
+                    <p class="emailexercise">If there is an exercise you would like added to the list please email us at <%= mail_to "spthomas145@gmail.com" %> and we will add it for you</p>
               </div>
 
               <div class="shoulderscol move" id="shouldersmove" style="display: none;">
@@ -93,7 +97,7 @@
                        <%= render(partial: "exercise_iteration", locals: { exercise: exercise, ae: ae }) %>
 
                     <% end %>
-                    <p>If there is an exercise you would like added to the list please email us at <%= mail_to "spthomas145@gmail.com" %> and we will add it for you</p>
+                    <p class="emailexercise">If there is an exercise you would like added to the list please email us at <%= mail_to "spthomas145@gmail.com" %> and we will add it for you</p>
               </div>
 
 
@@ -107,7 +111,7 @@
                        <%= render(partial: "exercise_iteration", locals: { exercise: exercise, ae: ae }) %>
 
                     <% end %>
-                    <p>If there is an exercise you would like added to the list please email us at <%= mail_to "spthomas145@gmail.com" %> and we will add it for you</p>
+                    <p class="emailexercise">If there is an exercise you would like added to the list please email us at <%= mail_to "spthomas145@gmail.com" %> and we will add it for you</p>
               </div>
 
               <div class="chestcol move" id="chestmove" style="display: none;">
@@ -120,7 +124,7 @@
                         <%= render(partial: "exercise_iteration", locals: { exercise: exercise, ae: ae }) %>
 
                     <% end %>
-                    <p>If there is an exercise you would like added to the list please email us at <%= mail_to "spthomas145@gmail.com" %> and we will add it for you</p>
+                    <p class="emailexercise">If there is an exercise you would like added to the list please email us at <%= mail_to "spthomas145@gmail.com" %> and we will add it for you</p>
               </div>
 
               <div class="backcol move" id="backmove" style="display: none;">
@@ -133,7 +137,7 @@
                         <%= render(partial: "exercise_iteration", locals: { exercise: exercise, ae: ae }) %>
 
                     <% end %>
-                    <p>If there is an exercise you would like added to the list please email us at <%= mail_to "spthomas145@gmail.com" %> and we will add it for you</p>
+                    <p class="emailexercise">If there is an exercise you would like added to the list please email us at <%= mail_to "spthomas145@gmail.com" %> and we will add it for you</p>
               </div>
 
         </div>

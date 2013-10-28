@@ -6,6 +6,15 @@ class Exercise < ActiveRecord::Base
 
 	accepts_nested_attributes_for :assets, allow_destroy: true
 
+   validates :name, { presence: true, uniqueness: true }
+   validates :muscle_group, { presence: true }
+   validates :description, { presence: true }
+   validates :option_types, { presence: true }
+
+
+
+
+
    scope :cardio, where("muscle_group = ?", "Cardio")
    scope :abs, where("muscle_group = ?", "Abs and Obliques")
    scope :arms, where("muscle_group = ?", "Biceps and Triceps")

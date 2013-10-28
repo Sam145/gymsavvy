@@ -17,14 +17,12 @@ class ProgramSetsController < ApplicationController
   def new
     @program_set = ProgramSet.new
     find_exercises
-
   end
 
 
   def edit
     @program_set = ProgramSet.find(params[:id])
     find_exercises
-
   end
 
 
@@ -41,6 +39,7 @@ class ProgramSetsController < ApplicationController
         program = @program_set.programs.build
         program.exercise = exercise
         @program_set.save
+        current_user.program_sets << @program_set
       end
      flash[:success] = "You have created a programme!!"
      redirect_to edit_program_set_path(@program_set.id)

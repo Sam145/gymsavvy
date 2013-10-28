@@ -13,7 +13,51 @@ $(document).ready(function(){
 		});
 
 	$("#cardiobtn").on("click", function(){
-		$("#cardiomove").fadeIn();
+		$("#cardiomove").fadeIn(function(){
+
+					$(".moreless").each(function(){
+
+			        var theContainer = $(this);
+
+			        var contentHeight = theContainer.find(".addDescriptionContent").height();
+			        var more = theContainer.find(".addMore").hide();
+
+			        theContainer.css({ "height" : 125 });
+			        theContainer.find(".imagespace").css({ "height" : 125 });
+			        theContainer.find(".addDescriptionContent").css({  "height" : "70px",
+			                                                        "overflow" : "hidden" });
+			        theContainer.find(".less").hide();
+
+
+			        if(contentHeight > 70) {
+			            more.show()
+			            more.click(function(){ 
+
+			                theContainer.css({ "height" : "100%" });
+			                theContainer.find(".imagespace").css({ "height" : "100%",
+			                                                        "margin-bottom" : "20px;"
+			                                                         });
+			                theContainer.find(".addDescriptionContent").css({  "height" : "100%",
+			                                                                "overflow" : "visible",
+			                                                                 });
+			                theContainer.find(".less").show();  
+			                more.hide();
+
+			                $(".less").click(function(){
+			                    theContainer.css({ "height" : 125 });
+			                    theContainer.find(".imagespace").css({ "height" : 125 });
+			                    theContainer.find(".addDescriptionContent").css({  "height" : "70px",
+			                                                                    "overflow" : "hidden" });
+			                    theContainer.find(".less").hide()
+			                    more.show()
+			                });
+			            });
+
+			        };
+			    });
+
+		}
+		);
 		});
 
 	$("#chestbtn").on("click", function(){
@@ -29,8 +73,13 @@ $(document).ready(function(){
 		});
 
 	$(".buttonexerciseshide").on("click", function(){
+
+		$(this).closest(".move").find(".moreless").each(function(){
+			$(this).find(".addDescriptionContent").css({ "height" : "100%" });
+		})
+
 		$(this).closest(".move").fadeOut();
-		});
+	});
 
 
 

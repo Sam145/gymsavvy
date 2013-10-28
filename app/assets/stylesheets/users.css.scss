@@ -23,19 +23,30 @@
 	margin: 10px;
 }
 
+.featuresinnercontainer p {
+	font-style: italic;
+}
+
 .features {
 	color: blue;
 }
 
 .signupformouter {
+	display: none;
 	background: #E89E5F;
 	border: 3px solid #E8500C;
 	width: 300px;
+	border-radius: 5px;
 }
 
 
 .signupforminner {
 	margin: 10px 20px 10px 20px;
+}
+
+.signupforminner h1 {
+	color: #0081FF;
+	margin: 5px;
 }
 
 

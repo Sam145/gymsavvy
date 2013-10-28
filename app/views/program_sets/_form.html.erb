@@ -11,14 +11,23 @@
     </div>
   <% end %>
 
-  <p>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-  </p>
-      
+  <div class="programmeinformation name">
+    <p>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </p>
+  </div>
+
       <%= render "add_exercise_list" %>
+
+  <div class="programmeinformation desc">
+    <p>
+      <%= f.label :description %><br/ >
+      If you want to describe your programme then<br/ >
+      <%= f.text_area :description, cols: "50", rows: "3" %>
+    </p>
+    <input type="checkbox" >I would like a chance to make my programme public
+  </div>
 
 
   <div class="">

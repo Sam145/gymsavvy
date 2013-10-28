@@ -43,9 +43,36 @@
 	height: 30px;
 }
 
+
+/* --------------------------------------- */
+/* >>>>>>> PROGRAMME form fields  <<<<<<<< */
+/* --------------------------------------- */
+
+.programmeinformation {
+	padding: 10px;
+	background: #FFEE62;
+	border: 2px solid #968C3A;
+}
+
+.name {
+	margin: 10px 5px 10px 5px;
+}
+
+.desc {
+	margin: 0px 20px 20px 20px;
+}
+
+
+
 /* --------------------------------------- */
 /* >>>>>>>>>>> EXERCISE LIST <<<<<<<<<<<<< */
 /* --------------------------------------- */
+
+.search {
+	background: black;
+	color: white;
+	height: 30px;
+}
 
 .iconoutercontainer {
 	background: white;
@@ -197,7 +224,8 @@
 }
 
 .showinfo h2 {
-	font-size: 25px;
+	max-height: 20px;
+	font-size: 20px;
 	margin: 5px;
 	margin-left: 122px;
 }
@@ -221,7 +249,7 @@
 	margin-bottom: 5px;
 	margin-right: 5px;
 	cursor: pointer;
-
+	display: none;
 }
 
 
@@ -255,12 +283,39 @@
 }
 
 
+/* --------------------------------------- */
+/* >>>>>>>>>>> EDIT PROGRAM <<<<<<<<<<<<< */
+/* --------------------------------------- */
 
+.addDescriptionContent {
+	min-height: 70px;
+	margin-left: 122px;
+	overflow: visible;
+}
 
+.editExercisebox {
+	position: relative;
+	background: #D2FFD3;
+	min-height: 125px;
+	margin: 5px;
+	border: 1px solid #0C6727;
+}
 
+.emailexercise {
+	background: rgba(255, 255, 255, 0.8);;
+	border: 1px solid;
+	margin: 6px;
+	padding: 6px;
+}
 
-
-
+.addMore {
+	display: none;
+	float: left;
+	color: blue;
+	margin-top: 5px 5px 5px 5px;
+	margin-left: 122px;
+	cursor: pointer;
+}
 
 
 

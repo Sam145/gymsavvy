@@ -1,3 +1,11 @@
+<% if @exercise.errors.any? %>
+	<ul>
+		<% @exercise.errors.full_messages.each do |msg| %>
+		 <li><%= msg %></li>
+		<% end %>
+	</ul>
+<% end %>
+
 <table>
 	<tr>
 		<td><%= f.label :name %>
