@@ -6,16 +6,18 @@
 	<% type.each do |exercise| %>
 	
 		<div class="exercisebox">
-			<div class="imagebox">
-				<% if exercise.assets.size >= 1 %>
-					<% exercise.assets.each do |asset| %>
-						<%= image_tag(asset.image.url(:thumb)) %>
+			<div class="exerciseImageSpace" id="imageSpace">
+				<div class="imagebox">
+					<% if exercise.assets.size >= 1 %>
+						<% exercise.assets.each do |asset| %>
+							<%= image_tag(asset.image.url(:thumb)) %>
+						<% end %>
+					<% else %>
+						<div class="missingimage">
+							<span>Image To<br /> Come</span>
+						</div>
 					<% end %>
-				<% else %>
-					<div class="missingimage">
-						<span>Image To<br /> Come</span>
-					</div>
-				<% end %>
+				</div>
 			</div>
 			<div class="info <%=  case exercise.muscle_group
                                           when 'Cardio' then "red"
@@ -28,8 +30,11 @@
                                           end
                                       %>">
 				<h2><%= exercise.name %></h2>
-				<p><%= exercise.description %></p>
-				<p>Option types:<%= exercise.option_types + " " + exercise.muscle_group %></p>
+				<p class="exerciseDescriptionContent" id="descriptionContent"><%= exercise.description %>
+				<br/ ><span class='less'>less</span></p>
+				<span class="exerciseMore" id="more">more</span>
+				<p class="optype">Option type:<%= exercise.option_types + " " + exercise.muscle_group %></p>
+
 				<ul class="actions">
 					<li><%= link_to "Edit", edit_exercise_path(exercise) %></li>
 					<li><%= link_to "Delete", exercise, method: :delete, data: { confirm: "are you sure you want to delete this exercise?" } %></li>

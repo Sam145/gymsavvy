@@ -1,5 +1,14 @@
-<div class="editExercisebox moreless">
-  <div class="imagespace">
+<div class="editExercisebox moreless <%=  case exercise.muscle_group
+                      when 'Cardio' then "redbackground"
+                      when 'Abs and Obliques' then "brownbackground"
+                      when 'Biceps and Triceps' then "bluebackground"
+                      when 'Shoulders' then "greenbackground" 
+                      when 'Legs' then "purplebackground"
+                      when 'Chest' then "yellowbackground"
+                      when 'Back' then "orangebackground"
+                      end
+                  %>">
+  <div class="imagespace", id="#imageSpace">
     <div class="showimagebox">
       <% if exercise.assets.size >= 1 %>
         <% exercise.assets.each do |asset| %>
@@ -25,12 +34,12 @@
         <h2><%= exercise.name %></h2>
         
             <div class="addDescriptionContainer">
-              <p class="addDescriptionContent"><%= exercise.description %>
+              <p class="addDescriptionContent", id="descriptionContent"><%= exercise.description %>
               <br/ ><span class='less'>less</span></p>
             </div>
 
         <div class=""> 
-          <p class="checktext">Add exercise<%= ae.check_box "exercise_id[#{exercise.id}]", {:class => "checkbox"}, true, false %><span class="addMore">more</span></p>  
+          <p class="checktext">Add exercise<%= ae.check_box "exercise_id[#{exercise.id}]", {:class => "checkbox"}, true, false %><span class="addMore", id="more">more</span></p>  
         </div>              
       </div>   
 </div>

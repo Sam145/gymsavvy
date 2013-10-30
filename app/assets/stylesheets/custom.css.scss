@@ -6,13 +6,6 @@ body {
 	
 }
 
-.flash {
-	padding: 5px 5px 5px 10px;
-	height: 20px;
-	margin: 10px;
-	background: #D2FFD3;
-	border: 2px solid #0C6727;
-}
 
 #wrap {
 	width: 1024px;
@@ -91,6 +84,7 @@ body {
 }
 
 .links h2 {
+	font-size: 16px;
 	padding-top: 5px;
 	margin-bottom: 5px;
 }
@@ -170,7 +164,13 @@ body {
 	margin: 5px 0px 20px 0px;
 }
 
-
+.flash {
+	padding: 5px 5px 5px 10px;
+	height: 20px;
+	margin: 10px;
+	background: #D2FFD3;
+	border: 2px solid #0C6727;
+}
 
 
 

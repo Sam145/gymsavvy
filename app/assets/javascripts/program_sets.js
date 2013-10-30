@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+// Allows the exercises to reordered by dragging and dropping
+
 	$(function() {
     $( "#sortable" ).sortable({
     	stop: function(){

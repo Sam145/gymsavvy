@@ -1,6 +1,6 @@
-/* ------------------- */
-/* ------ FORM ------- */
-/* ------------------- */
+/* ----------------------------------- */
+/* ------ CREATE EXERCISE FORM ------- */
+/* ----------------------------------- */
 
 .imagesrow {
 	width: 630px;
@@ -24,14 +24,17 @@
 }
 
 
-/* ------------------- */
+/* ----------------------------------- */
+/* ---------- EXERCISE LIST ---------- */
+/* ----------------------------------- */
 
 .exercisebox {
-	position: relative;
-	background: #D2FFD3;
-	height: 125px;
+	min-height: 125px;
+	position:relative;
+	margin: 2px;
 	margin: 5px;
-	border: 1px solid #0C6727;
+	border: 3px solid #0C6727;
+	background: #D2FFD3;
 }
 
 .imagebox {
@@ -39,8 +42,12 @@
 	width: 110px;
 	border: 1px solid;
 	overflow: hidden;
-	float: left;
 	margin: 5px;
+}
+
+.exerciseImageSpace {
+	position: absolute;
+	width: 110px;
 }
 
 .missingimage {
@@ -62,6 +69,11 @@
 
 .info h2 {
 	margin: 5px;
+	margin-left: 122px;
+}
+
+.optype {
+	margin-left: 122px;
 }
 
 .red 	h2{ color: #991b1f; } /* CARDIO */
@@ -72,12 +84,19 @@
 .orange h2{ color: #ce7728; } /* BACK */
 .brown 	h2{ color: #5a3c29; } /* ABS */
 
-.info p {
-	overflow: hidden;
-	height: 60px;
+.exerciseDescriptionContent {
+	overflow: visible;
 	margin: 5px;
-	font-size: 13.5px;
+	margin-left: 122px;
+	font-size: 13px;
 	color: #666666;
+}
+
+.exerciseMore {
+	color: blue;
+	margin-top: 5px;
+	margin-left: 122px;
+	cursor: pointer;
 }
 
 .checktext {
@@ -100,45 +119,6 @@
 
 .actions li {
 	display: inline;
-}
-
-/* ------------------------- */
-/* >>>>>> FORM FIELDS <<<<<< */
-/* ------------------------- */
-
-#sortable { list-style-type: none; padding: 0px; }
-
-.fieldsarrowscontainer {
-	position: relative;
-	width: 610px;
-	height: 70px;
-}
-
-.fieldcontainer{
-	float: left;
-	height: 60px;
-	width: 360px;
-}
-
-.fieldsets {
-	width: 40px;
-}
-
-.fieldreps {
-	width: 40px;
-}
-
-.fieldweight {
-	width: 50px;
-}
-
-.fielddistance {
-	width: 50px;
-}
-
-.fieldstime {
-	width: 30px;
-	margin: 5px;
 }
 
 

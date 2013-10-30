@@ -13,7 +13,7 @@
 
 		 
             <div class="showexercise">
-              <div class="imagespace">
+              <div class="imagespace"  id="imageSpace">
                 <div class="showimagebox">
                   <% if program.exercise.assets.size >= 1 %>
                     <% program.exercise.assets.each do |asset| %>
@@ -84,10 +84,10 @@
                   </div>
                     
                     <div class="descriptionContainer">
-                      <p class="descriptionContent"><%= program.exercise.description %>
+                      <p class="descriptionContent"  id="descriptionContent"><%= program.exercise.description %>
                       <br/ ><span class='less'>less</span></p>
                     </div>
-                  <span class="more">more</span>
+                  <span class="more"  id="more">more</span>
                 </div>   
             </div>
 		

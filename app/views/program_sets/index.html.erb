@@ -7,8 +7,7 @@
     <ul>
       <% @program_sets.each do |program_set| %>
 
-        <%= link_to(program_set) do %>
-          <div class="fakediv">
+        <%= link_to program_set, class: "divlink" do %>
             <div class="thumbposition">  
               <li>
                 <div class="setthumbnail">
@@ -19,7 +18,7 @@
                     <% end %>
                   </ol>
 
-                  <div class="bhhh">
+                  <div class="thumbnaaillinks">
                     <ul class="thumbactionsul">
                       <li><%= link_to 'Edit', edit_program_set_path(program_set) %></li>
                       <li><%= link_to 'Delete', program_set, method: :delete, data: { confirm: 'Are you sure?' }%></li>
@@ -29,7 +28,6 @@
                 </div>
               </li>
             </div>
-          </div>
         <% end %>
       <% end %>
     </ul>

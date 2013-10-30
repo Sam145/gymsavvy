@@ -38,6 +38,7 @@ class ProgramSetsController < ApplicationController
       @add_exercises.each do |exercise|
         program = @program_set.programs.build
         program.exercise = exercise
+        set_name
         @program_set.save
         current_user.program_sets << @program_set
       end
@@ -105,5 +106,18 @@ class ProgramSetsController < ApplicationController
   #      render action: "new" 
       end
   end
+
+  def set_name
+     count = current_user.program_sets.count + 1
+    unless @program_set.name?
+      @program_set.name = "Program #{count}"
+    end
+  end
+
+
+
+
+
+
 
 end

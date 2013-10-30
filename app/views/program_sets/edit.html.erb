@@ -1,125 +1,123 @@
 
-<div class="form">
-	<%= form_for(@program_set) do |f| %>
-	  <% if @program_set.errors.any? %>
-	    <div id="error_explanation">
-	    	<h2><%= pluralize(@program_set.errors.count, "error") %> prohibited this program_set from being saved:</h2>
-	    	
-	      <ul>
-	      <% @program_set.errors.full_messages.each do |msg| %>
-	        <li><%= msg %></li>
-	      <% end %>
-	      </ul>
-	    </div>
-	  <% end %>
+<%= form_for(@program_set) do |f| %>
+  <% if @program_set.errors.any? %>
+    <div id="error_explanation">
+    	<h2><%= pluralize(@program_set.errors.count, "error") %> prohibited this program_set from being saved:</h2>
+    	
+      <ul>
+      <% @program_set.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
-	  <div class="formbottom">
-		<h2>Edit and personalise your programme</h2>
-		<p>Shuffle around your exercises until your happy with the order.</p>
-		<p>You can chose what weight, how many sets and reps and change them later to match your progession</p>
+  <div class="formbottom">
+	<h2>Edit and personalise your programme</h2>
+	<p>Shuffle around your exercises until your happy with the order.</p>
+	<p>You can chose what weight, how many sets and reps and change them later to match your progession</p>
 
-	<div class="programmeinformation name">
-	    <p>
-	      <%= f.label :name %>
-	      <%= f.text_field :name %>
-	    </p>
-	</div>
-
-		<% i = 1 %>
-		<% n = 0 %>
-		<ul id="sortable">
-					<%= f.fields_for :programs do |pr| %>
-					
-						<li id="<%= i %>">
-							<div class="exercisebox">
-						      <div class="imagebox">
-						      	<% if @program_set.programs[n].exercise.assets.size >= 1 %>
-									<% @program_set.programs[n].exercise.assets.each do |asset| %>
-										<%= image_tag(asset.image.url(:thumb)) %>
-									<% end %>
-								<% else %>
-									<div class="missingimage">
-										<span>Image To<br /> Come</span>
-									</div>
-								<% end %>
-						      </div>
-						        <div class="info <%=  case @program_set.programs[n].exercise.muscle_group
-                                          when 'Cardio' then "red"
-                                          when 'Abs and Obliques' then "brown"
-                                          when 'Biceps and Triceps' then "blue"
-                                          when 'Shoulders' then "green" 
-                                          when 'Legs' then "purple"
-                                          when 'Chest' then "yellow"
-                                          when 'Back' then "orange"
-                                          end
-                                      %>">
-						          <h2><span class="numberspan"><%= i %></span>.<%= @program_set.programs[n].exercise.name %></h2>
-						          	<div class="fieldsarrowscontainer">
-							          <div class="fieldcontainer">
-							          	<% if @program_set.programs[n].exercise.option_types == "DT" %>
-							          		<%= pr.label :distance %>
-							          		<%= pr.text_field :distance, value: @program_set.programs[n].distance, class: "fielddistance" %>
-											<%= pr.select :distance_unit, options_for_select([['miles'], ['kilometres']], selected: @program_set.programs[n].distance_unit) %><br>
-							          		<%= pr.text_field :hours, value: @program_set.programs[n].hours, class: "fieldstime" %>Hours<br>
-							          		<%= pr.text_field :minutes, value: @program_set.programs[n].minutes, class: "fieldstime" %>Minutes
-							          	<% elsif @program_set.programs[n].exercise.option_types == "SWIMDT"  %>
-							          		<%= pr.label :distance %>
-							          		<%= pr.text_field :distance, value: @program_set.programs[n].distance, class: "fielddistance" %>
-											<%= pr.select :swim_distance_unit, options_for_select([['metres'], ['lengths']], selected: @program_set.programs[n].swim_distance_unit ) %><br>
-							          		<%= pr.text_field :hours, value: @program_set.programs[n].hours, class: "fieldstime" %>Hours<br>
-							          		<%= pr.text_field :minutes, value: @program_set.programs[n].minutes, class: "fieldstime" %>Minutes
-							          	<% elsif @program_set.programs[n].exercise.option_types == "WRS"  %>
-							          		<%= pr.label :weight %>
-							          		<%= pr.text_field :weight, value: @program_set.programs[n].weight, class: "fieldweight" %>
-											<%= pr.select :weight_unit, options_for_select([['KGs'], ['lbs']], selected: @program_set.programs[n].weight_unit) %>
-							          		<%= pr.label :reps %>
-							          		<%= pr.text_field :reps, value: @program_set.programs[n].reps, class: "fieldreps" %>
-							          		<%= pr.label :sets %>
-							          		<%= pr.text_field :sets, value: @program_set.programs[n].sets, class: "fieldsets" %>
-							          	<% elsif @program_set.programs[n].exercise.option_types == "RS"  %>
-							          		<%= pr.label :reps %>
-							          		<%= pr.text_field :reps, value: @program_set.programs[n].reps, class: "fieldreps" %>
-							          		<%= pr.label :sets %>
-							          		<%= pr.text_field :sets, value: @program_set.programs[n].sets, class: "fieldsets" %>
-							          	<% elsif @program_set.programs[n].exercise.option_types == "T"  %>
-							          		<%= pr.text_field :hours, value: @program_set.programs[n].hours, class: "fieldstime" %>Hours<br>
-							          		<%= pr.text_field :minutes, value: @program_set.programs[n].minutes, class: "fieldstime" %>Minutes
-							          	<% end %>
-							          	<%= pr.hidden_field :sequence, value: i, class: "seq" %>
-							          </div>
-							        </div>
-
-						          <p class="checktext">Remove exercise<%= pr.check_box :_destroy, {:class => "checkbox"}, true, false %></p>
-
-						        </div>   
-						    </div>
-						</li>
-						<% i+=1 %>
-						<% n+=1 %>
-					<% end %>
-					
-		</ul>
-
-		<p>If you would like a chance to make your program public make sure you have filled in a name for the program and a description and tick the box.</p>
-
-		<%= render "add_exercise_list" %>
-
-		<div class="programmeinformation desc">
-		    <p>
-		      <%= f.label :description %><br/ >
-		      If you want to describe your programme then<br/ >
-		      <%= f.text_area :description, cols: "50", rows: "3" %>
-		    </p>
-		    <input type="checkbox" >I would like a chance to make my programme public
-		</div>
-
-		<div class="btn">
-	      <%= f.submit  %>
-	    </div>
-
-		<% end %>
-	</div>
-
-	<%= link_to 'Show', @program_set %> |
-	<%= link_to 'Back', program_sets_path %>
+<div class="programmeinformation name">
+    <p>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </p>
 </div>
+
+	<% i = 1 %>
+	<% n = 0 %>
+	<ul id="sortable">
+				<%= f.fields_for :programs do |pr| %>
+				
+					<li id="<%= i %>">
+						<div class="editexercisecnt">
+					      <div class="imagebox floatimagebox">
+					      	<% if @program_set.programs[n].exercise.assets.size >= 1 %>
+								<% @program_set.programs[n].exercise.assets.each do |asset| %>
+									<%= image_tag(asset.image.url(:thumb)) %>
+								<% end %>
+							<% else %>
+								<div class="missingimage">
+									<span>Image To<br /> Come</span>
+								</div>
+							<% end %>
+					      </div>
+					        <div class="info <%=  case @program_set.programs[n].exercise.muscle_group
+                                      when 'Cardio' then "red"
+                                      when 'Abs and Obliques' then "brown"
+                                      when 'Biceps and Triceps' then "blue"
+                                      when 'Shoulders' then "green" 
+                                      when 'Legs' then "purple"
+                                      when 'Chest' then "yellow"
+                                      when 'Back' then "orange"
+                                      end
+                                  %>">
+					          <h2><span class="numberspan"><%= i %></span>.<%= @program_set.programs[n].exercise.name %></h2>
+					          	<div class="fieldsarrowscontainer">
+						          <div class="fieldcontainer">
+						          	<% if @program_set.programs[n].exercise.option_types == "DT" %>
+						          		<%= pr.label :distance %>
+						          		<%= pr.text_field :distance, value: @program_set.programs[n].distance, class: "fielddistance" %>
+										<%= pr.select :distance_unit, options_for_select([['miles'], ['kilometres']], selected: @program_set.programs[n].distance_unit) %><br>
+						          		<%= pr.text_field :hours, value: @program_set.programs[n].hours, class: "fieldstime" %>Hours<br>
+						          		<%= pr.text_field :minutes, value: @program_set.programs[n].minutes, class: "fieldstime" %>Minutes
+						          	<% elsif @program_set.programs[n].exercise.option_types == "SWIMDT"  %>
+						          		<%= pr.label :distance %>
+						          		<%= pr.text_field :distance, value: @program_set.programs[n].distance, class: "fielddistance" %>
+										<%= pr.select :swim_distance_unit, options_for_select([['metres'], ['lengths']], selected: @program_set.programs[n].swim_distance_unit ) %><br>
+						          		<%= pr.text_field :hours, value: @program_set.programs[n].hours, class: "fieldstime" %>Hours<br>
+						          		<%= pr.text_field :minutes, value: @program_set.programs[n].minutes, class: "fieldstime" %>Minutes
+						          	<% elsif @program_set.programs[n].exercise.option_types == "WRS"  %>
+						          		<%= pr.label :weight %>
+						          		<%= pr.text_field :weight, value: @program_set.programs[n].weight, class: "fieldweight" %>
+										<%= pr.select :weight_unit, options_for_select([['KGs'], ['lbs']], selected: @program_set.programs[n].weight_unit) %>
+						          		<%= pr.label :reps %>
+						          		<%= pr.text_field :reps, value: @program_set.programs[n].reps, class: "fieldreps" %>
+						          		<%= pr.label :sets %>
+						          		<%= pr.text_field :sets, value: @program_set.programs[n].sets, class: "fieldsets" %>
+						          	<% elsif @program_set.programs[n].exercise.option_types == "RS"  %>
+						          		<%= pr.label :reps %>
+						          		<%= pr.text_field :reps, value: @program_set.programs[n].reps, class: "fieldreps" %>
+						          		<%= pr.label :sets %>
+						          		<%= pr.text_field :sets, value: @program_set.programs[n].sets, class: "fieldsets" %>
+						          	<% elsif @program_set.programs[n].exercise.option_types == "T"  %>
+						          		<%= pr.text_field :hours, value: @program_set.programs[n].hours, class: "fieldstime" %>Hours<br>
+						          		<%= pr.text_field :minutes, value: @program_set.programs[n].minutes, class: "fieldstime" %>Minutes
+						          	<% end %>
+						          	<%= pr.hidden_field :sequence, value: i, class: "seq" %>
+						          </div>
+						        </div>
+
+					          <p class="checktext">Remove exercise<%= pr.check_box :_destroy, {:class => "checkbox"}, true, false %></p>
+
+					        </div>   
+					    </div>
+					</li>
+					<% i+=1 %>
+					<% n+=1 %>
+				<% end %>
+				
+	</ul>
+
+	<p>If you would like a chance to make your program public make sure you have filled in a name for the program and a description and tick the box.</p>
+
+	<%= render "add_exercise_list" %>
+
+	<div class="programmeinformation desc">
+	    <p>
+	      <%= f.label :description %><br/ >
+	      If you want to describe your programme then<br/ >
+	      <%= f.text_area :description, cols: "50", rows: "3" %>
+	    </p>
+	    <input type="checkbox" >I would like a chance to make my programme public
+	</div>
+
+	<div class="btn">
+      <%= f.submit  %>
+    </div>
+
+	<% end %>
+</div>
+
+<%= link_to 'Show', @program_set %> |
+<%= link_to 'Back', program_sets_path %>

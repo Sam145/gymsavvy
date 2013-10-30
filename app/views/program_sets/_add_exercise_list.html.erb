@@ -6,6 +6,7 @@
           <h2>Add exercises</h2>
         </div>
         
+<!-- BUTTONS TO ADD EXERCISES -->
 
               <div class="buttons">
                 <div class="firstbtn" id="absbtn">
@@ -48,16 +49,21 @@
               </div>
           
 
+
+<!-- THESE ARE THE LISTS THAT OPEN WITH THE BUTTONS -->
+
               <div class="abscol move" id="absmove" style="display: none;">
                 <div class="titlebar">
                     <h2>Abs and Obliques</h2>
                     <button type="button" class="buttonexerciseshide" >Close</button>
                 </div>
-                    <% @abs.each do |exercise| %>
-                
-                        <%= render(partial: "exercise_iteration", locals: { exercise: exercise, ae: ae }) %>
 
+                  <div class="exercisescrolling">
+                    <% @abs.each do |exercise| %>               
+                        <%= render(partial: "exercise_iteration", locals: { exercise: exercise, ae: ae }) %>
                     <% end %>
+                  </div>
+
                     <p class="emailexercise">If there is an exercise you would like added to the list please email us at <%= mail_to "spthomas145@gmail.com" %> and we will add it for you</p>
               </div>
 
@@ -66,11 +72,13 @@
                   <h2>Biceps and Triceps</h2>
                   <button type="button" class="buttonexerciseshide" >Close</button>
                 </div>
-                      <% @arms.each do |exercise| %>
-                  
-                          <%= render(partial: "exercise_iteration", locals: { exercise: exercise, ae: ae }) %>
 
+                  <div class="exercisescrolling">
+                      <% @arms.each do |exercise| %>                  
+                          <%= render(partial: "exercise_iteration", locals: { exercise: exercise, ae: ae }) %>
                       <% end %>
+                  </div>
+
                       <p class="emailexercise">If there is an exercise you would like added to the list please email us at <%= mail_to "spthomas145@gmail.com" %> and we will add it for you</p>
               </div>
 
@@ -79,11 +87,13 @@
                   <h2>Cardio</h2>
                   <button type="button" class="buttonexerciseshide" >Close</button>
                 </div>
-                    <% @cardio.each do |exercise| %>
-                
-                       <%= render(partial: "exercise_iteration", locals: { exercise: exercise, ae: ae }) %>
 
+                  <div class="exercisescrolling">
+                    <% @cardio.each do |exercise| %>
+                       <%= render(partial: "exercise_iteration", locals: { exercise: exercise, ae: ae }) %>
                     <% end %>
+                  </div>
+
                     <p class="emailexercise">If there is an exercise you would like added to the list please email us at <%= mail_to "spthomas145@gmail.com" %> and we will add it for you</p>
               </div>
 
@@ -92,11 +102,13 @@
                   <h2>Shoulders</h2>
                   <button type="button" class="buttonexerciseshide" >Close</button>
                 </div>
-                    <% @shoulders.each do |exercise| %>
-                
-                       <%= render(partial: "exercise_iteration", locals: { exercise: exercise, ae: ae }) %>
 
+                  <div class="exercisescrolling">
+                    <% @shoulders.each do |exercise| %>
+                       <%= render(partial: "exercise_iteration", locals: { exercise: exercise, ae: ae }) %>
                     <% end %>
+                  </div>
+
                     <p class="emailexercise">If there is an exercise you would like added to the list please email us at <%= mail_to "spthomas145@gmail.com" %> and we will add it for you</p>
               </div>
 
@@ -106,11 +118,13 @@
                   <h2>Legs</h2>
                   <button type="button" class="buttonexerciseshide" >Close</button>
                 </div>
+
+                  <div class="exercisescrolling">
                     <% @legs.each do |exercise| %>        
-
                        <%= render(partial: "exercise_iteration", locals: { exercise: exercise, ae: ae }) %>
-
                     <% end %>
+                  </div>
+
                     <p class="emailexercise">If there is an exercise you would like added to the list please email us at <%= mail_to "spthomas145@gmail.com" %> and we will add it for you</p>
               </div>
 
@@ -119,11 +133,13 @@
                   <h2>Chest</h2>
                   <button type="button" class="buttonexerciseshide" >Close</button>
                 </div>
+
+                  <div class="exercisescrolling">
                     <% @chest.each do |exercise| %>
-
                         <%= render(partial: "exercise_iteration", locals: { exercise: exercise, ae: ae }) %>
-
                     <% end %>
+                  </div>
+
                     <p class="emailexercise">If there is an exercise you would like added to the list please email us at <%= mail_to "spthomas145@gmail.com" %> and we will add it for you</p>
               </div>
 
@@ -132,11 +148,13 @@
                   <h2>Back</h2>
                   <button type="button" class="buttonexerciseshide" >Close</button>
                 </div>
-                    <% @back.each do |exercise| %>
-                
-                        <%= render(partial: "exercise_iteration", locals: { exercise: exercise, ae: ae }) %>
 
+                  <div class="exercisescrolling">
+                    <% @back.each do |exercise| %>
+                        <%= render(partial: "exercise_iteration", locals: { exercise: exercise, ae: ae }) %>
                     <% end %>
+                  </div>
+
                     <p class="emailexercise">If there is an exercise you would like added to the list please email us at <%= mail_to "spthomas145@gmail.com" %> and we will add it for you</p>
               </div>
 
