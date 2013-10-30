@@ -17,7 +17,7 @@
 	<p>Shuffle around your exercises until your happy with the order.</p>
 	<p>You can chose what weight, how many sets and reps and change them later to match your progession</p>
 
-<div class="programmeinformation name">
+<div class="<%= male_female('programmeinformation') %> name">
     <p>
       <%= f.label :name %>
       <%= f.text_field :name %>
@@ -42,16 +42,7 @@
 								</div>
 							<% end %>
 					      </div>
-					        <div class="info <%=  case @program_set.programs[n].exercise.muscle_group
-                                      when 'Cardio' then "red"
-                                      when 'Abs and Obliques' then "brown"
-                                      when 'Biceps and Triceps' then "blue"
-                                      when 'Shoulders' then "green" 
-                                      when 'Legs' then "purple"
-                                      when 'Chest' then "yellow"
-                                      when 'Back' then "orange"
-                                      end
-                                  %>">
+					        <div class="info <%= font_color(@program_set.programs[n].exercise) %>">
 					          <h2><span class="numberspan"><%= i %></span>.<%= @program_set.programs[n].exercise.name %></h2>
 					          	<div class="fieldsarrowscontainer">
 						          <div class="fieldcontainer">
@@ -103,7 +94,7 @@
 
 	<%= render "add_exercise_list" %>
 
-	<div class="programmeinformation desc">
+	<div class="<%= male_female('programmeinformation') %> desc">
 	    <p>
 	      <%= f.label :description %><br/ >
 	      If you want to describe your programme then<br/ >

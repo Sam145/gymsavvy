@@ -18,7 +18,7 @@
                     <% end %>
                   </ol>
 
-                  <div class="thumbnaaillinks">
+                  <div class="<%= male_female('thumbnaaillinks') %>">
                     <ul class="thumbactionsul">
                       <li><%= link_to 'Edit', edit_program_set_path(program_set) %></li>
                       <li><%= link_to 'Delete', program_set, method: :delete, data: { confirm: 'Are you sure?' }%></li>

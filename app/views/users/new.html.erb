@@ -34,6 +34,8 @@
           <%= f.label :password_confirmation %><br />
           <%= f.password_field :password_confirmation %>
         </p>
+          Male <%= f.radio_button :mf, true %> 
+          Female <%= f.radio_button :mf, false %>
         <p class="Sign Up"><%= f.submit %></p>
         
       <% end %>

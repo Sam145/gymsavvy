@@ -20,8 +20,22 @@ class ApplicationController < ActionController::Base
 	end
 
 	helper_method :current_user
+	helper_method :male_female
+	helper_method :font_color
 
 	private
+
+	def font_color(exercise)
+		case exercise.muscle_group
+          when 'Cardio' then "red"
+          when 'Abs and Obliques' then "brown"
+          when 'Biceps and Triceps' then "blue"
+          when 'Shoulders' then "green" 
+          when 'Legs' then "purple"
+          when 'Chest' then "yellow"
+          when 'Back' then "orange"
+        end
+	end
 
 	def sign_in(user)
 		session[:user_id] = user.id
@@ -34,6 +48,18 @@ class ApplicationController < ActionController::Base
 
 	def current_user
 	  @current_user ||= User.find(session[:user_id]) if session[:user_id]
+	end
+
+	def male_female(css_class_name)
+		if !current_user.nil?
+			if current_user.mf?
+		  		"#{css_class_name} #{css_class_name}male"
+		  	else
+		  		"#{css_class_name} #{css_class_name}female"
+		  	end
+		else
+			"#{css_class_name}"
+		end
 	end
 
 	def signed_in_user

@@ -45,7 +45,7 @@ class ProgramSetsController < ApplicationController
      flash[:success] = "You have created a programme!!"
      redirect_to edit_program_set_path(@program_set.id)
     else
-      redirect_to new_program_sets_path
+      redirect_to new_program_set_path
     end
 
   end

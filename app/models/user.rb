@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :password, :password_confirmation
+  attr_accessible :email, :password, :password_confirmation, :mf
+  # mf: true, is female. mf: false, is male
 
   has_many :program_sets
 

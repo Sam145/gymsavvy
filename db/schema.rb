@@ -25,10 +25,10 @@ ActiveRecord::Schema.define(:version => 20131030113356) do
   create_table "exercises", :force => true do |t|
     t.string   "muscle_group"
     t.string   "name"
-    t.text     "description"
+    t.text     "description",  :limit => 255
     t.string   "option_types"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
   end
 
   create_table "program_sets", :force => true do |t|

@@ -1,14 +1,22 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
+ruby '2.0.0'
+gem 'rails_12factor'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
 gem "bcrypt-ruby", :require => "bcrypt"
 gem "paperclip", "~> 3.0"
 
+group :development, :test do 
+	gem 'sqlite3'
+end
+
+group :production do 
+	gem 'pg'
+end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

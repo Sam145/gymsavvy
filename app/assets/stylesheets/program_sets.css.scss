@@ -52,8 +52,16 @@
 .thumbnaaillinks {
 	height: 35px;
 	border-radius: 0px 0px 6px 6px;
-	background: #FFFFA7;
+
 	text-align: center;
+}
+
+.thumbnaaillinksmale {
+	background: #4688E8;
+}
+
+.thumbnaaillinksfemale {
+	background: #E87BB4;
 }
 
 ul .thumbactionsul {
@@ -76,6 +84,16 @@ ul .thumbactionsul {
 	padding: 10px;
 	background: #61A1BD;
 	border: 2px solid #385D6E;
+}
+
+.programmeinformationmale {
+	background: #899DFF;
+	border: 2px solid #3947BA;
+}
+
+.programmeinformationfemale {
+	background: #E29BE8;
+	border: 2px solid #BA548A;
 }
 
 .name {

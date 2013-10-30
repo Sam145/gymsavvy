@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-  <div class="programmeinformation name">
+  <div class="<%= male_female('programmeinformation') %> name">
     <p>
       <%= f.label :name %>
       <%= f.text_field :name %>
@@ -20,7 +20,7 @@
 
       <%= render "add_exercise_list" %>
 
-  <div class="programmeinformation desc">
+  <div class="<%= male_female('programmeinformation') %> desc">
     <p>
       <%= f.label :description %><br/ >
       If you want to describe your programme then<br/ >

@@ -55,7 +55,7 @@
 	<div id="container">
 
 		<% flash.each do |name, msg| %>
-		  <%= content_tag :div, msg, :class => "flash #{name}" %>
+		  <%= content_tag :div, msg, :class => male_female('flash') %>
 		<% end %>
 
 

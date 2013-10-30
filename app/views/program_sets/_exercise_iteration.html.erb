@@ -21,16 +21,7 @@
       <% end %>
     </div>
   </div>
-      <div class="showinfo  <%=  case exercise.muscle_group
-                      when 'Cardio' then "red"
-                      when 'Abs and Obliques' then "brown"
-                      when 'Biceps and Triceps' then "blue"
-                      when 'Shoulders' then "green" 
-                      when 'Legs' then "purple"
-                      when 'Chest' then "yellow"
-                      when 'Back' then "orange"
-                      end
-                  %>">
+      <div class="showinfo  <%= font_color(exercise) %>">
         <h2><%= exercise.name %></h2>
         
             <div class="addDescriptionContainer">
