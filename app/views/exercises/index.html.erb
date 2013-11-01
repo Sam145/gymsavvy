@@ -3,6 +3,7 @@
 <%= link_to "Add New Exercise", new_exercise_path %>
 
 <% @exercises.each do |type| %>
+	<h3 class="headerlisting"><%= type[0].muscle_group unless type.empty?  %></h3>
 	<% type.each do |exercise| %>
 	
 		<div class="exercisebox">

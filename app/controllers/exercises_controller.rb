@@ -4,14 +4,7 @@ class ExercisesController < ApplicationController
   before_filter :admin?
 
   def index
-    @cardio = Exercise.cardio
-    @abs = Exercise.abs
-    @arms = Exercise.arms
-    @shoulders = Exercise.shoulders
-    @legs = Exercise.legs
-    @chest = Exercise.chest
-    @back = Exercise.back
-
+    find_exercises
     @exercises = [ @cardio, @abs, @arms, @shoulders, @legs, @chest, @back ]
 
   end

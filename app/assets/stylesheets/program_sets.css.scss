@@ -235,15 +235,16 @@ ul .thumbactionsul {
 	float: left;
 }
 
-.firstbtn:hover {
-	cursor: pointer;
-}
-
 .btnpos {
 	position: absolute;
 	top: -20px;
 	left: -20px;
 	z-index: 2;
+}
+
+.btnpos:hover {
+	cursor: pointer;
+	top: -30px;
 }
 
 .secondbtn {
@@ -252,10 +253,6 @@ ul .thumbactionsul {
 	margin-left: 55px;
 	width: 220px;
 	float: left;	
-}
-
-.secondbtn:hover {
-	cursor: pointer;
 }
 
 

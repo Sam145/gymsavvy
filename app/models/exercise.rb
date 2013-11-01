@@ -1,6 +1,9 @@
 class Exercise < ActiveRecord::Base
    attr_accessible :name, :muscle_group, :description, :option_types, :assets_attributes
 
+   before_validation :capitalize_name
+
+
    has_one :program
    has_many :assets
 
@@ -24,6 +27,12 @@ class Exercise < ActiveRecord::Base
    scope :back, where("muscle_group = ?", "Back")
 
 
+
+   private
+
+   def capitalize_name
+      self.name.capitalize!
+   end
 
 
    
