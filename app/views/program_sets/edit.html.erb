@@ -30,7 +30,7 @@
 				<%= f.fields_for :programs do |pr| %>
 				
 					<li id="<%= i %>">
-						<div class="editexercisecnt">
+						<div class="<%= male_female('editexercisecnt') %>">
 					      <div class="imagebox floatimagebox">
 					      	<% if @program_set.programs[n].exercise.assets.size >= 1 %>
 								<% @program_set.programs[n].exercise.assets.each do |asset| %>

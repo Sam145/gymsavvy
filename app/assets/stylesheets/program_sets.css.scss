@@ -98,10 +98,12 @@ ul .thumbactionsul {
 
 .name {
 	margin: 10px 5px 10px 5px;
+	border-radius: 10px 10px 0px 0px;
 }
 
 .desc {
 	margin: 0px 20px 20px 20px;
+	border-radius: 0px 0px 10px 10px;
 }
 
 
@@ -121,6 +123,16 @@ ul .thumbactionsul {
 	border: 3px solid #0C6727;
 	background: #D2FFD3;
 	cursor: pointer;
+}
+
+.editexercisecntmale {
+	border: 3px solid #3947BA;
+	background: #c4e0f5;
+}
+
+.editexercisecntfemale {
+	border: 3px solid #BA548A;
+	background: #FFEBFF;
 }
 
 .fieldsarrowscontainer {
@@ -305,6 +317,16 @@ ul .thumbactionsul {
 	background: #D2FFD3;
 }
 
+.showexercisefemale {
+	border: 3px solid #BA548A;
+	background: #FFEBFF;
+}
+
+.showexercisemale {
+	border: 3px solid #3947BA;
+	background: #c4e0f5;
+}
+
 .showimagebox {
 	height: 110px;
 	width: 110px;
@@ -401,6 +423,15 @@ ul .thumbactionsul {
 	margin: 5px;
 	border: 1px solid;
 }
+
+.editExerciseboxmale {
+	background: white;
+}
+
+.editExerciseboxfemale {
+	background: #FFEBFF;
+}
+
 
 .redbackground { border: 3px solid #991b1f; }
 .brownbackground { border: 3px solid #5a3c29; }

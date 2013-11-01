@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131030113356) do
+ActiveRecord::Schema.define(:version => 20131101122803) do
 
   create_table "assets", :force => true do |t|
     t.integer  "exercise_id"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(:version => 20131030113356) do
     t.string   "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "category"
   end
 
   add_index "program_sets", ["user_id"], :name => "index_program_sets_on_user_id"

@@ -12,7 +12,7 @@
 	<% @program_set.programs.each do |program| %>
 
 		 
-            <div class="showexercise">
+            <div class="<%= male_female('showexercise') %>">
               <div class="imagespace"  id="imageSpace">
                 <div class="showimagebox">
                   <% if program.exercise.assets.size >= 1 %>
@@ -47,13 +47,13 @@
                         <span><%= "#{program.weight} #{program.weight_unit}" %></span>
                       </div>
                     <% end %>
-                    <% if program.distance_unit %>
+                    <% if program.distance_unit && program.distance %>
                       <div class="details">
                         <h1>Distance</h1>
                         <span><%= "#{program.distance} #{program.distance_unit}" %></span>
                       </div>
                     <% end %>
-                    <% if program.swim_distance_unit %>
+                    <% if program.swim_distance_unit && program.distance  %>
                       <div class="details">
                         <h1>Distance</h1>
                         <span><%= "#{program.distance} #{program.swim_distance_unit}" %></span>
