@@ -16,7 +16,11 @@
 			<% if current_user %>
 				<li class="navlink"><%= link_to "Log out", log_out_path %></li>
 			<% else %>
-				<li class="navlink" id="signup"><%= link_to "Sign up", "#" %></li>
+				<% if params[:action] == "new" && params[:controller] == "users" %>
+					<li class="navlink" id="signup"><%= link_to "Sign up", "#" %></li>
+				<% else %>
+					<li class="navlink" id="signup"><%= link_to "Sign up", sign_up_path %></li>
+				<% end %>
 				<li class="navlink"><%= link_to "log in", log_in_path %></li>
 			<% end %>
 		</ul>

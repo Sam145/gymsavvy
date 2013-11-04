@@ -19,9 +19,8 @@ class ApplicationController < ActionController::Base
 	  @back = Exercise.back
 	end
 
-	helper_method :current_user
-	helper_method :male_female
-	helper_method :font_color
+	helper_method [:current_user, :button_image, :male_female, :font_color ]
+
 
 	private
 
@@ -59,6 +58,18 @@ class ApplicationController < ActionController::Base
 		  	end
 		else
 			"#{css_class_name}"
+		end
+	end
+
+	def button_image(image_name)
+		if !current_user.nil?
+			if current_user.mf?
+		  		"buttons/male/#{image_name}"
+		  	else
+		  		"buttons/female/#{image_name}"
+		  	end
+		else
+			"#{image_name}"
 		end
 	end
 
