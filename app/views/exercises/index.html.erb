@@ -31,11 +31,9 @@
                                           end
                                       %>">
 				<h2><%= exercise.name %></h2>
-<<<<<<< HEAD
+
 				<p class="exerciseDescriptionContent" id="descriptionContent"><%=raw (exercise.description).gsub!(/\n/, '<br />') %>
-=======
-				<p class="exerciseDescriptionContent" id="descriptionContent"><%=raw exercise.description.gsub!(/\n/, '<br />') %>
->>>>>>> Changed exercise list to make html safe text input
+
 				<br/ ><span class='less'>less</span></p>
 				<span class="exerciseMore" id="more">more</span>
 				<p class="optype">Option type:<%= exercise.option_types + " " + exercise.muscle_group %></p>
