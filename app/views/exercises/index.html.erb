@@ -31,7 +31,7 @@
                                           end
                                       %>">
 				<h2><%= exercise.name %></h2>
-				<p class="exerciseDescriptionContent" id="descriptionContent"><%= exercise.description %>
+				<p class="exerciseDescriptionContent" id="descriptionContent"><%=raw (exercise.description).gsub!(/\n/, '<br />') %>
 				<br/ ><span class='less'>less</span></p>
 				<span class="exerciseMore" id="more">more</span>
 				<p class="optype">Option type:<%= exercise.option_types + " " + exercise.muscle_group %></p>

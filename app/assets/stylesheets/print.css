@@ -1,0 +1,106 @@
+
+/* ---------------------------------------------- */
+/* >>>>>>>>>>> SHOW STYLE FOR PRINT <<<<<<<<<<<<< */
+/* ---------------------------------------------- */
+
+.showprogram {	
+	padding-top: 2px;
+	padding-bottom: 2px;
+	margin-right: 200px;
+}
+
+.showexercise {
+	max-height: 50px;
+	min-width: 200px;
+	position: relative;
+	margin: 2px;
+	margin: 5px;
+	border-top: none; border-right: none; border-bottom: 1px solid black; border-left: none;
+	background: none;
+}
+
+.showexercisefemale { border-top: none; border-right: none; border-bottom: 1px solid black; border-left: none; background: none; }
+.showexercisemale { border-top: none; border-right: none; border-bottom: 1px solid black; border-left: none; background: none; }
+
+.showinfo {
+	margin: 5px;
+	height: 30px;
+}
+
+.showinfo h2 {
+	max-height: 15px;
+	font-size: 15px;
+	margin: 5px;
+	margin-left: 10px;
+	float: left;
+}
+
+.details {
+	border-left: 1px solid black;
+	padding: 0px 9px 0px 9px;
+	text-align: center;
+	float: right;
+}
+
+.details h1 {
+	padding-bottom: 0px;
+	font-size: 14px;
+	line-height: 10px;
+}
+
+.details span {
+	font-size: 12px;
+	line-height: 10px;
+	margin-bottom:5px;
+}
+
+.containsdetails {
+	max-height: 50px;
+	float: right;
+	margin-left: 5px;
+}
+
+.descriptionContent { display: none; }
+.moredelete 		{ display: none; }
+.less 				{ display: none; }
+.imagespace 		{ display: none; }
+.showimagebox 		{ display: none; }
+hr 					{ display: none; }
+
+
+/* ------------------------------------------------------ */
+/* >>>>>>>>>>>>>>> CUSTOM STYLE FOR PRINT <<<<<<<<<<<<<<< */
+/* ------------------------------------------------------ */
+
+.maintopbar { display: none; }
+
+/* >>>>>>> LEFT SIDE <<<<<<<<< */
+.leftside { display: none; }
+
+/* >>>>>>> RIGHT SIDE <<<<<<<<< */
+.rightside { display: none; }
+
+
+/* >>>>>>> SHARED PAGE CONTENT <<<<<<<<< */
+
+.pageheading {
+	text-align: left;
+	font-size: 14px;
+	margin: 5px 0px 20px 0px;
+}
+
+.minusforprint {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+

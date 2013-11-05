@@ -9,6 +9,7 @@ gem 'rails_12factor'
 
 gem "bcrypt-ruby", :require => "bcrypt"
 gem "paperclip", "~> 3.0"
+gem 'yaml_db'
 
 group :development, :test do 
 	gem 'sqlite3'

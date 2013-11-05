@@ -1,9 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= !@program_set.name.blank? ? @program_set.name : "Your programme" %></h1>
+<div class="pageheading">
+  <h1><%= !@program_set.name.blank? ? @program_set.name : "Your programme" %></h1>
+</div>
 
-<%= link_to 'Edit programme', edit_program_set_path(@program_set) %> |
-<%= link_to 'Your programme list', program_sets_path %>
+<div class="minusforprint">
+  <%= link_to 'Edit programme', edit_program_set_path(@program_set) %> |
+  <%= link_to 'Your programme list', program_sets_path %>
+  <%= link_to_function("Print this Page", "javascript:print()") %>
+</div>
 
 <hr>
 
@@ -74,10 +79,12 @@
                   </div>
                     
                     <div class="descriptionContainer">
-                      <p class="descriptionContent"  id="descriptionContent"><%= program.exercise.description %>
+                      <p class="descriptionContent"  id="descriptionContent"><%=raw (program.exercise.description).gsub!(/\n/, '<br />') %>
                       <br/ ><span class='less'>less</span></p>
                     </div>
-                  <span class="more"  id="more">more</span>
+                  <div class="moredelete">
+                    <span class="more"  id="more">more</span>
+                  </div>
                 </div>   
             </div>
 		

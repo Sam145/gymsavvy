@@ -1,0 +1,483 @@
+
+---
+users:
+  columns:
+  - id
+  - email
+  - weight
+  - password_hash
+  - password_salt
+  - created_at
+  - updated_at
+  - admin
+  - mf
+  records: 
+  - - 1
+    - steveandjanbox@gmx.com
+    - 
+    - $2a$10$qnRNT4vKNaG66tUsYizlZeVfTXEfb6OKfK0VRqvZt/8llmEtmefPS
+    - $2a$10$qnRNT4vKNaG66tUsYizlZe
+    - '2013-10-30 17:15:08.951652'
+    - '2013-10-30 17:17:00.217706'
+    - true
+    - false
+
+---
+programs:
+  columns:
+  - id
+  - exercise_id
+  - sequence
+  - rating
+  - type
+  - reps
+  - sets
+  - rest_time
+  - weight
+  - distance
+  - created_at
+  - updated_at
+  - time
+  - distance_unit
+  - swim_distance_unit
+  - weight_unit
+  - hours
+  - minutes
+  - seconds
+  - program_set_id
+  records: 
+  - - 1
+    - 1
+    - 1
+    - 
+    - 
+    - 10
+    - 3
+    - 
+    - 
+    - 
+    - '2013-10-30 17:31:24.386319'
+    - '2013-10-30 17:31:38.136979'
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 1
+
+---
+exercises:
+  columns:
+  - id
+  - muscle_group
+  - name
+  - description
+  - option_types
+  - created_at
+  - updated_at
+  records: 
+  - - 2
+    - Shoulders
+    - Alternating deltoid raise
+    - "1. From a standing position, hold a pair of dumbbells at your side.\r\n2. Keeping
+      your elbows slightly bent, raise the weights directly in front of you to shoulder
+      height.\r\n3. Return the weights to your original position.\r\n4. Now raise
+      them out to your sides up to shoulder height.\r\n5. Return the weights to the
+      starting position and continue alternating to the front and side.\r\n"
+    - WRS
+    - '2013-11-04 10:13:52.196123'
+    - '2013-11-04 12:46:03.812825'
+  - - 3
+    - Chest
+    - Alternating floor press
+    - "1. Lie on the floor with two kettlebells next to your shoulders.\r\n2. Position
+      one in place on your chest and then the other, gripping the kettlebells on the
+      handle with the palms facing forward.\r\n3. Extend both arms, so that the kettlebells
+      are being held above your chest. Lower one kettlebell, bringing it to your chest
+      and turn the wrist in the direction of the locked out kettlebell.\r\n4. Raise
+      the kettlebell and repeat on the opposite side."
+    - WRS
+    - '2013-11-04 13:59:51.637875'
+    - '2013-11-04 14:01:21.525456'
+  - - 4
+    - Biceps and Triceps
+    - Cross body hammer curl
+    - "1. Stand up straight with a dumbbell in each hand. Your hands should be down
+      at your side with your palms facing in.\r\n2. While keeping your palms facing
+      in and without twisting your arm, curl the dumbbell of the right arm up towards
+      your left shoulder as you exhale. Touch the top of the dumbbell to your shoulder
+      and hold the contraction for a second.\r\n3. Slowly lower the dumbbell along
+      the same path as you inhale and then repeat the same movement for the left arm.\r\nContinue
+      alternating in this fashion until the recommended amount of repetitions is performed
+      for each arm.\r\nVariations: You can also perform this exercise in between two
+      pulleys using the end of a rope attachment on each arm.\r\n\r\n"
+    - WRS
+    - '2013-11-04 14:04:56.951541'
+    - '2013-11-04 14:26:55.899958'
+  - - 5
+    - Legs
+    - 'Barbell glute bridge '
+    - "1. Begin seated on the ground with a loaded barbell over your legs. Using a
+      fat bar or having a pad on the bar can greatly reduce the discomfort caused
+      by this exercise. Roll the bar so that it is directly above your hips, and lay
+      down flat on the floor.\r\n2. Begin the movement by driving through with your
+      heels, extending your hips vertically through the bar. Your weight should be
+      supported by your upper back and the heels of your feet.\r\n3. Extend as far
+      as possible, then reverse the motion to return to the starting position."
+    - WRS
+    - '2013-11-04 14:10:22.859163'
+    - '2013-11-04 14:10:22.859163'
+  - - 6
+    - Legs
+    - Clean deadlift
+    - "1. Begin standing with a barbell close to your shins. Your feet should be directly
+      under your hips with your feet turned out slightly. Grip the bar with a double
+      overhand grip or hook grip, about shoulder width apart. Squat down to the bar.
+      Your spine should be in full extension, with a back angle that places your shoulders
+      in front of the bar and your back as vertical as possible.\r\n2. Begin by driving
+      through the floor through the front of your heels. As the bar travels upward,
+      maintain a constant back angle. Flare your knees out to the side to help keep
+      them out of the bar's path.\r\n3. After the bar crosses the knees, complete
+      the lift by driving the hips into the bar until your hips and knees are extended."
+    - WRS
+    - '2013-11-04 14:12:54.731961'
+    - '2013-11-04 14:12:54.731961'
+  - - 7
+    - Shoulders
+    - Backward medicine ball throw
+    - "This exercise is best done with a partner. If you lack a partner, the ball
+      can be thrown and retrieved or thrown against a wall.\r\n1. Begin standing a
+      few meters in front of your partner, both facing the same direction. Begin holding
+      the ball between your legs.\r\n2. Squat down and then forcefully reverse direction,
+      coming to full extension and you toss the ball over your head to your partner.\r\n3.
+      Your partner can then roll the ball back to you. Repeat for the desired number
+      of repetitions."
+    - WRS
+    - '2013-11-04 14:16:13.262617'
+    - '2013-11-04 14:17:10.119967'
+  - - 8
+    - Biceps and Triceps
+    - Close-grip standing barbell curl
+    - "1. Hold a barbell with both hands, palms up and a few inches apart.\r\n2. Stand
+      with your torso straight and your head up. Your feet should be about shoulder
+      width and your elbows close to your torso. This will be your starting position.
+      Tip: You will keep your upper arms and elbows stationary throughout the movement.\r\n3.
+      Curl the bar up in a semicircular motion until the forearms touch your biceps.
+      Exhale as you perform this portion of the movement and contract your biceps
+      hard for a second at the top. Tip: Avoid bending the back or using swinging
+      motions as you lift the weight. Only the forearms should move.\r\n4. Slowly
+      go back down to the starting position as you inhale.\r\nRepeat for the recommended
+      amount of repetitions."
+    - WRS
+    - '2013-11-04 14:20:13.685365'
+    - '2013-11-04 14:20:13.685365'
+  - - 9
+    - Chest
+    - Around the world
+    - "1. Lay down on a flat bench holding a dumbbell in each hand with the palms
+      of the hands facing towards the ceiling. Tip: Your arms should be parallel to
+      the floor and next to your thighs. To avoid injury, make sure that you keep
+      your elbows slightly bent. This will be your starting position.\r\n2. Now move
+      the dumbbells by creating a semi-circle as you displace them from the initial
+      position to over the head. All of the movement should happen with the arms parallel
+      to the floor at all times. Breathe in as you perform this portion of the movement.\r\n3.
+      Reverse the movement to return the weight to the starting position as you exhale.\r\n"
+    - WRS
+    - '2013-11-04 14:22:56.343214'
+    - '2013-11-04 14:22:56.343214'
+  - - 10
+    - Shoulders
+    - Arnold dumbbell press
+    - "1. Sit on an exercise bench with back support and hold two dumbbells in front
+      of you at about upper chest level with your palms facing your body and your
+      elbows bent. Tip: arms should be next to your torso. The starting position should
+      look like the contracted portion of a dumbbell curl.\r\n2. To perform the movement,
+      raise the dumbbells as you rotate the palms of your hands until they are facing
+      forward.\r\n3. Continue lifting the dumbbells until your arms are extended above
+      you in straight arm position. Breathe out as you perform this portion of the
+      movement.\r\n4. After a second pause at the top, begin to lower the dumbbells
+      to the original position by rotating the palms of your hands towards you. Tip:
+      The left arm will be rotated in a counter clockwise manner while the right one
+      will be rotated clockwise. Breathe in as you perform this portion of the movement."
+    - WRS
+    - '2013-11-04 14:29:23.395326'
+    - '2013-11-04 14:32:59.773064'
+  - - 11
+    - Abs and Obliques
+    - Ab roller
+    - "1. Hold the Ab Roller with both hands and kneel on the floor.\r\n2. Now place
+      the ab roller on the floor in front of you so that you are on all your hands
+      and knees (as in a kneeling push up position). This will be your starting position.\r\n3.
+      Slowly roll the ab roller straight forward, stretching your body into a straight
+      position. Tip: Go down as far as you can without touching the floor with your
+      body. Breathe in during this portion of the movement.\r\n4. After a pause at
+      the stretched position, start pulling yourself back to the starting position
+      as you breathe out. Tip: Go slowly and keep your abs tight at all times.\r\nCaution:
+      This exercise is not advised for people with lower back problems or hernias."
+    - RS
+    - '2013-11-04 14:35:26.626324'
+    - '2013-11-04 14:35:26.626324'
+  - - 12
+    - Abs and Obliques
+    - Air bike
+    - "1. Lie flat on the floor with your lower back pressed to the ground. For this
+      exercise, you will need to put your hands beside your head. Be careful however
+      to not strain with the neck as you perform it. Now lift your shoulders into
+      the crunch position.\r\n2. Bring knees up to where they are perpendicular to
+      the floor, with your lower legs parallel to the floor. This will be your starting
+      position.\r\n3. Simultaneously, slowly go through a cycle pedal motion kicking
+      forward with the right leg and bringing in the knee of the left leg. Bring your
+      right elbow close to your left knee by crunching to the side, as you breathe
+      out.\r\n4. Go back to the initial position as you breathe in.\r\nCrunch to the
+      opposite side as you cycle your legs and bring closer your left elbow to your
+      right knee and exhale.\r\n5. Continue alternating in this manner until all of
+      the recommended repetitions for each side have been completed."
+    - RS
+    - '2013-11-04 14:38:00.157046'
+    - '2013-11-04 14:38:00.157046'
+  - - 13
+    - Cardio
+    - Rope jumping
+    - "1. Hold an end of the rope in each hand. \r\n2. Position the rope behind you
+      on the ground. Raise your arms up and turn the rope over your head bringing
+      it down in front of you. \r\n3. When it reaches the ground, jump over it. Find
+      a good turning pace that can be maintained. Different speeds and techniques
+      can be used to introduce variation.\r\nRope jumping is fun, challenges your
+      coordination, and requires a lot of energy. A 150 lb person will burn about
+      350 calories jumping rope for 30 minutes, compared to over 450 calories running."
+    - RS
+    - '2013-11-04 14:48:13.544729'
+    - '2013-11-04 14:48:13.544729'
+  - - 14
+    - Cardio
+    - Cycling
+    - "1. To begin, seat yourself on the bike and adjust the seat to your height.\r\n2.
+      Wear protective gear to avoid possible injury. Ensure that you are courteous
+      to vehicles and pedestrians, and that you obey the rules of the road.\r\n3.
+      Cycling offers convenience, cardiovascular benefits, and has less impact than
+      other activities. A 150 lb person will burn about 280 calories cycling at a
+      moderate rate for 30 minutes, compared to 450 calories or more running."
+    - DT
+    - '2013-11-04 14:53:39.704778'
+    - '2013-11-04 14:53:39.704778'
+  - - 15
+    - Cardio
+    - Trail running/walking
+    - "1. Running or hiking on trails will get the blood pumping and heart beating
+      almost immediately. Make sure you have good shoes. While you use the muscles
+      in your calves and buttocks to pull yourself up a hill, the knees, joints and
+      ankles absorb the bulk of the pounding coming back down. Take smaller steps
+      as you walk downhill, keep your knees bent to reduce the impact and slow down
+      to avoid falling.\r\nA 150 lb person can burn over 200 calories for 30 minutes
+      walking uphill, compared to 175 on a flat surface. If running the trail, a 150
+      lb person can burn well over 500 calories in 30 minutes."
+    - DT
+    - '2013-11-04 14:55:28.112727'
+    - '2013-11-04 14:55:28.112727'
+  - - 16
+    - Abs and Obliques
+    - Bent-knee hip raise
+    - "1. Lay flat on the floor with your arms next to your sides.\r\n2. Now bend
+      your knees at around a 75 degree angle and lift your feet off the floor by around
+      2 inches.\r\n3. Using your lower abs, bring your knees in towards you as you
+      maintain the 75 degree angle bend in your legs. \r\n4. Continue this movement
+      until you raise your hips off of the floor by rolling your pelvis backward.
+      Breathe out as you perform this portion of the movement. Tip: At the end of
+      the movement your knees will be over your chest.\r\n5. Squeeze your abs at the
+      top of the movement for a second and then return to the starting position slowly
+      as you breathe in. Tip: Maintain a controlled motion at all times.\r\n6. Repeat\r\nVariations:
+      You can straighten your legs to make it harder or wear ankle weights."
+    - RS
+    - '2013-11-04 14:58:18.846221'
+    - '2013-11-04 14:59:05.276679'
+  - - 17
+    - Legs
+    - 'Bench sprint '
+    - "1. Stand on the ground with one foot resting on a bench or box with your heel
+      close to the edge.\r\n2. Push off with your foot on top of the bench, extending
+      through the hip and knee.\r\n3. Land with the opposite foot on top of the box,
+      returning your other foot back to the start position.\r\n4. Continue alternating
+      from one foot to another to complete the set."
+    - RS
+    - '2013-11-04 15:06:09.017122'
+    - '2013-11-04 15:06:09.017122'
+  - - 18
+    - Biceps and Triceps
+    - Farmers walk
+    - "There are various items that can be used for the farmers walk. These can also
+      be performed with heavy dumbbells or short bars. \r\n\r\n1. Begin by standing
+      between the weights.\r\nAfter gripping the handles, lift them up by driving
+      through your heels, keeping your back straight and your head up.\r\n2. Walk
+      taking short, quick steps, and don't forget to breathe. Move for a given distance,
+      typically 50-100 feet, as fast as possible."
+    - WRS
+    - '2013-11-04 15:11:15.568277'
+    - '2013-11-04 15:11:15.568277'
+  - - 19
+    - Chest
+    - Barbell bench press
+    - "1.Lie back on a flat bench. Using a medium width grip (a grip that creates
+      a 90-degree angle in the middle of the movement between the forearms and the
+      upper arms), lift the bar from the rack and hold it straight over you with your
+      arms locked. This will be your starting position.\r\n2. From the starting position,
+      breathe in and begin coming down slowly until the bar touches your middle chest.\r\n3.
+      After a brief pause, push the bar back to the starting position as you breathe
+      out. Focus on pushing the bar using your chest muscles. \r\n4. Lock your arms
+      and squeeze your chest in the contracted position at the top of the motion,
+      hold for a second and then start coming down slowly again. \r\nTip: Ideally,
+      lowering the weight should take about twice as long as raising it.\r\nRepeat
+      the movement for the prescribed amount of repetitions.\r\nWhen you are done,
+      place the bar back in the rack."
+    - WRS
+    - '2013-11-04 15:17:48.840230'
+    - '2013-11-04 15:17:48.840230'
+  - - 20
+    - Back
+    - Bent over two-arm long bar row
+    - "1. Put weight on one of the ends of an Barbell. Make sure that you either place
+      the other end of the barbell in the corner of two walls; or put a heavy object
+      on the ground so the barbell cannot slide backward.\r\n2. Bend forward until
+      your torso is as close to parallel with the floor as you can and keep your knees
+      slightly bent.\r\n3. Now grab the bar with both arms just behind the plates
+      on the side where the weight was placed and put your other hand on your knee.
+      This will be your starting position.\r\n4. Pull the bar straight up with your
+      elbows in (to maximize back stimulation) until the plates touch your lower chest.
+      \r\n5. Squeeze the back muscles as you lift the weight up and hold for a second
+      at the top of the movement. \r\n6. Breathe out as you lift the weight. Tip:
+      Use a stirrup or double handle cable attachment by hooking it under the end
+      of the bar.\r\nSlowly lower the bar to the starting position getting a nice
+      stretch on the lats. Tip: Do not let the plates touch the floor. To ensure the
+      best range of motion, I recommend using small plates (25-lb ones) as opposed
+      to larger plates (like 35-45lb ones).\r\nRepeat."
+    - WRS
+    - '2013-11-04 15:22:18.605798'
+    - '2013-11-04 15:22:18.605798'
+  - - 21
+    - Back
+    - Axle deadlift exercise
+    - "1. Approach the bar so that it is centered over your feet. You feet should
+      be about hip width apart. \r\n2. Bend at the hip to grip the bar at shoulder
+      width, allowing your shoulder blades to protract. Typically, you would use an
+      over/under grip.\r\n3. With your feet and your grip set, take a big breath and
+      then lower your hips and flex the knees until your shins contact the bar. \r\n4.Look
+      forward with your head, keep your chest up and your back arched, and begin driving
+      through the heels to move the weight upward.\r\n5. After the bar passes the
+      knees, aggressively pull the bar back, pulling your shoulder blades together
+      as you drive your hips forward into the bar.\r\n6. Lower the bar by bending
+      at the hips and guiding it to the floor."
+    - WRS
+    - '2013-11-04 15:26:25.916456'
+    - '2013-11-04 15:26:25.916456'
+  - - 22
+    - Back
+    - Alternating kettlebell row
+    - "1. Place two kettlebells in front of your feet. \r\n2. Bend your knees slightly
+      and push your butt out as much as possible. \r\n3. As you bend over to get into
+      the starting position grab both kettlebells by the handles.\r\n4. Pull one kettlebell
+      off of the floor while holding on to the other kettlebell. Retract the shoulder
+      blade of the working side, as you flex the elbow, drawing the kettlebell towards
+      your stomach or rib cage.\r\n5. Lower the kettlebell in the working arm and
+      repeat with your other arm."
+    - WRS
+    - '2013-11-04 15:29:06.522907'
+    - '2013-11-04 15:29:06.522907'
+  - - 23
+    - Cardio
+    - Swimming
+    - "Swimming can support up to 90% of the body’s weight in the water. It also means
+      you gain a full body workout. Because water is about 800 times denser than air,
+      you can work harder, and burn more calories, in a pool than out of it. Different
+      swimming strokes challenge different muscles within the body so you can choose
+      where you tone up.\r\nSwimming lengthens and strengthens your muscles. It is
+      the constant water-resistance, against any movement in any direction, that forces
+      your muscles to simultaneously contract and stretch, creating flexible and resilient
+      muscle fibers. In freestyle and backstroke, your arms pull and push underwater,
+      but you also must maintain your torso's position in the water itself so you're
+      exercising not only your triceps, biceps and deltoids but also your abdominals,
+      gluteals, ribcage intercostals, chest pectorals and hip stabilizers. In freestyle
+      and backstroke, you use a flutter kick, engaging predominantly your quadriceps
+      in the freestyle, hamstrings in the backstroke, and to a lesser degree, your
+      calf and foot muscles."
+    - SWIMDT
+    - '2013-11-04 15:40:09.035152'
+    - '2013-11-04 15:40:09.035152'
+  - - 24
+    - Abs and Obliques
+    - Sit-ups
+    - "1. Lie flat on your back on the floor with your knees bent and your legs secured
+      under a piece of heavy furniture.\r\n2. Cross your arms over your chest.\r\n3.
+      Flexing your abdominals, raise your torso until you are in nearly a sitting
+      position.\r\n4. Retaining tension on the abs, lower your torso to the beginning
+      position. (Note: Maintain full control throughout the movement. Avoid the temptation
+      to rock back and forth).\r\n"
+    - RS
+    - '2013-11-04 16:24:57.012653'
+    - '2013-11-04 16:24:57.012653'
+  - - 25
+    - Abs and Obliques
+    - Leg raises
+    - "2. Lie flat on your back on the floor with your legs straight in front of you.\r\n3.
+      Place your hands at your sides by the floor for support.\r\n4. Flexing your
+      lower abdominals, raise your legs until they are perpendicular to the floor.\r\n5.
+      Retaining tension on the abs, lower your legs to the beginning position. Repeat
+      (Note: Maintain full control throughout the movement. Avoid the temptation to
+      let your legs drop on the negative portion of the movement).\r\n"
+    - RS
+    - '2013-11-04 16:26:34.597341'
+    - '2013-11-04 16:26:34.597341'
+  - - 26
+    - Abs and Obliques
+    - Lying leg raise and crunch
+    - "1. Lie flat on your back on the floor with your legs straight in front of you.\r\n2.
+      Place your hands at your sides by the floor for support.\r\n3. Flexing your
+      lower abdominals, raise your legs until they are perpendicular to the floor.\r\n4.
+      Now , raise your shoulders and torso as far as possible from the ground in a
+      curling movement without raising your back from the floor.\r\n5. Retaining tension
+      on the abs, lower your legs to the beginning position and then bring your torso
+      to the starting position as well. (Note: Maintain full control throughout the
+      movement. Avoid the temptation to rock back and forth)."
+    - RS
+    - '2013-11-04 16:28:15.710005'
+    - '2013-11-04 16:28:15.710005'
+  - - 27
+    - Abs and Obliques
+    - Bicycle crunch
+    - "1. Lie on your back and bring your knees up toward your chest. Place your hands
+      behind your head with your elbows extended out and lift your head and shoulders
+      off of the mat.\r\nTip: Do not pull on your neck, you should be lifting with
+      your abdominals.\r\n2. Now extend one leg out as you twist your body so that
+      your elbow comes toward the opposite bent knee.   Keep your shoulders off the
+      floor. Focus your eyes toward the lower elbow and do not allow the elbows to
+      fold in toward each other.\r\n3. Now inhale as you twist in the opposite direction
+      pulling the extended leg in towards you while simultaneously extending the other
+      leg. Keep the extended leg 6 to 10 inches off the floor. Be sure to stretch
+      the leg out long and with control. Keep the abdominals contracted and your low
+      back pressed into the mat.\r\n4. Exhale completely to complete the repetition.\r\n5.
+      When you have finished, hug both of your knees into your chest and hold for
+      thirty seconds or more to stretch out your back.\r\n"
+    - RS
+    - '2013-11-04 16:39:14.141581'
+    - '2013-11-04 16:39:29.094675'
+  - - 28
+    - Abs and Obliques
+    - Knee-ins
+    - "1. Sit on the floor (or on the edge of a chair or exercise bench) with your
+      legs extended in front of you and your hands holding on to the sides for support.\r\n2.
+      Keeping your knees together, pull your knees in towards your chest until you
+      can go no farther.\r\n3. Keeping the tension on your lower ab muscles, return
+      to the start position and repeat the movement until you have completed your
+      set.\r\n"
+    - RS
+    - '2013-11-04 16:44:46.657579'
+    - '2013-11-04 16:44:46.657579'
+  - - 29
+    - Abs and Obliques
+    - Medicine ball push-up
+    - "1. Place a medicine ball on the floor and grab each side of it, in a standard
+      pushup position. \r\n2. Lower your body until your chest is about an inch above
+      the ball,  and then push yourself back up. Repeat."
+    - RS
+    - '2013-11-04 16:52:40.197233'
+    - '2013-11-04 16:52:40.197233'
