@@ -6,10 +6,31 @@ body {
 	
 }
 
-
 #wrap {
 	width: 1024px;
+
 	margin: 0 auto;
+	position: relative;
+
+}
+
+
+.foot {
+	position: relative;
+	width: 1024px;
+	background: #222e39;
+	color: white;
+	height: 200px;
+	margin: 0 auto;
+}
+
+.clearfooter {
+	height: 20px;
+	clear: both;
+}
+
+.personalinfo {
+	margin: 20px 10px 10px 50px;
 }
 
 .mainbar {
@@ -54,9 +75,6 @@ body {
 	background: none;
 }
 
-#maincontainer {
-	overflow: auto;
-}
 
 
 

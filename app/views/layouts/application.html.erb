@@ -8,78 +8,86 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
 <div id="wrap">
 
-<div class="maintopbar">
-	<div class="maintitlebar"><%= image_tag "title/maintitle.psd" %></div>
-	<div class="mainnavbar">
-		<ul>
-			<% if current_user %>
-				<li class="navlink"><%= link_to "Log out", log_out_path %></li>
-			<% else %>
-				<% if params[:action] == "new" && params[:controller] == "users" %>
-					<li class="navlink" id="signup"><%= link_to "Sign up", "#" %></li>
+	<div class="maintopbar">
+		<div class="maintitlebar"><%= image_tag "title/maintitle.psd" %></div>
+		<div class="mainnavbar">
+			<ul>
+				<% if current_user %>
+					<li class="navlink"><%= link_to "My programmes", program_sets_path %></li>
+					<li class="navlink"><%= link_to "Log out", log_out_path %></li>
 				<% else %>
-					<li class="navlink" id="signup"><%= link_to "Sign up", sign_up_path %></li>
+					<% if params[:action] == "new" && params[:controller] == "users" %>
+						<li class="navlink" id="signup"><%= link_to "Sign up", "#" %></li>
+						<li class="navlink"  id="login"><%= link_to "log in", "#" %></li>
+					<% else %>
+						<li class="navlink" id="signup"><%= link_to "Sign up", sign_up_path %></li>
+						<li class="navlink"  id="login"><%= link_to "log in", log_in_path %></li>
+					<% end %>				
 				<% end %>
-				<li class="navlink"><%= link_to "log in", log_in_path %></li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="maincontainer">
+		<div class="leftside">
+			<div class="links">
+				<h2>Mens Programmes</h2>
+				<ul>
+					<li>Bulking up</li>
+					<li>Lean machine</li>
+					<li>Lose a few</li>
+				</ul>
+			</div>
+			<div class="links">
+				<h2>Womans Programmes</h2>
+				<ul>
+					<li>Pear Shape</li>
+					<li>Apple Shape</li>
+					<li>Hour Glass Shape</li>
+					<li>Tube Shape</li>
+				</ul>
+			</div>
+			<div class="links">
+				<h2>Injured?</h2>
+				<ul>
+					<li>Common injuries</li>
+					<li>How to avoid injury</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="container">
+
+			<% flash.each do |name, msg| %>
+			  <%= content_tag :div, msg, :class => male_female('flash') %>
 			<% end %>
-		</ul>
-	</div>
-</div>
 
-<div id="maincontainer">
-	<div class="leftside">
-		<div class="links">
-			<h2>Mens Programmes</h2>
-			<ul>
-				<li>Fat Burn</li>
-				<li>Muscle Build</li>
-				<li>Where did i go wronge</li>
-			</ul>
+			<%= yield %>
 		</div>
-		<div class="links">
-			<h2>Womans Programmes</h2>
-			<ul>
-				<li>Pear Shaped</li>
-				<li>Apple Shaped</li>
-				<li>Hour Glass</li>
-				<li>Tube</li>
-			</ul>
-		</div>
-		<div class="links">
-			<h2>Injured?</h2>
-			<ul>
-				<li>Common injuries</li>
-				<li>Ask the doc</li>
-				<li>Give advice</li>
-			</ul>
-		</div>
-	</div>
 
-	<div id="container">
-
-		<% flash.each do |name, msg| %>
-		  <%= content_tag :div, msg, :class => male_female('flash') %>
-		<% end %>
-
-
-		<%= yield %>
-	</div>
-
-	<div class="rightside">
-		<div class="advertising">
-			<h1>Adverts</h1>
-			<div class="image">
-				<%= image_tag "protein_shake.gif", :alt => "protein shake" %>
-			</div>
-			<div class="image">
-				<%= image_tag "sand_bell.gif", :alt => "sand bell" %>
+		<div class="rightside">
+			<div class="advertising">
+				<h1>Adverts</h1>
+				<div class="image">
+					<%= image_tag "protein_shake.gif", :alt => "protein shake" %>
+				</div>
+				<div class="image">
+					<%= image_tag "sand_bell.gif", :alt => "sand bell" %>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
 </div>
+<div class="clearfooter"></div>
+	<div class="foot">
+		<p class="personalinfo">Created by Sam Thomas<br />
+			support@gymsays.co.uk
+		</p>
+	</div>
+
 </body>
 </html>

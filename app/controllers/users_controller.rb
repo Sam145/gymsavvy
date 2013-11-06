@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
   	if user.save
       sign_in user
-  		redirect_to program_sets_path, notice: "Hi there! Welcome to your gym buddy"
+  		redirect_to new_program_set_path, notice: "Hi there! Welcome to your gym buddy"
   	else
   		render 'new'
   	end

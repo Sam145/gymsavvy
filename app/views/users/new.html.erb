@@ -6,42 +6,84 @@
   <p><span class="siteponts">CREATE PROGRAMME</span> - Although there are plenty of programmes to choose from, sometimes it's easier just to create exactly what you want from scratch. Use this feature by browsing and selecting the exercises and adjusting the weights and distances to match your current fitness level. As you progress, alter the exercises/weights/distances until you reach you goal.</p><br> 
 
 
-  <div class="signupformouter">
-    <div class="signupforminner">
-      <h1>Sign Up!</h1>
+<div class="signlog">
+  <div id="formsleftside">
+    <div class="signupformouter">
+      <div class="signupforminner">
+        <h1>Sign Up!</h1>
 
-      <%= form_for @user do |f| %>
-        <% if @user.errors.any? %>
-          <div class="error_messages">
-            <h2>Form is invalid</h2>
-            <ul>
-              <% for message in @user.errors.full_messages %>
-                <li><%= message %></li>
-              <% end %>
-            </ul>
-          </div>
+        <%= form_for @user do |f| %>
+          <% if @user.errors.any? %>
+            <div class="error_messages">
+              <h2>Form is invalid</h2>
+              <ul>
+                <% for message in @user.errors.full_messages %>
+                  <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+          <p>
+            <%= f.label :email %><br />
+            <%= f.text_field :email %>
+          </p>
+          <p>
+            <%= f.label :password %><br />
+            <%= f.password_field :password %>
+          </p>
+          <p>
+            <%= f.label :password_confirmation %><br />
+            <%= f.password_field :password_confirmation %>
+          </p>
+            Male <%= f.radio_button :mf, true %> 
+            Female <%= f.radio_button :mf, false %>
+          <p class="Sign Up"><%= f.submit %></p>
+          
         <% end %>
-
-        <p>
-          <%= f.label :email %><br />
-          <%= f.text_field :email %>
-        </p>
-        <p>
-          <%= f.label :password %><br />
-          <%= f.password_field :password %>
-        </p>
-        <p>
-          <%= f.label :password_confirmation %><br />
-          <%= f.password_field :password_confirmation %>
-        </p>
-          Male <%= f.radio_button :mf, true %> 
-          Female <%= f.radio_button :mf, false %>
-        <p class="Sign Up"><%= f.submit %></p>
-        
-      <% end %>
+      </div>
     </div>
   </div>
 
+  <div class="or">
+    <h2>OR</h2>
+  </div>
+
+  <div id="formsrightside">
+    <div class="loginwhichcnt">
+      <div class="whichform">
+        <div class="imagecntfor">
+          <div class="loginbelow">
+            <p>If your already a member<br /> use the login below</p>
+          </div>
+        </div>
+        <div class="imagecntfor">
+          <div class="signupright">
+            <p>If your not yet a member<br /> just use the sign up on your right</p>
+          </div>
+        </div>
+      </div>
+      <div class="loginformouter">
+        <div class="loginforminner">
+          <h1>Log in!</h1>
+
+          <%= form_tag sessions_path do %>
+            <p>
+              <%= label_tag :email %><br />
+              <%= text_field_tag :email, params[:email] %>
+            </p>
+            <p>
+              <%= label_tag :password %><br />
+              <%= password_field_tag :password %>
+            </p>
+            <p class="button"><%= submit_tag "Log in" %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
 
 
 <div class="featuresoutercontainer">

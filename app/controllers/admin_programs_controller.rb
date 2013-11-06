@@ -1,17 +1,50 @@
 class AdminProgramsController < ApplicationController
 
-	def index
-		user = User.find_by_email("spthomas145@gmail.com")
+	before_filter :set_user
 
-		# male preset programmes
-		fat_burn_programmes = user.program_sets.where(category: "fat burn")
-		muscle_build_programmes = user.program_sets.where(category: "muscle build")
+	# Guys preset programmes section
 
-		# female preset programmes
-		pear_shape_programmes = user.program_sets.where(category: "pear shape")
-		apple_shape_programmes = user.program_sets.where(category: "apple shape")
-		hour_glass_programmes = user.program_sets.where(category: "hour glass")
-		tube_programmes = user.program_sets.where(category: "tube")
+	def bulking
+		@bulking_programmes = user.program_sets.where(category: "bulking")
+	end
+
+	def lean
+		@lean_programmes = user.program_sets.where(category: "lean")
+	end
+
+	def lose
+		@lose_weight_programmes = user.program_sets.where(category: "lose")
+	end
+
+	# Girls preset programmes section
+
+	def pear
+		@pear_shape_programmes = user.program_sets.where(category: "pear")
+	end
+					
+	def apple
+		@apple_shape_programmes = user.program_sets.where(category: "apple")
+	end
+
+	def hour
+		@hour_glass_programmes = user.program_sets.where(category: "hour")
+	end
+	
+	def tube
+		@tube_programmes = user.program_sets.where(category: "tube")
+	end
+
+	# Injuryed section
+
+	def injuries
+	end
+
+	def avoid
+	end
+
+
+	def set_user
+		user = User.find_by_email("support@gymsays.co.uk")
 	end
 
 end

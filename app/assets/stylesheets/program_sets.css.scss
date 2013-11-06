@@ -25,34 +25,37 @@
 	border-radius: 10px;
 	margin: 10px;
 	width: 190px;
-	height: 230px;
+	height: 240px;
 }
 
-.setthumbnail:hover {
+.setthumbnailmale:hover {
 	background: blue;
+}
+
+.setthumbnailfemale:hover {
+	background: #E8BAE7;
 }
 
 .setthumbnail h1 {
 	text-align: center;
 	margin: 2px 2px 5px 2px;
-	padding: 5px 0px 5px 0px;
+	padding: 2px 0px 10px 0px;
 	border-radius: 5px 5px 0px 0px;
-	font-size: 18px;
-	height: 20px;
+	font-size: 15px;
 	background: black;
+	height: 30px;
 	color: white;
 }
 
 .setthumbnail ol {
 	padding-left: 30px;
 	height: 160px;
-	overflow:scroll;
+	overflow: auto;
 }
 
 .thumbnaaillinks {
 	height: 35px;
 	border-radius: 0px 0px 6px 6px;
-
 	text-align: center;
 }
 
@@ -61,7 +64,7 @@
 }
 
 .thumbnaaillinksfemale {
-	background: #E87BB4;
+	background: #E89BC3;
 }
 
 ul .thumbactionsul {
@@ -72,9 +75,12 @@ ul .thumbactionsul {
 	height: 40px;
 	display: inline;
 	margin-top: 10px;
+
 }
 
-
+.divlink {
+	text-decoration: none;
+}
 
 /* ------------------------------------------- */
 /* >>>>>>> NEW PROGRAMME FORM FIELDS  <<<<<<<< */
@@ -104,6 +110,10 @@ ul .thumbactionsul {
 .desc {
 	margin: 0px 20px 20px 20px;
 	border-radius: 0px 0px 10px 10px;
+}
+
+.publicbox {
+	margin-right: 5px;
 }
 
 
@@ -301,6 +311,18 @@ ul .thumbactionsul {
 /* >>>>>>>>>>> SHOW PROGRAMME EXERCISE LIST <<<<<<<<<<<<< */
 /* ------------------------------------------------------ */
 
+.buttoncontainer {
+	width: 625px;
+	text-align: center;
+}
+
+.btnlink {
+	display: inline;
+	margin: 0px 10px 0px 10px;
+	
+}
+
+
 .showprogram {	
 	padding-top: 2px;
 	padding-bottom: 2px;
@@ -402,7 +424,9 @@ ul .thumbactionsul {
 	margin-left: 5px;
 }
 
-
+hr {
+	margin: 0px 15px 0px 15px;
+}
 
 
 

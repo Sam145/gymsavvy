@@ -1,6 +1,7 @@
 
-
-/* Home page */
+/* --------------- */
+/* >> Home page << */
+/* --------------- */
 
 .homecontainer {
 	margin: 10px;
@@ -31,11 +32,30 @@
 	color: blue;
 }
 
-.signupformouter {
+
+
+/* ------------------------------ */
+/* >> Home page - SIGNUP LOGIN << */
+/* ------------------------------ */
+
+
+.signlog {
 	display: none;
+	text-align: center;
+}
+
+#formsleftside {
+	display: inline-block;
+}
+
+#formsrightside {
+	display: inline-block;
+}
+
+.signupformouter {
 	background: #E89E5F;
 	border: 3px solid #E8500C;
-	width: 300px;
+	width: 290px;
 	border-radius: 5px;
 }
 
@@ -49,4 +69,53 @@
 	margin: 5px;
 }
 
+.whichform {
+	width: 296px;
+	height: 45px;
+	background: grey;
+	margin-bottom: 5px;
+}
+
+.imagecntfor {
+	position:absolute;
+}
+
+.loginbelow {
+	width: 296px;
+	text-align: center;
+	color: white;
+	margin-top: 3px;
+}
+
+.signupright {
+	display: none;
+	width: 296px;
+	text-align: center;
+	color: white;
+	margin-top: 3px;
+}
+
+.loginformouter {
+	background: #E89E5F;
+	border: 3px solid #E8500C;
+	width: 290px;
+	border-radius: 5px;
+}
+
+
+.loginforminner {
+	margin: 10px 20px 10px 20px;
+}
+
+.loginforminner h1 {
+	color: #0081FF;
+	margin: 5px;
+}
+
+.or {
+	position: relative;
+	top: -50px;
+	display: inline-block;
+	color: #0081FF;
+}
 

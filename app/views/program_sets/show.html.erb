@@ -4,10 +4,10 @@
   <h1><%= !@program_set.name.blank? ? @program_set.name : "Your programme" %></h1>
 </div>
 
-<div class="minusforprint">
-  <%= link_to 'Edit programme', edit_program_set_path(@program_set) %> |
-  <%= link_to 'Your programme list', program_sets_path %>
-  <%= link_to_function("Print this Page", "javascript:print()") %>
+<div class="buttoncontainer">
+  <div class="btnlink"><%= link_to 'Edit programme', edit_program_set_path(@program_set), method: :get %></div>
+  <div class="btnlink"><%= link_to 'Your programme list', program_sets_path, method: :get %></div>
+  <div class="btnlink"><%= link_to_function("Print this Page", "javascript:print()") %></div>
 </div>
 
 <hr>

@@ -110,7 +110,7 @@ class ProgramSetsController < ApplicationController
   def set_name
      count = current_user.program_sets.count + 1
     unless @program_set.name?
-      @program_set.name = "Program #{count}"
+      @program_set.name = "Programme #{count}"
     end
   end
 

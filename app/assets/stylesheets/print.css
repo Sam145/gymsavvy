@@ -89,9 +89,10 @@ hr 					{ display: none; }
 	margin: 5px 0px 20px 0px;
 }
 
-.minusforprint {
-	display: none;
-}
+.flash 				{ display: none; }
+.flashmale 			{ display: none; }
+.flashfemale 		{ display: none; }
+.buttoncontainer 	{ display: none; }
 
 
 
