@@ -23,6 +23,25 @@ users:
     - false
 
 ---
+program_sets:
+  columns:
+  - id
+  - user_id
+  - name
+  - description
+  - created_at
+  - updated_at
+  - category
+  records: 
+  - - 2
+    - 1
+    - Program 1
+    - ''
+    - '2013-11-05 11:31:18.856219'
+    - '2013-11-05 11:31:18.864121'
+    - 
+
+---
 programs:
   columns:
   - id
@@ -66,6 +85,66 @@ programs:
     - 
     - 
     - 1
+  - - 2
+    - 11
+    - 1
+    - 
+    - 
+    - 23
+    - 
+    - 
+    - 
+    - 
+    - '2013-11-05 11:31:18.859942'
+    - '2013-11-05 11:31:28.245821'
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 2
+  - - 3
+    - 12
+    - 2
+    - 
+    - 
+    - 43
+    - 5
+    - 
+    - 
+    - 
+    - '2013-11-05 11:31:18.869174'
+    - '2013-11-05 11:31:28.247290'
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 2
+  - - 4
+    - 16
+    - 3
+    - 
+    - 
+    - 5
+    - 45
+    - 
+    - 
+    - 
+    - '2013-11-05 11:31:18.875938'
+    - '2013-11-05 11:31:28.248725'
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 2
 
 ---
 exercises:
@@ -130,8 +209,8 @@ exercises:
     - '2013-11-04 14:10:22.859163'
     - '2013-11-04 14:10:22.859163'
   - - 6
-    - Legs
-    - Clean deadlift
+    - Cardio
+    - Deadlift
     - "1. Begin standing with a barbell close to your shins. Your feet should be directly
       under your hips with your feet turned out slightly. Grip the bar with a double
       overhand grip or hook grip, about shoulder width apart. Squat down to the bar.
@@ -143,7 +222,7 @@ exercises:
       the lift by driving the hips into the bar until your hips and knees are extended."
     - WRS
     - '2013-11-04 14:12:54.731961'
-    - '2013-11-04 14:12:54.731961'
+    - '2013-11-06 10:41:05.301194'
   - - 7
     - Shoulders
     - Backward medicine ball throw
@@ -239,7 +318,7 @@ exercises:
     - '2013-11-04 14:38:00.157046'
   - - 13
     - Cardio
-    - Rope jumping
+    - Skipping
     - "1. Hold an end of the rope in each hand. \r\n2. Position the rope behind you
       on the ground. Raise your arms up and turn the rope over your head bringing
       it down in front of you. \r\n3. When it reaches the ground, jump over it. Find
@@ -249,7 +328,7 @@ exercises:
       350 calories jumping rope for 30 minutes, compared to over 450 calories running."
     - RS
     - '2013-11-04 14:48:13.544729'
-    - '2013-11-04 14:48:13.544729'
+    - '2013-11-05 11:12:57.682989'
   - - 14
     - Cardio
     - Cycling
@@ -481,3 +560,356 @@ exercises:
     - RS
     - '2013-11-04 16:52:40.197233'
     - '2013-11-04 16:52:40.197233'
+  - - 30
+    - Abs and Obliques
+    - The plank
+    - "1. Start on elbows and knees, locking hands together. 2. Straighten legs and
+      raise your body so that you’re supported by the balls of your feet, with feet
+      hip-distance apart. \r\n3. Face the floor, being careful not to arch your back
+      or stick your butt in the air. Hold this position for 45 seconds to begin with,
+      extending the time as you get stronger.\r\n\r\n\r\n"
+    - T
+    - '2013-11-05 11:36:48.594953'
+    - '2013-11-05 11:36:48.594953'
+  - - 31
+    - Abs and Obliques
+    - The side plank
+    - "1. Lie on your right side, propped up on your elbow. 2. Let your left foot
+      rest on top of your right, and then push up so that your body forms a perfect
+      triangle with the floor. Don’t let your left shoulder roll forward or back.
+      \r\n3. Hold the position for as long as you can, then\r\nrepeat on the other
+      side.\r\n\r\n"
+    - T
+    - '2013-11-05 11:38:10.155889'
+    - '2013-11-05 11:38:10.155889'
+  - - 32
+    - Abs and Obliques
+    - The sky dive
+    - "Always follow a basic or side plank with this move. \r\n1. Lie flat on the
+      floor, face down, with your arms by your sides. \r\n2. Gently raise your chest
+      off the floor until you can feel your lower back muscles start to work, simultaneously
+      raising your arms up, palms facing upwards and with your thumbs furthest away
+      from your body, pointing to the ceiling. Be careful not to clench your buttocks.
+      Hold for 30 seconds.\r\n\r\n"
+    - T
+    - '2013-11-05 11:40:18.438687'
+    - '2013-11-05 11:40:18.438687'
+  - - 33
+    - Biceps and Triceps
+    - Arm curl
+    - "1. Stand up with your torso upright while holding a barbell at a shoulder-width
+      grip. The palms of your hands should be facing forward and the elbows should
+      be close to the torso. This will be your starting position.\r\n2. While holding
+      the upper arms stationary, curl the weights forward while contracting the biceps
+      as you breathe out. \r\nTip: Only the forearms should move.\r\n3. Continue this
+      movement until your biceps are fully contracted and the bar is at shoulder level.
+      Hold the contracted position for a second and squeeze the biceps hard.\r\n4.
+      Slowly begin to bring the bar back to starting position as your breathe in."
+    - WRS
+    - '2013-11-05 11:45:56.346752'
+    - '2013-11-05 11:45:56.346752'
+  - - 34
+    - Biceps and Triceps
+    - 'Lying dumbbell tricep extension '
+    - "1. Lie on a flat bench while holding two dumbbells directly in front of you.
+      Your arms should be fully extended at a 90-degree angle from your torso and
+      the floor. The palms should be facing in and the elbows should be tucked in.
+      This is the starting position.\r\n2. As you breathe in and you keep the upper
+      arms stationary with the elbows in, slowly lower the weight until the dumbbells
+      are near your ears.\r\nAt this point, while keeping the elbows in and the upper
+      arms stationary, use the triceps to bring the weight back up to the starting
+      position as you breathe out.\r\n3. Repeat.\r\n"
+    - WRS
+    - '2013-11-05 11:52:16.519663'
+    - '2013-11-05 11:53:00.302944'
+  - - 35
+    - Legs
+    - Dead lift
+    - "1. Put a barbell in front of you on the ground and grab it using a pronated
+      (palms facing down) grip that a little wider than shoulder width. Tip: Depending
+      on the weight used, you may need wrist wraps to perform the exercise and also
+      a raised platform in order to allow for better range of motion.\r\n2. Bend the
+      knees slightly and keep the shins vertical, hips back and back straight. This
+      will be your starting position.\r\n3. Keeping your back and arms completely
+      straight at all times, use your hips to lift the bar as you exhale. \r\n\r\nTip:
+      The movement should not be fast but steady and under control.\r\n4. Once you
+      are standing completely straight up, lower the bar by pushing the hips back,
+      only slightly bending the knees, unlike when squatting. \r\n\r\nTip: Take a
+      deep breath at the start of the movement and keep your chest up. Hold your breath
+      as you lower and exhale as you complete the movement.\r\n"
+    - WRS
+    - '2013-11-05 12:03:54.710711'
+    - '2013-11-05 12:03:54.710711'
+  - - 36
+    - Cardio
+    - Lunge
+    - "1. Holding Dumbbells evenly by you sides choose one leg and step forward about
+      one to two feet, keeping your arms straight.  (The taller you are, the further
+      forward you should go, but don't go so far that you feel you are going to fall
+      over.)\r\n2. Begin bending your front knee until it is over the top of the foot.
+      Never extend it beyond the toes.\r\n3. As you bend this knee, lift the heel
+      of the opposite leg. The knee will be forced to bend as you lunge down.\r\n4.
+      top when both knees are at a 90 degree angle with the floor.\r\n5. Shift all
+      of your weight to the balls of your feet, concentrating on your toes. (If you
+      need to step forward more to make this happen without leaning that's fine.)\r\n6.
+      Pull your body back up to the starting position."
+    - WRS
+    - '2013-11-05 12:06:37.306389'
+    - '2013-11-05 12:09:20.130920'
+  - - 37
+    - Biceps and Triceps
+    - Push-ups
+    - "1. Kneel on the ground, set your hands at a distance that is slightly wider
+      than shoulder-width apart. \r\n2. Think of your body as one giant straight line
+      – from the top of your head down through your heels. Your butt shouldn’t be
+      sticking up in the air or sagging.\r\nTip: clench your butt, and then tighten
+      your abs. Your core will be engaged, and your body should be in that straight
+      line.\r\n3. Keep your head up.\r\nTip : Your chest should be a fists width above
+      the ground.\r\n4. At the top of your push up, your arms should be straight and
+      supporting your weight. You’re now ready to do a push up.\r\n5. With your arms
+      straight, butt clenched, and abs braced, steadily lower yourself until your
+      elbows are at a 90 degree angle or smaller. Depending on your level of experience,
+      age, and flexibility, 90 degrees might be the lowest you’re able to go. \r\nTip
+      : Try not to let your elbows go flying out with each repetition. Keep them relatively
+      close to your body, and keep note of when they start to fly out when you get
+      tired.\r\n5. Push back up until you’re back in the same position."
+    - RS
+    - '2013-11-05 12:22:42.862375'
+    - '2013-11-05 12:22:42.862375'
+  - - 38
+    - Biceps and Triceps
+    - Dips
+    - "1. The triceps dip requires a low flat surface, such as one for weight lifting.
+      \ \r\n2. Sit on the bench with your hands palm faced down on either side. \r\n3.
+      Stretch your legs together  out in front of you.\r\n4. Take your weight on your
+      hands to raise your butt up off of the bench.\r\n5. Lower your butt down in
+      front of the weight lifting bench. Your heels will remain feet together on the
+      floor.\r\n6. Repeat this as many times are possible. Try not to go too far down—this
+      might cause an injury.\r\n"
+    - RS
+    - '2013-11-06 08:53:58.584416'
+    - '2013-11-06 08:55:34.303106'
+  - - 39
+    - Chest
+    - Dumbbell bench press
+    - "1. Lie down on a flat bench with a dumbbell in each hand resting on top of
+      your thighs. The palms of your hands will be facing each other.\r\nTip: Use
+      your thighs to help raise the dumbbells up, lift the dumbbells one at a time
+      so that you can hold them in front of you at shoulder width.\r\n2. Rotate your
+      wrists forward so that the palms of your hands are facing away from you. The
+      dumbbells should be just to the sides of your chest, with your upper arm and
+      forearm creating a 90 degree angle. Be sure to maintain full control of the
+      dumbbells at all times. This will be your starting position.\r\n3. Breathe out,
+      use your chest to push the dumbbells up. Lock your arms at the top of the lift
+      and squeeze your chest, hold for a second and then begin coming down slowly.
+      \r\nTip: Lowering the weight should take about twice as long as raising it.\r\n4.
+      Repeat."
+    - WRS
+    - '2013-11-06 09:07:50.856453'
+    - '2013-11-06 09:07:50.856453'
+  - - 40
+    - Chest
+    - Dumbell pullover
+    - "1. Lie on a flat bench while holding a barbell using a palms down grip that
+      is about 15 inches apart.\r\n2. Place the bar on your upper thighs, extend your
+      arms and lock them while keeping a slight bend on the elbows. This will be your
+      starting position.\r\n3. Raise the weight using a semicircular motion and keeping
+      your arms straight as you inhale. Continue the same movement until the bar is
+      on the other side above your head . At this point your arms should be parallel
+      to the floor with the palms of your hands facing the ceiling.\r\nNow return
+      the barbell to the starting position by reversing the motion as you exhale.\r\n4.
+      Repeat."
+    - WRS
+    - '2013-11-06 09:11:17.393688'
+    - '2013-11-06 09:11:17.393688'
+  - - 41
+    - Chest
+    - Dumbbell flyes
+    - "1. Lie down on a flat bench with a dumbbell on each hand resting on top of
+      your thighs. The palms of your hand will be facing each other.\r\n2. Using your
+      thighs to help raise the dumbbells, lift the dumbbells one at a time so you
+      can hold them in front of you at shoulder width with the palms of your hands
+      facing each other. Raise the dumbbells up like you're pressing them, but stop
+      and hold just before you lock out. This will be your starting position.\r\nTip:
+      A slight bend on your elbows will prevent stress at the biceps tendon.\r\n3.
+      Lower your arms out at both sides in a wide arc until you feel a stretch on
+      your chest. Breathe in as you perform this portion of the movement. \r\nTip:
+      Keep in mind that throughout the movement, the arms should remain stationary;
+      the movement should only occur at the shoulder joint.\r\n4. Return your arms
+      back to the starting position as you squeeze your chest muscles and breathe
+      out. \r\n5. Hold for a second at the contracted position and repeat."
+    - WRS
+    - '2013-11-06 09:19:05.046131'
+    - '2013-11-06 09:19:05.046131'
+  - - 43
+    - Chest
+    - Hammergrip incline
+    - "1. Lie back on an incline bench with a dumbbell on each hand on top of your
+      thighs. The palms of your hand will be facing each other.\r\n2. Use your thighs
+      to help you get the dumbbells up,  at shoulder width.\r\n3. keep the palms of
+      your hands facing each other.  Keep your elbows flared out with the upper arms
+      in line with the shoulders (perpendicular to the torso) and the elbows bent
+      creating a 90-degree angle between the upper arm and the forearm. This will
+      be your starting position.\r\n4. Bring down the weights slowly to your side
+      as you breathe in. Keep full control of the dumbbells at all times.\r\n5. As
+      you breathe out, push the dumbbells up using your pectoral muscles. Lock your
+      arms in the contracted position, hold for a second and then start coming down
+      slowly. \r\nTip: Take at least twice as long to go down than to come up.\r\nRepeat."
+    - WRS
+    - '2013-11-06 09:35:48.876395'
+    - '2013-11-06 09:35:48.876395'
+  - - 45
+    - Abs and Obliques
+    - Push up plank switches
+    - "1. Start by doing a full  push up.\r\n2. When your arms are locked at the top,
+      drop right arm down resting on the forearm, closely followed by the left arm.\r\n3.
+      Push back up with the right arm, closely followed by the left.\r\n4.  Now drop
+      down the left arm closely followed by the right.\r\n5. Keep alternating each
+      arm as the lead arm."
+    - RS
+    - '2013-11-06 10:07:39.951131'
+    - '2013-11-06 10:07:39.951131'
+  - - 46
+    - Cardio
+    - Burpees
+    - "1. Stand up straight with your arms by your sides and your feet at shoulder
+      width. Sit into a squat.\r\n2. Kick your feet behind you so you're in a push-up
+      position.\r\n3. Lower your chest to the ground.\r\n4. Press back up to complete
+      the push up.\r\n5. Pull your feet back in so you're in squat position.\r\nJump
+      up in the air while raising both arms to reach for the ceiling.\r\n\r\nTo increase
+      the intensity of burpee jump-ups, at the end of the burpee, try doing a standing
+      broad jump instead of jumping straight up in the air. Instead of changing to
+      a broad jump, you can pull your knees up toward your chest when you jump straight
+      up in the air. Practice both of these different movements, or alternate between
+      the two during your workout.\r\n\r\nAnother way to increase the intensity of
+      burpee jump-ups is by holding a SandBell. "
+    - RS
+    - '2013-11-06 10:25:46.596200'
+    - '2013-11-06 10:25:46.596200'
+  - - 47
+    - Legs
+    - Dumbbell clean lift
+    - "1. Begin standing with a dumbbell in each hand with your feet shoulder width
+      apart.\r\n2. Lower the weights to the floor by flexing at the hips and knees,
+      pushing your hips back until the dumbbells reach the floor. This will be your
+      starting position.\r\n3. To initiate the movement, violently jump upward by
+      extending the hips, knees, and ankles to acclerate the weights upward. Maintaining
+      a neutral grip on the dumbbells, keep the arms straight until full extension
+      is reached.\r\nAfter full extension, rebend the hips and knees to receive the
+      weight in a squat position. Allow the arms to bend, guiding the dumbbells to
+      your shoulders.\r\nUpon receiving the weight in the squat position, extend the
+      hips and knees to finish in a standing position with the weights on your shoulders."
+    - WRS
+    - '2013-11-06 10:46:03.385180'
+    - '2013-11-06 10:46:03.385180'
+  - - 48
+    - Legs
+    - Single leg glute lift
+    - "1. Lay on the floor with your feet flat and knees bent.\r\n2. Raise one leg
+      off of the ground, pulling the knee to your chest. This will be your starting
+      position.\r\n3. Start the movement by driving through the heel, extending your
+      hip upward and raising your glutes off of the ground.\r\nExtend as far as possible,
+      pause and then return to the starting position."
+    - RS
+    - '2013-11-06 10:50:32.457167'
+    - '2013-11-06 10:50:32.457167'
+  - - 49
+    - Legs
+    - Calf raises
+    - "1. Take an exercise band and stand on it with your toes making sure that the
+      length of the band between the foot and the arms is the same for both sides.\r\nWhile
+      each end of the band, raise the arms to the side of your head as if you were
+      getting ready to perform a shoulder press. The palms should be facing forward
+      with the elbows bent and to the sides. This movement will create tension on
+      the band. This will be your starting position.\r\n2. Keeping the hands by your
+      shoulder, stand up on your toes as you exhale and contract the calves hard at
+      the top of the movement.\r\n3. After a one second contraction, slowly go back
+      down to the starting position.\r\nRepeat.\r\n"
+    - RS
+    - '2013-11-06 10:57:43.351173'
+    - '2013-11-06 10:57:43.351173'
+  - - 50
+    - Legs
+    - Good morning
+    - "1. Begin with a bar  across the rear of your shoulders as you would a power
+      squat, not on top of your shoulders. Keep your back tight, shoulder blades pinched
+      together, and your knees slightly bent. \r\n2. Begin by bending at the hips,
+      moving them back as you bend over to near parallel. Keep your back arched and
+      your cervical spine in proper alignment.\r\n3. Reverse the motion by extending
+      through the hips with your glutes and hamstrings. Continue until you have returned
+      to the starting position."
+    - WRS
+    - '2013-11-06 11:06:04.001523'
+    - '2013-11-06 11:06:04.001523'
+  - - 51
+    - Shoulders
+    - Double kettle push press
+    - "1.Clean two kettlebells to your shoulders.\r\n2. Squat down a few inches and
+      reverse the motion rapidly. Use the momentum from the legs to drive the kettlebells
+      overhead.\r\n3.Once the kettlebells are locked out, lower the kettlebells to
+      your shoulders and repeat."
+    - WRS
+    - '2013-11-06 11:09:29.540669'
+    - '2013-11-06 11:09:29.540669'
+  - - 52
+    - Shoulders
+    - Dumbell lying one arm rear lateral raise
+    - "1. While holding a dumbbell in one hand, lay with your chest down on a slightly
+      inclined (around 15 degrees when measured from the floor) adjustable bench.
+      The other hand can be used to hold to the leg of the bench for stability.\r\nPosition
+      the palm of the hand that is holding the dumbbell in a neutral manner (palms
+      facing your torso) as you keep the arm extended with the elbow slightly bent.
+      This will be your starting position.\r\n2. Raise the arm with the dumbbell to
+      the side until your elbow is at shoulder height and your arm is roughly parallel
+      to the floor as you exhale. \r\nTip: Maintain your arm perpendicular to the
+      torso while keeping your arm extended throughout the movement. Also, keep the
+      contraction at the top for a second.\r\n3. Slowly lower the dumbbell to the
+      starting position as you inhale.\r\nRepeat."
+    - WRS
+    - '2013-11-06 11:12:25.222816'
+    - '2013-11-06 11:12:25.222816'
+  - - 53
+    - Shoulders
+    - Hand stand push up
+    - "1. With your back to the wall bend at the waist and place both hands on the
+      floor at shoulder width.\r\n2. Kick yourself up against the wall with your arms
+      straight. Your body should be upside down with the arms and legs fully extended.
+      Keep your whole body as straight as possible. \r\nTip: If doing this for the
+      first time, have a spotter help you. Also, make sure that you keep facing the
+      wall with your head, rather than looking down.\r\n3. Slowly lower yourself to
+      the ground as you inhale until your head almost touches the floor. \r\nTip:
+      It is of utmost importance that you come down slow in order to avoid head injury.\r\n4.
+      Push yourself back up slowly as you exhale until your elbows are nearly locked.\r\nRepeat."
+    - RS
+    - '2013-11-06 11:28:42.443453'
+    - '2013-11-06 11:28:42.443453'
+  - - 54
+    - Shoulders
+    - Lateral raise with bands
+    - "2. To begin, stand on an exercise band so that tension begins at arm's length.
+      Grasp the ends using a pronated (palms facing your thighs) grip that is slightly
+      less than shoulder width. Your hands should be resting on the sides of your
+      thighs. Your arms should be extended with a slight bend at the elbows and your
+      back should be straight. This will be your starting position.\r\n3. Use your
+      side shoulders to lift the Bands to the sides as you exhale. Continue to lift
+      your arms until they are slightly above parallel. \r\nTip: As you lift your
+      hands, slightly tilt the hand as if you were pouring water and keep your arms
+      extended. Also, keep your torso stationary and pause for a second at the top
+      of the movement.\r\nLower your hands back down slowly to the starting position.
+      Inhale as you perform this portion of the movement.\r\nRepeat."
+    - RS
+    - '2013-11-06 11:32:40.408155'
+    - '2013-11-06 11:32:40.408155'
+  - - 55
+    - Back
+    - Middle back shrug
+    - "1. Lie facedown on an incline bench while holding a dumbbell in each hand.
+      Your arms should be fully extended hanging down and pointing towards the floor.
+      Tip: The palms of your hands should be facing each other. This will be your
+      starting position.\r\n2. As you exhale, squeeze your shoulder blades together
+      and hold the contraction for a full second. Tip: This movement is just like
+      the reverse action of a hug, or trying to perform rear laterals as if you had
+      no arms.\r\nAs you inhale go back to the starting position.\r\nRepeat."
+    - WRS
+    - '2013-11-06 11:43:37.419156'
+    - '2013-11-06 11:43:37.419156'

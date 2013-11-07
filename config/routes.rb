@@ -9,6 +9,17 @@ Gymsavvy::Application.routes.draw do
   get "log_in" => "users#new", :as => "log_in"
   get "sign_up" => "users#new", :as => "sign_up"
 
+ # Mens programmes
+  get "bulking_up" => "admin_programs#bulking", :as => "bulking"
+  get "lean_machine" => "admin_programs#lean", :as => "lean"
+  get "lose_a_few" => "admin_programs#lose", :as => "lose"
+
+  # Womans programmes
+  get "pear_shape" => "admin_programs#pear", :as => "pear"
+  get "apple_shape" => "admin_programs#apple", :as => "apple"
+  get "hour_glass_shape" => "admin_programs#hour", :as => "hour"
+  get "tube_shape" => "admin_programs#tube", :as => "tube"
+
   resources :sessions
   resources :users
   resources :program_sets

@@ -123,6 +123,18 @@ body {
 	cursor: pointer;
 }
 
+.sidelinks {
+	text-decoration: none;
+	color: #b7c3d3;
+}
+
+.sidelinks:link { color: #b7c3d3; }
+.sidelinks:visited { color: #b7c3d3; }
+.sidelinks:hover { background: none; }
+.sidelinks:active { color: #b7c3d3; }
+
+
+
 
 /* >>>>>>> RIGHT SIDE <<<<<<<<< */
 

@@ -12,10 +12,13 @@
 <div id="wrap">
 
 	<div class="maintopbar">
-		<div class="maintitlebar"><%= image_tag "title/maintitle.psd" %></div>
+		<div class="maintitlebar"><%= image_tag "title/maintitle.png" %></div>
 		<div class="mainnavbar">
 			<ul>
 				<% if current_user %>
+					<% if current_user.admin? %>
+						<li class="navlink"><%= link_to "Exercises", exercises_path %></li>
+					<% end %>
 					<li class="navlink"><%= link_to "My programmes", program_sets_path %></li>
 					<li class="navlink"><%= link_to "Log out", log_out_path %></li>
 				<% else %>
@@ -36,18 +39,18 @@
 			<div class="links">
 				<h2>Mens Programmes</h2>
 				<ul>
-					<li>Bulking up</li>
-					<li>Lean machine</li>
-					<li>Lose a few</li>
+					<li><%= link_to "Bulking up", bulking_path, class: "sidelinks" %></li>
+					<li><%= link_to "Lean machine", lean_path, class: "sidelinks" %></li>
+					<li><%= link_to "Lose a few", lose_path, class: "sidelinks" %></li>
 				</ul>
 			</div>
 			<div class="links">
 				<h2>Womans Programmes</h2>
 				<ul>
-					<li>Pear Shape</li>
-					<li>Apple Shape</li>
-					<li>Hour Glass Shape</li>
-					<li>Tube Shape</li>
+					<li><%= link_to "Pear Shape", pear_path, class: "sidelinks" %></li>
+					<li><%= link_to "Apple Shape", apple_path, class: "sidelinks" %></li>
+					<li><%= link_to "Hour Glass Shape", hour_path, class: "sidelinks" %></li>
+					<li><%= link_to "Tube Shape", tube_path, class: "sidelinks" %></li>
 				</ul>
 			</div>
 			<div class="links">
