@@ -1,11 +1,11 @@
 class ProgramSetsController < ApplicationController
 
-  before_filter :signed_in_user, only: :index
+  before_filter :signed_in_user
+  before_filter :validate_user, only: [ :show, :edit, :update, :destroy]
 
 
   def index
     @program_sets = current_user.program_sets
-
   end
 
 
@@ -111,6 +111,14 @@ class ProgramSetsController < ApplicationController
      count = current_user.program_sets.count + 1
     unless @program_set.name?
       @program_set.name = "Programme #{count}"
+    end
+  end
+
+  def validate_user
+    program_set = ProgramSet.find(params[:id])
+    unless current_user.id == program_set.user.id
+      redirect_to program_sets_path
+      flash[:notice] = "You can only change your own records"
     end
   end
 

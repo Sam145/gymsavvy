@@ -92,14 +92,13 @@
 				
 	</ul>
 
-	<p>If you would like a chance to make your program public make sure you have filled in a name for the program and a description and tick the box.</p>
 
 	<%= render "add_exercise_list" %>
 
 	<div class="<%= male_female('programmeinformation') %> desc">
 	    <p>
 	      <%= f.label :description, "programme description" %><br/ >
-	      If you want to describe your programme then<br/ >
+	      If you want to describe your programme then fill in the box below<br/ >
 	      <%= f.text_area :description, cols: "50", rows: "3" %>
 	    </p>
 	    

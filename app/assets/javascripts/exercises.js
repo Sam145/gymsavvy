@@ -44,6 +44,15 @@ $(document).ready(function(){
 		$(this).closest(".move").fadeOut();
 	});
 
+	$(".buttonexerciseshide2").on("click", function(){
+		$(".move").find(".moreless").each(function(){
+			$(".move").find(".addDescriptionContent").css({ "height" : "100%" });
+		})
+		$(this).closest(".move").fadeOut(function(){
+			$(this).find(".checkbox").prop("checked", false);
+		});
+	});
+
 
 // Creates more and less functionality for exercises list page
 
