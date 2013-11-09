@@ -1,25 +1,41 @@
-<h1>Bulking up</h1>
+<%= render "shared/sign_up_log_in" %>
 
-<div class="thumbnailcontainer">
-    <ul>
+<div class="temptitle">
+  <h1>Bulking up</h1>
+</div>
+
+<div class="contocome">
+  <p>Content to be added shortly</p>
+</div>
+
+<!--
+<div class="">
+
       <% @bulking_programmes.each do |program_set| %>
 
-        <%= link_to program_set, class: "divlink" do %>
-            <div class="thumbposition">  
-              <li>
-                <div class="<%= male_female('setthumbnail') %>">
-                  <h1><%= program_set.name %></h1>
-                  <ol>
-                    <% program_set.programs.each do |program| %>
-                      <li><%= program.exercise.name %></li>
-                    <% end %>
-                  </ol>
 
-                </div>
-              </li>
+            <div class="publicsetcnt">  
+
+              <div class="publicsetlist">
+                <%= program_set.name %>
+                <ol>
+                  <% program_set.programs.each do |program| %>
+                    <li><%= program.exercise.name %></li>
+                  <% end %>
+                </ol>
+              </div>
+
+              <div class="publicsetdesc">
+                <%= program_set.description %>
+              </div>
+
+
             </div>
-        <% end %>
+
+            <hr>
 
       <% end %>
-    </ul>
+
 </div>
+
+-->

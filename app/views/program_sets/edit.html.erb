@@ -16,15 +16,29 @@
   	<div class="pageheading">
 		<h2>Edit and personalise your programme</h2>
 	</div>
-	<p>Shuffle around your exercises until your happy with the order.</p>
-	<p>You can chose what weight, how many sets and reps and change them later to match your progession</p>
+	<div class="toptextbox">
+		<p>Shuffle around your exercises until your happy with the order.</p>
+		<p>You can chose what weight, how many sets and reps and change them later to match your progession</p>
+	</div>
 
 <div class="<%= male_female('programmeinformation') %> name">
-    <p>
-      <%= f.label :name, "programme name" %>
-      <%= f.text_field :name %>
-    </p>
+
+	<%= f.label :name, "Programme name" %>
+	<%= f.text_field :name %>
+
+    <div class="addbtnpos <%= male_female('submitstyle') %> ">
+		<%= "Add exercise" %>
+	</div>
 </div>
+
+<div class="listandimgcnt">
+
+	<div class="dragdropimgcnt">
+		<p>Reorder your exercises by dragging and dropping</p>
+		<div>
+			<%= image_tag "dragdrop.psd" %>
+		</div>
+	</div>
 
 	<% i = 1 %>
 	<% n = 0 %>
@@ -91,13 +105,15 @@
 				<% end %>
 				
 	</ul>
+</div>
 
-
-	<%= render "add_exercise_list" %>
+	<div class="addexerciseshow" style="display:none;">
+		<%= render "add_exercise_list" %>
+	</div>
 
 	<div class="<%= male_female('programmeinformation') %> desc">
 	    <p>
-	      <%= f.label :description, "programme description" %><br/ >
+	      <%= f.label :description, "Programme description" %><br/ >
 	      If you want to describe your programme then fill in the box below<br/ >
 	      <%= f.text_area :description, cols: "50", rows: "3" %>
 	    </p>
@@ -110,11 +126,11 @@
 			<br /><%= f.label :grade %>
 				<%= f.select :grade, options_for_select([['beginner'], ['intermediate'], ['hard']]) %>
 	   	<% end %>
-	</div>
 
-	<div class="btn">
-      <%= f.submit  %>
-    </div>
+	   	<div class="submitbtnpos">
+	      <%= f.submit("Update Programme", class: male_female("submitstyle")) %>
+	    </div>
+	</div>
 
 	<% end %>
 </div>

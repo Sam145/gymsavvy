@@ -6,6 +6,16 @@
 	padding: 10px;
 }
 
+.createlink a {
+	text-decoration: none;
+}
+
+.createlink a:link { text-decoration: none; color: white }
+.createlink a:visited { text-decoration: none; color: white }
+.createlink a:hover { text-decoration: none; color: white }
+.createlink a:active { text-decoration: none; color: white }
+
+
 
 .thumbnailcontainer {
 	width: 650px;
@@ -29,11 +39,21 @@
 }
 
 .setthumbnailmale:hover {
-	background: blue;
+	background-color: #222e39; background-image: -webkit-gradient(linear, left top, left bottom, from(#222e39), to(#23538a));
+	 background-image: -webkit-linear-gradient(top, #222e39, #23538a);
+	 background-image: -moz-linear-gradient(top, #222e39, #23538a);
+	 background-image: -ms-linear-gradient(top, #222e39, #23538a);
+	 background-image: -o-linear-gradient(top, #222e39, #23538a);
+	 background-image: linear-gradient(to bottom, #222e39, #23538a);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#222e39, endColorstr=#23538a);
 }
 
 .setthumbnailfemale:hover {
-	background: #E8BAE7;
+	background-color: #C893CC; background-image: -webkit-gradient(linear, left top, left bottom, from(#C893CC), to(#E80C8A));
+	 background-image: -webkit-linear-gradient(top, #C893CC, #E80C8A);
+	 background-image: -moz-linear-gradient(top, #C893CC, #E80C8A);
+	 background-image: -ms-linear-gradient(top, #C893CC, #E80C8A);
+	 background-image: -o-linear-gradient(top, #C893CC, #E80C8A);
+	 background-image: linear-gradient(to bottom, #C893CC, #E80C8A);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#C893CC, endColorstr=#E80C8A);
 }
 
 .setthumbnail h1 {
@@ -64,7 +84,7 @@
 }
 
 .thumbnaaillinksfemale {
-	background: #E89BC3;
+	background: #681A6E;
 }
 
 ul .thumbactionsul {
@@ -75,8 +95,11 @@ ul .thumbactionsul {
 	height: 40px;
 	display: inline;
 	margin-top: 10px;
-
 }
+
+.thumbactionsul li a { text-decoration: none; }
+.thumbactionsul li a { color: white; }
+.thumbactionsul li a:hover { background: none; color: black; }
 
 .divlink {
 	text-decoration: none;
@@ -105,11 +128,14 @@ ul .thumbactionsul {
 .name {
 	margin: 10px 5px 10px 5px;
 	border-radius: 10px 10px 0px 0px;
+	padding-bottom: 20px;
 }
 
 .desc {
-	margin: 0px 20px 20px 20px;
+	margin: 0px 5px 20px 5px;
+	margin-top: 30px;
 	border-radius: 0px 0px 10px 10px;
+	padding-bottom: 30px;
 }
 
 .publicbox {
@@ -123,13 +149,21 @@ ul .thumbactionsul {
 /* >>>>>> EDIT PROGRAMME DETAILS FORM FIELDS <<<<<< */
 /* ------------------------------------------------ */
 
+.toptextbox {
+	margin: 10px;
+}
+
+.listandimgcnt {
+	min-height: 310px;
+}
+
 #sortable { list-style-type: none; padding: 0px; }
 
 .editexercisecnt{
 	min-height: 125px;
 	position:relative;
 	margin: 5px;
-	width: 500px;
+	width: 490px;
 	border: 3px solid #0C6727;
 	background: #D2FFD3;
 	cursor: pointer;
@@ -145,10 +179,27 @@ ul .thumbactionsul {
 	background: #FFEBFF;
 }
 
-.fieldsarrowscontainer {
-	position: relative;
-	width: 610px;
-	height: 70px;
+.dragdropimgcnt {
+	width: 139px;
+	margin-right: 5px;
+	border: 2px solid red;
+	float: right;
+}
+
+.dragdropimgcnt p {
+	border: 2px solid red;
+	color: red;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+	margin: 5px;
+	padding-bottom: 5px;
+}
+
+.dragdropimg {
+	width: 139px;
+	height: 270px;
+	background: orange;
 }
 
 .fieldcontainer{
@@ -374,7 +425,7 @@ ul .thumbactionsul {
 
 .showinfo h2 {
 	max-height: 20px;
-	font-size: 20px;
+	font-size: 19px;
 	margin: 5px;
 	margin-left: 122px;
 }
@@ -488,15 +539,9 @@ hr {
 }
 
 .exercisescrolling {
-	height: 500px;
+	height: 650px;
 	overflow: scroll;
 }
-
-
-
-
-
-
 
 
 

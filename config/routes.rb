@@ -6,8 +6,6 @@ Gymsavvy::Application.routes.draw do
   root to: 'users#new'
 
   get "log_out" => "sessions#destroy", :as => "log_out"
-  get "log_in" => "users#new", :as => "log_in"
-  get "sign_up" => "users#new", :as => "sign_up"
 
  # Mens programmes
   get "bulking_up" => "admin_programs#bulking", :as => "bulking"

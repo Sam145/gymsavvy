@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Gymsavvy</title>
-  <%= stylesheet_link_tag    'custom', 'exercises', 'program_sets', 'users', 'scaffolds', :media => :screen %>
+  <%= stylesheet_link_tag    'custom', 'exercises', 'program_sets', 'users', 'scaffolds', 'admin_programs', :media => :screen %>
   <%= stylesheet_link_tag('print', :media => :print) %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -15,6 +15,7 @@
 		<div class="maintitlebar"><%= image_tag "title/maintitle.png" %></div>
 		<div class="mainnavbar">
 			<ul>
+				<li class="navlink"><%= link_to "Home", root_path %></li>
 				<% if current_user %>
 					<% if current_user.admin? %>
 						<li class="navlink"><%= link_to "Exercises", exercises_path %></li>
@@ -22,13 +23,8 @@
 					<li class="navlink"><%= link_to "My programmes", program_sets_path %></li>
 					<li class="navlink"><%= link_to "Log out", log_out_path %></li>
 				<% else %>
-					<% if params[:action] == "new" && params[:controller] == "users" %>
 						<li class="navlink" id="signup"><%= link_to "Sign up", "#" %></li>
-						<li class="navlink"  id="login"><%= link_to "log in", "#" %></li>
-					<% else %>
-						<li class="navlink" id="signup"><%= link_to "Sign up", sign_up_path %></li>
-						<li class="navlink"  id="login"><%= link_to "log in", log_in_path %></li>
-					<% end %>				
+						<li class="navlink"  id="login"><%= link_to "log in", "#" %></li>			
 				<% end %>
 			</ul>
 		</div>
@@ -87,9 +83,11 @@
 </div>
 <div class="clearfooter"></div>
 	<div class="foot">
-		<p class="personalinfo">Created by Sam Thomas<br />
-			support@gymsays.co.uk
-		</p>
+		<div class="personalinfo">
+			<p>Created by Sam Thomas<br />
+				support@gymsays.co.uk
+			</p>
+		</div>
 	</div>
 
 </body>

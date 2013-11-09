@@ -2,6 +2,13 @@ $(document).ready(function(){
 
 // Onclick events for exercise buttons
 
+	$(".addbtnpos").on("click", function(){
+		$(".addexerciseshow").fadeIn(function(){
+			 $('html, body').animate({scrollTop: $(".addexerciseshow").offset().top - 30})
+		});
+	});
+
+
 	$("#absbtn").on("click", function(){
 		$("#absmove").fadeIn();
 		moreAndLess(".editExercisebox", 70);
@@ -37,13 +44,17 @@ $(document).ready(function(){
 		moreAndLess(".editExercisebox", 70);
 		});
 
+	// to submit added exercises added exercises
 	$(".buttonexerciseshide").on("click", function(){
 		$(".move").find(".moreless").each(function(){
 			$(".move").find(".addDescriptionContent").css({ "height" : "100%" });
 		})
-		$(this).closest(".move").fadeOut();
+		$(this).closest(".move").fadeOut( function(){
+			$('.edit_program_set').submit();
+		});
 	});
 
+	// to cancel added exercises
 	$(".buttonexerciseshide2").on("click", function(){
 		$(".move").find(".moreless").each(function(){
 			$(".move").find(".addDescriptionContent").css({ "height" : "100%" });

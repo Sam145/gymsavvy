@@ -13,7 +13,7 @@
 
   <div class="<%= male_female('programmeinformation') %> name">
     <p>
-      <%= f.label :name, "programme name" %>
+      <%= f.label :name, "Programme name" %>
       <%= f.text_field :name %>
     </p>
   </div>
@@ -22,17 +22,16 @@
 
   <div class="<%= male_female('programmeinformation') %> desc">
     <p>
-      <%= f.label :description, "programme description" %><br/ >
+      <%= f.label :description, "Programme description" %><br/ >
       If you want to describe your programme then<br/ >
       <%= f.text_area :description, cols: "50", rows: "3" %>
     </p>
     <%= f.check_box :public, class: "publicbox" %>
-    <%= f.label :public, "I would like a chance to make my programme public" %>
+    <%= f.label :public, "I would like a chance to make my programme public" %>  
 
-  <div class="">
-    <%= f.submit %>
-  </div>
-  
+      <div class="submitbtnpos">
+        <%= f.submit "Create Programme", class: male_female("submitstyle") %>
+      </div>
   </div>
 
 <% end %>
