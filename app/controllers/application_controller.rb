@@ -19,10 +19,16 @@ class ApplicationController < ActionController::Base
 	  @back = Exercise.back
 	end
 
-	helper_method [:current_user, :button_image, :male_female, :font_color ]
+	helper_method [:current_user, :button_image, :male_female, :font_color, :huy]
 
 
 	private
+
+	def huy(instance)
+		if @user.errors.any?
+			"display: block;"
+		end
+	end
 
 	def font_color(exercise)
 		case exercise.muscle_group
