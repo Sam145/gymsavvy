@@ -5,10 +5,10 @@ class UsersController < ApplicationController
   end
 
   def create
-  	user = User.new(params[:user])
+  	@user = User.new(params[:user])
 
-  	if user.save
-      sign_in user
+  	if @user.save
+      sign_in @user
   		redirect_to new_program_set_path, notice: "Hi there! Welcome to your gym buddy"
   	else
   		render 'new'

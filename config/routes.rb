@@ -18,6 +18,9 @@ Gymsavvy::Application.routes.draw do
   get "hour_glass_shape" => "admin_programs#hour", :as => "hour"
   get "tube_shape" => "admin_programs#tube", :as => "tube"
 
+  get "common_injuries" => "admin_programs#injuries", :as => "injuries"
+  get "avoid_injury" => "admin_programs#avoid", :as => "avoid"
+
   resources :sessions
   resources :users
   resources :program_sets

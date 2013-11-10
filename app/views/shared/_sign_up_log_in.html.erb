@@ -36,6 +36,7 @@
     <h2>OR</h2>
   </div>
 
+
   <div id="formsrightside">
     <div class="signupformouter">
       <div class="signupforminner">
@@ -46,8 +47,8 @@
             <div class="error_messages">
               <h2>Form is invalid</h2>
               <ul>
-                <% for message in @user.errors.full_messages %>
-                  <li><%= message %></li>
+                <% @user.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
                 <% end %>
               </ul>
             </div>

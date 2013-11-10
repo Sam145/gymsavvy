@@ -39,10 +39,25 @@ div {
   color: green;
 }
 
-.field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table;
+
+.error_messages h2 {
+  font-size: 17px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+
+.error_messages ul {
+  margin-left: 5px;
+  padding: 0px;
+}
+
+.field_with_errors label {
+  background: #F26363;
+}
+
+.field_with_errors input {
+  background: #F26363;
 }
 
 #error_explanation {

@@ -77,7 +77,7 @@
 						          	<% elsif @program_set.programs[n].exercise.option_types == "WRS"  %>
 						          		<%= pr.label :weight %>
 						          		<%= pr.text_field :weight, value: @program_set.programs[n].weight, class: "fieldweight" %>
-										<%= pr.select :weight_unit, options_for_select([['KGs'], ['lbs']], selected: @program_set.programs[n].weight_unit) %>
+										<%= pr.select :weight_unit, options_for_select([['Kg'], ['lbs']], selected: @program_set.programs[n].weight_unit) %>
 						          		<%= pr.label :reps %>
 						          		<%= pr.text_field :reps, value: @program_set.programs[n].reps, class: "fieldreps" %>
 						          		<%= pr.label :sets %>
