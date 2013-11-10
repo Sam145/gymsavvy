@@ -1,21 +1,23 @@
 $(document).ready(function(){
 	
-	$('#signup').on("click", function(){
+
+	$('#login').on("click", function(){
 		$('.signlog').css({ "display" : "block" })
 	});
 
-	$('#login').on("click", function(){
+	$('#signup').on("click", function(){
 
 		var leftSide = $('#formsleftside');
 		var rightSide = $('#formsrightside');
+
 		var signInForm = $('.signupformouter');
 		var logInForm = $('.loginwhichcnt');
 
-		$('.signupright').show();
-		$('.loginbelow').hide();
+		$('.signupright').hide();
+		$('.loginbelow').show();
 
-		signInForm.appendTo(rightSide);
-		logInForm.appendTo(leftSide);
+		signInForm.appendTo(leftSide);
+		logInForm.appendTo(rightSide);
 
 		$('.signlog').css({ "display" : "block" })
 

@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
 
   def new
+  	@user = User.new
   end
   
   def create
@@ -10,8 +11,8 @@ class SessionsController < ApplicationController
 	    redirect_back_or program_sets_path
 	    flash[:notice] = "Logged in!"
 	  else
-	    flash.now.alert = "Invalid email or password"
-	    render "new"
+	    flash[:notice] = "Invalid email or password"
+	    redirect_to controller: "sessions", action: "new"
 	  end
 	end
 
