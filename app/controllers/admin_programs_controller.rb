@@ -5,33 +5,33 @@ class AdminProgramsController < ApplicationController
 	# Guys preset programmes section
 
 	def bulking
-		@bulking_programmes = @user.program_sets.where(category: "bulking")
+		@bulking_programmes = @admin_user.program_sets.where(category: "bulking")
 	end
 
 	def lean
-		@lean_programmes = @user.program_sets.where(category: "lean")
+		@lean_programmes = @admin_user.program_sets.where(category: "lean")
 	end
 
 	def lose
-		@lose_weight_programmes = @user.program_sets.where(category: "lose")
+		@lose_weight_programmes = @admin_user.program_sets.where(category: "lose")
 	end
 
 	# Girls preset programmes section
 
 	def pear
-		@pear_shape_programmes = @user.program_sets.where(category: "pear")
+		@pear_shape_programmes = @admin_user.program_sets.where(category: "pear")
 	end
 					
 	def apple
-		@apple_shape_programmes = @user.program_sets.where(category: "apple")
+		@apple_shape_programmes = @admin_user.program_sets.where(category: "apple")
 	end
 
 	def hour
-		@hour_glass_programmes = @user.program_sets.where(category: "hour")
+		@hour_glass_programmes = @admin_user.program_sets.where(category: "hour")
 	end
 	
 	def tube
-		@tube_programmes = @user.program_sets.where(category: "tube")
+		@tube_programmes = @admin_user.program_sets.where(category: "tube")
 	end
 
 	# Injuryed section
@@ -44,7 +44,8 @@ class AdminProgramsController < ApplicationController
 
 
 	def set_user
-		@user = User.find_by_email("support@gymsays.co.uk")
+		@user = User.new
+		@admin_user = User.find_by_email("support@gymsays.co.uk")
 	end
 
 end
