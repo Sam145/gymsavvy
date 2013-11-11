@@ -74,7 +74,7 @@ function moreAndLess(mainContainer, descriptionHeight) {
 		var theContainer = $(this);
 
 		var contentHeight = $(this).find("#descriptionContent").height();
-		var more = $(this).find("#more").hide();
+		var more = $(this).find(".more").hide();
 
 		theContainer.css({ "height" : 125 });
 		theContainer.find("#imageSpace").css({ "height" : 125 });
@@ -119,6 +119,18 @@ moreAndLess(".exercisebox", 53);
 
 // Creates more and less functionality for show page
 moreAndLess(".showexercise", 75);
+
+
+
+$('.headerlisting').on("click", function(){
+	$(this).closest('.exercisesthemaincnt').find('.theexercises').slideToggle();
+
+});
+
+
+
+
+
 
 
 

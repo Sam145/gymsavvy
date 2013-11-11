@@ -3,49 +3,55 @@
 <%= link_to "Add New Exercise", new_exercise_path %>
 
 <% @exercises.each do |type| %>
-	<h3 class="headerlisting"><%= type[0].muscle_group unless type.empty?  %></h3>
-	<% type.each do |exercise| %>
-	
-		<div class="exercisebox">
-			<div class="exerciseImageSpace" id="imageSpace">
-				<div class="imagebox">
-					<% if exercise.assets.size >= 1 %>
-						<% exercise.assets.each do |asset| %>
-							<%= image_tag(asset.image.url(:thumb)) %>
-						<% end %>
-					<% else %>
-						<div class="missingimage">
-							<span>Image To<br /> Come</span>
-						</div>
-					<% end %>
-				</div>
-			</div>
-			<div class="info <%=  case exercise.muscle_group
-                                          when 'Cardio' then "red"
-                                          when 'Abs and Obliques' then "brown"
-                                          when 'Biceps and Triceps' then "blue"
-                                          when 'Shoulders' then "green" 
-                                          when 'Legs' then "purple"
-                                          when 'Chest' then "yellow"
-                                          when 'Back' then "orange"
-                                          end
-                                      %>">
-				<h2><%= exercise.name %></h2>
-
-				<p class="exerciseDescriptionContent" id="descriptionContent"><%=raw (exercise.description).gsub!(/\n/, '<br />') %>
-
-				<br/ ><span class='less'>less</span></p>
-				<span class="exerciseMore" id="more">more</span>
-				<p class="optype">Option type:<%= exercise.option_types + " " + exercise.muscle_group %></p>
-
-				<ul class="actions">
-					<li><%= link_to "Edit", edit_exercise_path(exercise) %></li>
-					<li><%= link_to "Delete", exercise, method: :delete, data: { confirm: "are you sure you want to delete this exercise?" } %></li>
-				</ul>
-			</div>
-			
+	<div class="exercisesthemaincnt">
+		<div class="headerlisting">
+			<h3><%= type[0].muscle_group unless type.empty?  %></h3>
 		</div>
-	<% end %>
+		<div class="theexercises">
+			<% type.each do |exercise| %>
+		
+				<div class="exercisebox">
+					<div class="exerciseImageSpace" id="imageSpace">
+						<div class="imagebox">
+							<% if exercise.assets.size >= 1 %>
+								<% exercise.assets.each do |asset| %>
+									<%= image_tag(asset.image.url(:thumb)) %>
+								<% end %>
+							<% else %>
+								<div class="missingimage">
+									<span>Image To<br /> Come</span>
+								</div>
+							<% end %>
+						</div>
+					</div>
+					<div class="info <%=  case exercise.muscle_group
+		                                          when 'Cardio' then "red"
+		                                          when 'Abs and Obliques' then "brown"
+		                                          when 'Biceps and Triceps' then "blue"
+		                                          when 'Shoulders' then "green" 
+		                                          when 'Legs' then "purple"
+		                                          when 'Chest' then "yellow"
+		                                          when 'Back' then "orange"
+		                                          end
+		                                      %>">
+						<h2><%= exercise.name %></h2>
+
+						<p class="exerciseDescriptionContent" id="descriptionContent"><%=raw (exercise.description).gsub!(/\n/, '<br />') %>
+
+						<br/ ><span class='less'>less</span></p>
+						<span class="exerciseMore more">more</span>
+						<p class="optype">Option type:<%= exercise.option_types + " " + exercise.muscle_group %></p>
+
+						<ul class="actions">
+							<li><%= link_to "Edit", edit_exercise_path(exercise) %></li>
+							<li><%= link_to "Delete", exercise, method: :delete, data: { confirm: "are you sure you want to delete this exercise?" } %></li>
+						</ul>
+					</div>
+					
+				</div>
+			<% end %>
+		</div>
+	</div>
 
 <% end %>
 
