@@ -74,7 +74,7 @@ function moreAndLess(mainContainer, descriptionHeight) {
 		var theContainer = $(this);
 
 		var contentHeight = $(this).find("#descriptionContent").height();
-		var more = $(this).find(".more").hide();
+		var more = $(this).find(".moreLessFeat").hide();
 
 		theContainer.css({ "height" : 125 });
 		theContainer.find("#imageSpace").css({ "height" : 125 });
