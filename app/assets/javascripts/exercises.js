@@ -109,7 +109,6 @@ function moreAndLess(mainContainer, descriptionHeight) {
 			});
 		};
 
-
 	});
 
 }
