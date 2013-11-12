@@ -120,7 +120,8 @@ moreAndLess(".exercisebox", 53);
 moreAndLess(".showexercise", 75);
 
 
-
+// For Admins exercise list
+$('.theexercises').hide();
 $('.headerlisting').on("click", function(){
 	$(this).closest('.exercisesthemaincnt').find('.theexercises').slideToggle();
 
