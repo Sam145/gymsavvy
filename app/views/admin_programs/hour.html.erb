@@ -6,6 +6,17 @@
 	<h1>Hour glass shape</h1>
 </div>
 
-<div class="contocome">
-	<p>Content to be added shortly</p>
+<div class="bodyinfowrap">
+	<div class="bodyshapeimage">
+		<p>image to come</p>
+	</div>
+	<div class="bodyshapeinfocnt">
+		<p><%=
+			"Hip and bust are almost of equal size, with a narrow waist. You girls have a curvy figure with a full bust and hips and a small waist, but you are in proportion. You will tend to lose and gain weight evenly over your body. Marilyn Monroe and Kelly Brook are famous for their hourglass figures."
+		%></p>
+	</div>
+
 </div>
+<hr>
+
+<%= render partial: "shape_programmes", :locals => { shape_programmes: @hour_glass_programmes } %>

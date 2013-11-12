@@ -9,12 +9,12 @@
 	</div>
 
 		<div class="progclonewrap">
-			<div class="setprogbox">
+			<div class="<%= blue_pink(program_set, 'setprogbox') %>">
 
 				<% program_set.programs.each do |program| %>
 
 					 
-			            <div class="setexercisefemale">
+			            <div class="<%= blue_pink(program_set, 'setexercise') %>">
 
 			                <div class="setinfo <%=  font_color(program.exercise) %>" >
 			                  <h2><%= program.exercise.name %></h2>
@@ -70,7 +70,7 @@
 				<% end %>
 			</div>
 
-			<div class="clonebox">
+			<div class="<%= blue_pink(program_set, 'clonebox') %>">
 			</div>
 
 		</div>

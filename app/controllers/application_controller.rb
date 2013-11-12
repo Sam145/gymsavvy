@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
 	  @back = Exercise.back
 	end
 
-	helper_method [:current_user, :button_image, :male_female, :font_color, :huy]
+	helper_method [:current_user, :button_image, :male_female, :font_color, :huy, :blue_pink]
 
 
 	private
@@ -64,6 +64,17 @@ class ApplicationController < ActionController::Base
 		  	end
 		else
 			"#{css_class_name}"
+		end
+	end
+
+	def blue_pink(instance, css_class_name)
+		case instance.category
+			when "bulking" || "lean" || "lose" then 
+				"#{css_class_name} #{css_class_name}blue"
+		  	when "apple" || "hour" || "pear" || "tube" then 
+		  		"#{css_class_name} #{css_class_name}pink"
+			else 
+				"#{css_class_name}"
 		end
 	end
 

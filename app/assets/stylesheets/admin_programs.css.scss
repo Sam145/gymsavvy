@@ -39,10 +39,13 @@
 }
 
 .setprogbox {
-	border: 3px solid #BA548A;
+	border: 3px solid grey;
 	width: 480px;
 	float: left;
 }
+
+.setprogboxpink { border: 3px solid #BA548A; }
+.setprogboxblue { border: 3px solid #2576B2; }
 
 .setprogname {
 	margin: 5px;
@@ -54,8 +57,11 @@
 	margin-bottom: 15px;
 }
 
-.setexercisefemale {
+.setexercisepink {
 	background: #FFEBFF;
+}
+.setexerciseblue {
+	background: #c4e0f5;
 }
 
 .setinfo {
@@ -88,10 +94,12 @@
 }
 
 .clonebox {
-	border: 3px solid #BA548A;
+	border: 3px solid grey;
 	width: 125px;
 	height: 200px;
 	float: right;
 }
 
+.cloneboxpink { border: 3px solid #BA548A; }
+.cloneboxblue { border: 3px solid #2576B2; }
 
