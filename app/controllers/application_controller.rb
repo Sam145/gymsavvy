@@ -19,12 +19,12 @@ class ApplicationController < ActionController::Base
 	  @back = Exercise.back
 	end
 
-	helper_method [:current_user, :button_image, :male_female, :font_color, :huy]
+	helper_method [:current_user, :button_image, :male_female, :font_color, :error_check]
 
 
 	private
 
-	def huy(instance)
+	def error_check(instance)
 		if @user.errors.any?
 			"display: block;"
 		end
