@@ -1,21 +1,3 @@
-/* ----------------------------------- */
-/* ------ PUBLIC EXERCISE SETS ------- */
-/* ----------------------------------- */
-
-
-.publicsetcnt {
-	margin: 10px;
-	background: blue;
-}
-
-.publicsetlist {
-	
-}
-
-.publicsetdesc {
-	
-}
-
 
 /* ------------------------------------ */
 /* ------ ADMIN BODY SHAPE INFO ------- */
@@ -43,8 +25,73 @@
 
 
 
+/* ---------------------------------- */
+/* ------ ADMIN EXERCISE SETS ------- */
+/* ---------------------------------- */
 
 
+.setprog {
+	margin: 10px;
+}
 
+.progclonewrap {
+	width: 620px;
+}
+
+.setprogbox {
+	border: 3px solid #BA548A;
+	width: 480px;
+	float: left;
+}
+
+.setprogname {
+	margin: 5px;
+	margin-bottom: 15px;
+}
+
+.setprogdesc {
+	margin: 5px;
+	margin-bottom: 15px;
+}
+
+.setexercisefemale {
+	background: #FFEBFF;
+}
+
+.setinfo {
+	margin: 5px;
+	min-height: 40px;
+}
+
+.setinfo h1 {
+	font-size: 15px;
+}
+
+.setinfo h2 {
+	width: 245px;
+	max-height: 10px;
+	font-size: 17px;
+	margin: 5px;
+	margin-right: 10px;
+	float: left;
+}
+
+.setdetailcnt {
+	margin-left: 5px;
+}
+
+.setprogdetails {
+	border-left: 2px solid red;
+	padding: 6px 9px 6px 9px;
+	text-align: center;
+	display: inline-block;
+}
+
+.clonebox {
+	border: 3px solid #BA548A;
+	width: 125px;
+	height: 200px;
+	float: right;
+}
 
 

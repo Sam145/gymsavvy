@@ -1,0 +1,78 @@
+<div class="setprog">
+	<% shape_programmes.each do |program_set| %>
+
+	<div class="setprogname">
+		<h1><%= program_set.name %></h1>
+	</div>
+	<div class="setprogdesc">
+		<p><%= program_set.description %></p>
+	</div>
+
+		<div class="progclonewrap">
+			<div class="setprogbox">
+
+				<% program_set.programs.each do |program| %>
+
+					 
+			            <div class="setexercisefemale">
+
+			                <div class="setinfo <%=  font_color(program.exercise) %>" >
+			                  <h2><%= program.exercise.name %></h2>
+			                  <div class="setdetailcnt">
+			                    <% if program.sets %>
+			                      <div class="setprogdetails">
+			                        <h1>Sets</h1>
+			                        <span><%= program.sets %></span>
+			                      </div>
+			                    <% end %>
+			                    <% if program.reps %>
+			                      <div class="setprogdetails">
+			                        <h1>Reps</h1>
+			                        <span><%= program.reps %></span>
+			                      </div>
+			                    <% end %>
+			                    <% if program.weight %>
+			                      <div class="setprogdetails">
+			                        <h1>Weight</h1>
+			                        <span><%= "#{program.weight} #{program.weight_unit}" %></span>
+			                      </div>
+			                    <% end %>
+			                    <% if program.distance_unit && program.distance %>
+			                      <div class="setprogdetails">
+			                        <h1>Distance</h1>
+			                        <span><%= "#{program.distance} #{program.distance_unit}" %></span>
+			                      </div>
+			                    <% end %>
+			                    <% if program.swim_distance_unit && program.distance  %>
+			                      <div class="setprogdetails">
+			                        <h1>Distance</h1>
+			                        <span><%= "#{program.distance} #{program.swim_distance_unit}" %></span>
+			                      </div>
+			                    <% end %>
+			                    <% if program.minutes %>
+			                      <div class="setprogdetails">
+			                        <h1>Minutes</h1>
+			                        <span><%= program.minutes %></span>
+			                      </div>
+			                    <% end %>
+			                    <% if program.hours %>
+			                      <div class="setprogdetails">
+			                        <h1>Hours</h1>
+			                        <span><%= program.hours %></span>
+			                      </div>
+			                    <% end %>
+			                  </div>
+			                    
+
+			                </div>   
+			            </div>
+					
+				<% end %>
+			</div>
+
+			<div class="clonebox">
+			</div>
+
+		</div>
+	<% end %>
+</div>
