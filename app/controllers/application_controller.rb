@@ -67,15 +67,17 @@ class ApplicationController < ActionController::Base
 	end
 
 	def blue_pink(instance, css_class_name)
-		case instance.category
-			when "bulking" || "lean" || "lose" then 
-				"#{css_class_name} #{css_class_name}blue"
-		  	when "apple" || "hour" || "pear" || "tube" then 
-		  		"#{css_class_name} #{css_class_name}pink"
-			else 
-				"#{css_class_name}"
+		if instance.category == "bulking" || instance.category == "lean" || instance.category == "lose" 
+			"#{css_class_name} #{css_class_name}blue"
+
+		elsif instance.category == "apple" || instance.category == "hour" || instance.category == "pear" || instance.category == "tube"
+			"#{css_class_name} #{css_class_name}pink"
+		else
+			"#{css_class_name}"
 		end
 	end
+
+
 
 	def button_image(image_name)
 		if !current_user.nil?
