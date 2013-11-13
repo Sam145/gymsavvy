@@ -67,8 +67,16 @@
 .setprogboxblue { border: 3px solid #2576B2; }
 
 .setprogname {
+	clear: both;
+	margin-left: 5px;
+
+	padding-top: 10px;
+}
+
+.setprogname h1 {
+	font-size: 15px;
 	margin: 5px;
-	margin-bottom: 15px;
+
 }
 
 .setprogdesc {
@@ -114,12 +122,13 @@
 
 .clonebox {
 	display: none;
-	border: 3px solid grey;
+	border: 3px solid white;
 	width: 125px;
 	height: 200px;
 	float: right;
+
 }
 
-.cloneboxpink { border: 3px solid #BA548A; }
-.cloneboxblue { border: 3px solid #2576B2; }
+.cloneboxpink { border: 3px solid white; }
+.cloneboxblue { border: 3px solid white; }
 
