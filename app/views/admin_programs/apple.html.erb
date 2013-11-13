@@ -6,6 +6,18 @@
 	<h1>Apple shape</h1>
 </div>
 
-<div class="contocome">
-	<p>Content to be added shortly</p>
+<div class="bodyinfowrap">
+	<div class="bodyshapeimage">
+		<p>image to come</p>
+	</div>
+	<div class="bodyshapeinfocnt">
+		<p><%=
+			"You have broader shoulders and bust, and narrower hips. You carry most of your weight around your midriff and bust. There could be health concerns if your waist measures more than 35 inches. Now for the good news; you will be able to lose weight and reshape yourself with a good programme of exercise routines and a healthy diet. Kate Winslett and Catherine Zeta-Jones are both examples of apple shapes."
+		%></p>
+	</div>
+
 </div>
+<hr>
+
+<%= render partial: "shape_programmes", :locals => { shape_programmes: @apple_shape_programmes } %>
+

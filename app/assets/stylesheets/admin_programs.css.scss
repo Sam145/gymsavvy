@@ -1,17 +1,125 @@
-/* ----------------------------------- */
-/* ------ PUBLIC EXERCISE SETS ------- */
-/* ----------------------------------- */
+
+/* ------------------------------------ */
+/* ------ ADMIN BODY SHAPE INFO ------- */
+/* ------------------------------------ */
+
+/* >>>>>>> TEMP CONTENT <<<<<<<<< */
+
+.contocome {
+	margin-top: 30px;
+	text-align: center
+}
+
+.contocome p {
+	font-size: 15px;
+}
+
+.temptitle {
+	text-align: center;
+	margin: 10px 0px 0px 20px;
+	padding-bottom: 10px;
+}
 
 
-.publicsetcnt {
+
+.bodyinfowrap {
 	margin: 10px;
-	background: blue;
+	min-height: 210px;
 }
 
-.publicsetlist {
+.bodyshapeimage {
+	width: 170px;
+	height: 200px;
+	border: 1px solid;
+	float: left;
+}
+
+.bodyshapeinfocnt {
 	
 }
 
-.publicsetdesc {
-	
+.bodyshapeinfocnt p {
+	margin-left: 180px;
 }
+
+
+
+/* ---------------------------------- */
+/* ------ ADMIN EXERCISE SETS ------- */
+/* ---------------------------------- */
+
+
+.setprog {
+	margin: 10px;
+}
+
+.progclonewrap {
+	width: 620px;
+}
+
+.setprogbox {
+	border: 3px solid grey;
+	width: 480px;
+	float: left;
+}
+
+.setprogboxpink { border: 3px solid #BA548A; }
+.setprogboxblue { border: 3px solid #2576B2; }
+
+.setprogname {
+	margin: 5px;
+	margin-bottom: 15px;
+}
+
+.setprogdesc {
+	margin: 5px;
+	margin-bottom: 15px;
+}
+
+.setexercisepink {
+	background: #FFEBFF;
+}
+.setexerciseblue {
+	background: #c4e0f5;
+}
+
+.setinfo {
+	margin: 5px;
+	min-height: 40px;
+}
+
+.setinfo h1 {
+	font-size: 15px;
+}
+
+.setinfo h2 {
+	width: 245px;
+	max-height: 10px;
+	font-size: 17px;
+	margin: 5px;
+	margin-right: 10px;
+	float: left;
+}
+
+.setdetailcnt {
+	margin-left: 5px;
+}
+
+.setprogdetails {
+	border-left: 2px solid red;
+	padding: 6px 9px 6px 9px;
+	text-align: center;
+	display: inline-block;
+}
+
+.clonebox {
+	display: none;
+	border: 3px solid grey;
+	width: 125px;
+	height: 200px;
+	float: right;
+}
+
+.cloneboxpink { border: 3px solid #BA548A; }
+.cloneboxblue { border: 3px solid #2576B2; }
+

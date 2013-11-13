@@ -6,6 +6,17 @@
 	<h1>Pear shape</h1>
 </div>
 
-<div class="contocome">
-	<p>Content to be added shortly</p>
+<div class="bodyinfowrap">
+	<div class="bodyshapeimage">
+		<p>image to come</p>
+	</div>
+	<div class="bodyshapeinfocnt">
+		<p><%=
+			"Your hip measurements are greater than your bust measurements and your waist is well defined. You typically carry your weight around your hips, bottom and thighs, and it can be very stubborn to shift! You may find that when you lose weight it will come off of your face and upper body rather than where you want it to come off! Beyonce and Jennifer Lopez are famous Pear shape ladies."
+		%></p>
+	</div>
+
 </div>
+<hr>
+
+<%= render partial: "shape_programmes", :locals => { shape_programmes: @pear_shape_programmes } %>
