@@ -48,6 +48,9 @@
 /* ------ ADMIN EXERCISE SETS ------- */
 /* ---------------------------------- */
 
+.setprogspeech {
+	margin: 10px 15px 10px 15px;
+}
 
 .setprog {
 	margin: 10px;
@@ -60,6 +63,7 @@
 .setprogbox {
 	border: 3px solid grey;
 	width: 480px;
+	margin-bottom: 10px;
 	float: left;
 }
 
@@ -69,8 +73,6 @@
 .setprogname {
 	clear: both;
 	margin-left: 5px;
-
-	padding-top: 10px;
 }
 
 .setprogname h1 {

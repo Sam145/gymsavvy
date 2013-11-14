@@ -2,7 +2,20 @@ $(document).ready(function(){
 
 
 	$('#login').on("click", function(){
-		$('.signlog').css({ "display" : "block" })
+
+		var leftSide = $('#formsleftside');
+		var rightSide = $('#formsrightside');
+
+		var signInForm = $('.signupformouter');
+		var logInForm = $('.loginwhichcnt');
+
+		$('.loginbelow').hide();
+		$('.signupright').show();
+
+		signInForm.appendTo(rightSide);
+		logInForm.appendTo(leftSide);
+
+		$('.signlog').css({ "display" : "block" })		
 	});
 
 	$('#signup').on("click", function(){
@@ -13,8 +26,8 @@ $(document).ready(function(){
 		var signInForm = $('.signupformouter');
 		var logInForm = $('.loginwhichcnt');
 
-		$('.signupright').hide();
 		$('.loginbelow').show();
+		$('.signupright').hide();
 
 		signInForm.appendTo(leftSide);
 		logInForm.appendTo(rightSide);

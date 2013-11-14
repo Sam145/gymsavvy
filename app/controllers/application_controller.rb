@@ -70,7 +70,7 @@ class ApplicationController < ActionController::Base
 		if instance.category == "bulking" || instance.category == "lean" || instance.category == "lose" 
 			"#{css_class_name} #{css_class_name}blue"
 
-		elsif instance.category == "apple" || instance.category == "hour" || instance.category == "pear" || instance.category == "tube"
+		elsif instance.category == "apple" || instance.category == "hour" || instance.category == "pear" || instance.category == "celery"
 			"#{css_class_name} #{css_class_name}pink"
 		else
 			"#{css_class_name}"

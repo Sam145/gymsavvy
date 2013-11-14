@@ -1,43 +1,4 @@
   <div id="formsleftside">
-    <div class="loginwhichcnt">
-      <div class="whichform">
-        <div class="imagecntfor">
-          <div class="loginbelow">
-            <p>If your already a member<br /> use the login below</p>
-          </div>
-        </div>
-        <div class="imagecntfor">
-          <div class="signupright">
-            <p>If your not yet a member<br /> just use the sign up on your right</p>
-          </div>
-        </div>
-      </div>
-      <div class="loginformouter">
-        <div class="loginforminner">
-          <h1>Log in!</h1>
-
-          <%= form_tag sessions_path do %>
-            <p>
-              <%= label_tag :email %><br />
-              <%= text_field_tag :email, params[:email] %>
-            </p>
-            <p>
-              <%= label_tag :password %><br />
-              <%= password_field_tag :password %>
-            </p>
-            <p class="button"><%= submit_tag "Log in" %></p>
-          <% end %>
-        </div>
-      </div>
-    </div>    
-  </div>
-
-  <div class="or">
-    <h2>OR</h2>
-  </div>
-
-
-  <div id="formsrightside">
     <div class="signupformouter">
       <div class="signupforminner">
         <h1>Sign Up!</h1>
@@ -73,6 +34,44 @@
         <% end %>
       </div>
     </div>
+  </div>
 
+  <div class="or">
+    <h2>OR</h2>
+  </div>
+
+
+  <div id="formsrightside">
+        <div class="loginwhichcnt">
+      <div class="whichform">
+        <div class="imagecntfor">
+          <div class="loginbelow">
+            <p>If your already a member<br /> use the login below</p>
+          </div>
+        </div>
+        <div class="imagecntfor">
+          <div class="signupright">
+            <p>If your not yet a member<br /> just use the sign up on your right</p>
+          </div>
+        </div>
+      </div>
+      <div class="loginformouter">
+        <div class="loginforminner">
+          <h1>Log in!</h1>
+
+          <%= form_tag sessions_path do %>
+            <p>
+              <%= label_tag :email %><br />
+              <%= text_field_tag :email, params[:email] %>
+            </p>
+            <p>
+              <%= label_tag :password %><br />
+              <%= password_field_tag :password %>
+            </p>
+            <p class="button"><%= submit_tag "Log in" %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>    
   </div>
 

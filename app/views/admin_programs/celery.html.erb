@@ -1,0 +1,23 @@
+<div class="signlog">
+  <%= render "shared/sign_up_log_in" %>
+</div>
+
+<div class="temptitle">
+	<h1>Celery shape</h1>
+</div>
+
+<div class="bodyinfowrap">
+	<div class="bodyshapeimage">
+		<p>image to come</p>
+	</div>
+	<div class="bodyshapeinfocnt">
+		<p><%=
+
+			"The celery shape - You have a straight and long body with slim hips. Your bust and hips are pretty much the same size. You can be perceived as boyish, due to your lack of curves and your chest tends to be relatively flat. The waist is just slightly smaller. You don’t gain much weight or muscle mass easily. The good news is that you tend to lose weight evenly. Kate Moss and Kiera Knightly are both famous tube shaped ladies."
+		%></p>
+	</div>
+
+</div>
+<hr>
+
+<%= render partial: "shape_programmes", :locals => { shape_programmes: @tube_programmes } %>

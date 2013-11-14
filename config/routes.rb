@@ -17,7 +17,7 @@ Gymsavvy::Application.routes.draw do
   get "pear_shape" => "admin_programs#pear", :as => "pear"
   get "apple_shape" => "admin_programs#apple", :as => "apple"
   get "hour_glass_shape" => "admin_programs#hour", :as => "hour"
-  get "tube_shape" => "admin_programs#tube", :as => "tube"
+  get "celery_shape" => "admin_programs#celery", :as => "celery"
 
   get "common_injuries" => "admin_programs#injuries", :as => "injuries"
   get "avoid_injury" => "admin_programs#avoid", :as => "avoid"

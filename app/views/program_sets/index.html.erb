@@ -10,7 +10,12 @@
       <% @program_sets.each do |program_set| %>
 
         <%= link_to program_set, class: "divlink" do %>
-            <div class="thumbposition">  
+            <div class="thumbposition"> 
+              <% if program_set.category %> 
+                <%= program_set.category %>
+              <% else %>
+                <% false %>
+              <% end %>
               <li>
                 <div class="<%= male_female('setthumbnail') %>">
                   <h1><%= program_set.name %></h1>

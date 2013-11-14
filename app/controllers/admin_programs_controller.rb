@@ -30,8 +30,8 @@ class AdminProgramsController < ApplicationController
 		@hour_glass_programmes = @admin_user.program_sets.where(category: "hour")
 	end
 	
-	def tube
-		@tube_programmes = @admin_user.program_sets.where(category: "tube")
+	def celery
+		@tube_programmes = @admin_user.program_sets.where(category: "celery")
 	end
 
 	# Injuryed section

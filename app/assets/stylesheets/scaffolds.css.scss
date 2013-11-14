@@ -41,6 +41,7 @@ div {
 
 
 .error_messages h2 {
+  color: red;
   font-size: 17px;
   margin-top: 10px;
   margin-bottom: 5px;
@@ -50,10 +51,16 @@ div {
 .error_messages ul {
   margin-left: 5px;
   padding: 0px;
+  text-align: left;
+}
+
+div.field_with_errors {
+  display: inline;
 }
 
 .field_with_errors label {
-  background: #F26363;
+  color: red;
+  font-weight: bold;
 }
 
 .field_with_errors input {

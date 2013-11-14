@@ -122,7 +122,7 @@
 	    <%= f.label :public, "I would like a chance to make my programme public" %>
 	    <% if current_user.admin? %>
 	    	<br /><%= f.label :category %>
-				<%= f.select :category, options_for_select([['bulking'], ['lean'], ['lose'], ['apple'],['pear'], ['hour'], ['tube']]) %>
+				<%= f.select :category, options_for_select([['bulking'], ['lean'], ['lose'], ['apple'],['pear'], ['hour'], ['celery']]) %>
 			<br /><%= f.label :grade %>
 				<%= f.select :grade, options_for_select([['beginner'], ['intermediate'], ['hard']]) %>
 	   	<% end %>
