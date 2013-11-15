@@ -9,7 +9,8 @@ class UsersController < ApplicationController
 
   	if @user.save
       sign_in @user
-  		redirect_to new_program_set_path, notice: "Hi there! Welcome to your gym buddy"
+  		redirect_back_or(new_program_set_path) 
+      flash[:notice] = "Hi there! Welcome to your gym buddy"
   	else
   		render 'new'
   	end
