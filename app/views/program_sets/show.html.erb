@@ -34,6 +34,12 @@
                 <div class="showinfo <%=  font_color(program.exercise) %>" >
                   <h2><%= program.exercise.name %></h2>
                   <div class="containsdetails">
+                    <% if program.weight %>
+                      <div class="details">
+                        <h1>Weight</h1>
+                        <span><%= "#{program.weight} #{program.weight_unit}" %></span>
+                      </div>
+                    <% end %>
                     <% if program.sets %>
                       <div class="details">
                         <h1>Sets</h1>
@@ -45,13 +51,7 @@
                         <h1>Reps</h1>
                         <span><%= program.reps %></span>
                       </div>
-                    <% end %>
-                    <% if program.weight %>
-                      <div class="details">
-                        <h1>Weight</h1>
-                        <span><%= "#{program.weight} #{program.weight_unit}" %></span>
-                      </div>
-                    <% end %>
+                    <% end %>                    
                     <% if program.distance_unit && program.distance %>
                       <div class="details">
                         <h1>Distance</h1>

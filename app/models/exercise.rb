@@ -18,13 +18,13 @@ class Exercise < ActiveRecord::Base
 
 
 
-   scope :cardio, where("muscle_group = ?", "Cardio")
-   scope :abs, where("muscle_group = ?", "Abs and Obliques")
-   scope :arms, where("muscle_group = ?", "Biceps and Triceps")
-   scope :shoulders, where("muscle_group = ?", "Shoulders")
-   scope :legs, where("muscle_group = ?", "Legs")
-   scope :chest, where("muscle_group = ?", "Chest")
-   scope :back, where("muscle_group = ?", "Back")
+   scope :cardio, where("muscle_group = ?", "Cardio").order("name")
+   scope :abs, where("muscle_group = ?", "Abs and Obliques").order("name")
+   scope :arms, where("muscle_group = ?", "Biceps and Triceps").order("name")
+   scope :shoulders, where("muscle_group = ?", "Shoulders").order("name")
+   scope :legs, where("muscle_group = ?", "Legs").order("name")
+   scope :chest, where("muscle_group = ?", "Chest").order("name")
+   scope :back, where("muscle_group = ?", "Back").order("name")
 
 
 

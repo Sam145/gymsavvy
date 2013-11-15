@@ -19,6 +19,8 @@ Gymsavvy::Application.routes.draw do
   get "hour_glass_shape" => "admin_programs#hour", :as => "hour"
   get "celery_shape" => "admin_programs#celery", :as => "celery"
 
+  get "edit/:id" => "program_sets#clone_program", :as => "clone_program"
+
   get "common_injuries" => "admin_programs#injuries", :as => "injuries"
   get "avoid_injury" => "admin_programs#avoid", :as => "avoid"
 

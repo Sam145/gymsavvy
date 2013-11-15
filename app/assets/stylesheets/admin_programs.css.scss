@@ -34,6 +34,13 @@
 	float: left;
 }
 
+.bodyshapeimage p {
+	text-align: center;
+	margin-top: 80px;
+	color: red;
+}
+
+
 .bodyshapeinfocnt {
 	
 }
@@ -123,14 +130,48 @@
 }
 
 .clonebox {
-	display: none;
-	border: 3px solid white;
+	border: 3px solid red;
 	width: 125px;
 	height: 200px;
 	float: right;
 
 }
 
-.cloneboxpink { border: 3px solid white; }
-.cloneboxblue { border: 3px solid white; }
+.clonebox p {
+	margin: 5px;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+	height: 132px;
+}
+
+.cloneboxpink { border: 3px solid #BA548A; }
+.cloneboxblue { border: 3px solid #2576B2; }
+
+.clonebtncnt a { color: #FFF; }
+.clonebtncnt {
+	height: 58px;
+	text-align: center; 
+}
+
+.clonebtn{
+border:1px solid #ffad41;font-size:16px;font-family:arial, helvetica, sans-serif; padding: 10px 10px 10px 10px; text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+ background-color: #ffc579; background-image: -webkit-gradient(linear, left top, left bottom, from(#ffc579), to(#fb9d23));
+ background-image: -webkit-linear-gradient(top, #ffc579, #fb9d23);
+ background-image: -moz-linear-gradient(top, #ffc579, #fb9d23);
+ background-image: -ms-linear-gradient(top, #ffc579, #fb9d23);
+ background-image: -o-linear-gradient(top, #ffc579, #fb9d23);
+ background-image: linear-gradient(to bottom, #ffc579, #fb9d23);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffc579, endColorstr=#fb9d23);
+}
+
+.clonebtn:hover{
+border:1px solid #ff9913;
+ background-color: #ffaf46; background-image: -webkit-gradient(linear, left top, left bottom, from(#ffaf46), to(#e78404));
+ background-image: -webkit-linear-gradient(top, #ffaf46, #e78404);
+ background-image: -moz-linear-gradient(top, #ffaf46, #e78404);
+ background-image: -ms-linear-gradient(top, #ffaf46, #e78404);
+ background-image: -o-linear-gradient(top, #ffaf46, #e78404);
+ background-image: linear-gradient(to bottom, #ffaf46, #e78404);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffaf46, endColorstr=#e78404);
+}
+
 

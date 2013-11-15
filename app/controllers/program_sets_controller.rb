@@ -1,7 +1,7 @@
 class ProgramSetsController < ApplicationController
 
   before_filter :signed_in_user
-  before_filter :validate_user, only: [ :show, :edit, :update, :destroy]
+  before_filter :validate_user, only: [ :show, :update, :destroy]
 
 
   def index
@@ -52,6 +52,7 @@ class ProgramSetsController < ApplicationController
 
 
   def update
+
     @program_set = ProgramSet.find(params[:id])
 
         ##### THIS ADDS PROGRAMS TO PROGRAMS SET AND UPDATES RECORDS THEN REDIRECTS BACK TO EDIT ######
@@ -75,6 +76,24 @@ class ProgramSetsController < ApplicationController
 
   end
 
+
+  def clone_program
+    original_program_set = ProgramSet.find(params[:id])
+    # This duplicates the record and assigns to the current user
+    new_program_set = original_program_set.dup
+    new_program_set.category = nil
+    new_program_set.user_id = current_user.id
+    new_program_set.save
+
+    # This duplicates the associations and saves them to the new record 
+      original_program_set.programs.each do |program|
+        new_program = program.dup
+        new_program.program_set_id = new_program_set.id
+        new_program.save
+      end
+
+    redirect_to edit_program_set_path(new_program_set.id)
+  end
 
 
   def destroy
