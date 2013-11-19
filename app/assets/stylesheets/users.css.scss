@@ -13,15 +13,66 @@
 	font-size: 15px;
 }
 
+.boxhat {
+	height: 10px;
+	background: #E89E5F;
+	border-top: 3px solid #E8500C;
+	border-left: 3px solid #E8500C;
+	border-right: 3px solid #E8500C;
+	margin: 10px 30px 0px 30px;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.ribbon {
+	margin: 0px 10px 0px 10px;
+	height: 30px;
+	border-bottom: 2px solid #003D78;
+	background: #0081FF;
+}
+
+.ribbon h1 {
+	font-size: 15px;
+	padding-top: 6px;
+	color: white;
+	text-align: center;
+}
+
+.shadedtriangles {
+	position: relative;
+	margin: 0px 10px 0px 10px;
+	z-index: -1;
+}
+
+#triangleone {
+	float: left;
+	width: 0; 
+	height: 0; 
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid #003D78;
+}
+
+#triangletwo {
+	float: right;
+	width: 0; 
+	height: 0; 
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid #003D78;
+}
+
 .featuresoutercontainer {
 	background: #E89E5F;
-	border: 3px solid #E8500C;
-	margin: 10px 0px 10px 0px;
-	border-radius: 10px;
+	border-bottom: 3px solid #E8500C;
+	border-left: 3px solid #E8500C;
+	border-right: 3px solid #E8500C;
+	margin: 0px 30px 10px 30px;
+	border-radius: 0px 0px 10px 10px;
+	z-index: 2;
 }
 
 .featuresinnercontainer {
-	margin: 10px;
+	padding: 10px;
 }
 
 .featuresinnercontainer p {
