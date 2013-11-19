@@ -25,43 +25,43 @@
 			                <div class="setinfo <%=  font_color(program.exercise) %>" >
 			                  <h2><%= program.exercise.name %></h2>
 			                  <div class="setdetailcnt">			                                      
-			                    <% if program.reps %>
+			                    <% if !program.reps.blank? %>
 			                      <div class="setprogdetails">
 			                        <h1>Reps</h1>
 			                        <span><%= program.reps %></span>
 			                      </div>
 			                    <% end %>
-			                    <% if program.sets %>
+			                    <% if !program.sets.blank? %>
 			                      <div class="setprogdetails">
 			                        <h1>Sets</h1>
 			                        <span><%= program.sets %></span>
 			                      </div>
 			                    <% end %>
-			                    <% if program.weight %>
+			                    <% if !program.weight.blank? %>
 			                      <div class="setprogdetails">
 			                        <h1>Weight</h1>
 			                        <span><%= "#{program.weight} #{program.weight_unit}" %></span>
 			                      </div>
 			                    <% end %>		                    
-			                    <% if program.distance_unit && program.distance %>
+			                    <% if !program.distance_unit.blank? && !program.distance.blank? %>
 			                      <div class="setprogdetails">
 			                        <h1>Distance</h1>
 			                        <span><%= "#{program.distance} #{program.distance_unit}" %></span>
 			                      </div>
 			                    <% end %>
-			                    <% if program.swim_distance_unit && program.distance  %>
+			                    <% if !program.swim_distance_unit.blank? && !program.distance.blank?  %>
 			                      <div class="setprogdetails">
 			                        <h1>Distance</h1>
 			                        <span><%= "#{program.distance} #{program.swim_distance_unit}" %></span>
 			                      </div>
 			                    <% end %>
-			                    <% if program.minutes %>
+			                    <% if !program.minutes.blank? %>
 			                      <div class="setprogdetails">
 			                        <h1>Minutes</h1>
 			                        <span><%= program.minutes %></span>
 			                      </div>
 			                    <% end %>
-			                    <% if program.hours %>
+			                    <% if !program.hours.blank? %>
 			                      <div class="setprogdetails">
 			                        <h1>Hours</h1>
 			                        <span><%= program.hours %></span>

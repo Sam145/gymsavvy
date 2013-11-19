@@ -11,7 +11,7 @@
 
         <%= link_to program_set, class: "divlink" do %>
             <div class="thumbposition"> 
-              <% if program_set.category %> 
+              <% if !program_set.category.blank? %> 
                 <%= program_set.category %>
               <% else %>
                 <% false %>
